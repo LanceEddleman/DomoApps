@@ -1,0 +1,33 @@
+{
+  "name": "SuperCar Build298d",
+  "version": "0.0.1",
+  "mapping": [
+    {
+      "alias": "lv1_data",
+      "dataSourceId": "77cf7594-b8d6-46c2-bab7-871646ffd43e",
+      "fields": [
+        {
+          "alias": "name",
+          "columnName": "Name"
+        },
+        {
+          "alias": "age",
+          "columnName": "Age"
+        },
+        {
+          "alias": "id",
+          "columnName": "ID"
+        },
+        {
+          "alias": "date",
+          "columnName": "Date"
+        }
+      ]
+    }
+  ],
+  "size": {
+    "width": 5,
+    "height": 2.75
+  },
+  "id": "46b2edaf-49f6-4a5b-bdc8-6ad7f5ced483"
+}
