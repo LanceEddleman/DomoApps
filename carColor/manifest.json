@@ -1,10 +1,10 @@
 {
-  "name": "SuperCar Build298d",
+  "name": "SuperCar",
   "version": "0.0.1",
   "mapping": [
     {
-      "alias": "lv1_data",
-      "dataSourceId": "77cf7594-b8d6-46c2-bab7-871646ffd43e",
+      "alias": "carData",
+      "dataSetId": "7e24cbd1-7aae-41e3-a419-5330594e83ce",
       "fields": [
         {
           "alias": "name",
@@ -29,5 +29,5 @@
     "width": 5,
     "height": 2.75
   },
-  "id": "46b2edaf-49f6-4a5b-bdc8-6ad7f5ced483"
+  "id": "21525342-a0d4-4d5d-bc06-16985d7b7b38"
 }
