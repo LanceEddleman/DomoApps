@@ -1,0 +1,185 @@
+.bgc{
+	background-color:SkyBlue;
+	margin-right: 1px;
+	margin: 0px;
+}
+
+body{
+	overflow: hidden;
+}
+
+html{
+  padding: 0px;
+  background: white;
+}
+
+#table {
+  width: 98%;
+  text-align: center;
+  border-style: solid;
+  border-width: 10px;
+  border-color: Black;
+  padding-left: 3px;
+	padding-right:0px;
+  margin: 0px;
+  background: white;
+  overflow: auto;
+  height: 300px;
+}
+
+table {
+  text-align: center;
+  align: center;
+  padding: 5px;
+  width: 100.1%;
+  text-align: center;
+  margin: 0px;
+  background: white;
+}
+
+span {
+  display: inline-block;
+  width: 200px;
+}
+
+#title{
+//	position: absolute;
+	text-align: center;
+	font-size: 30px;
+	font-family: fantasy;
+	color: black !important;
+	padding-left: 2px;
+	background-color:white;
+	width:99%;
+	height: 105px;
+	margin: 0 auto;
+//	margin-top:75px;
+//	height:250px;
+	border:5px solid SkyBlue;
+
+
+}
+
+.build, .logo, .date{
+	line-height: 105px;
+	float:right;
+	width:33%;
+	height: 105px;
+	vertical-align: middle;
+//	position: absolute;
+}
+
+
+.hr1{
+	color:black;
+	width:2px;
+}
+
+/* Flaired edges, by Tomas Theunissen */
+
+hr.style-one {
+	border: 0;
+	height: 1px;
+	background: #333;
+	background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+	background-image:    -moz-linear-gradient(left, #ccc, #333, #ccc);
+	background-image:     -ms-linear-gradient(left, #ccc, #333, #ccc);
+	background-image:      -o-linear-gradient(left, #ccc, #333, #ccc);
+}
+
+div {
+  width: 100%;
+  text-align:center;
+  overflow: hidden;
+}
+
+p {
+  width: 100%;
+  text-align:center;
+}
+
+
+.full {
+	width: 100%;
+	text-align: center;
+}
+
+.infographic {
+	color: black;
+}
+
+.tbold {
+	font-size: 24px;
+	font-weight: bolder;
+}
+
+.migrate {
+	color: black;
+//	font-size: 12px;
+}
+
+.migrate09 {
+	color: orange;
+}
+
+.duplicate {
+	color: yellow;
+}
+
+.avatar{
+	 width: 60px;
+	 height: 60px;
+}
+
+.tablew {
+	width: 99%;
+}
+.namew {
+	width: 50px;
+}
+
+.agew {
+	width: 50px;
+}
+
+.idw {
+	width: 50px;
+}
+.datew {
+	width: 50px;
+}
+.colw {
+	width: 50px;
+}
+
+.thlook {
+	width: 100%;
+	height: 50px;
+//	text-align: center;
+	font-size: 24px;
+	color: black !important;
+	border-style: solid;
+	border-width: 1px;
+	border-color: brown;
+	padding: 0px;
+
+}
+
+.tlook{
+	font-weight: bold;
+//	text-align: center;
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	border-bottom: 1px solid brown;
+	padding: 0px;
+}
+
+.tlookb{
+//	text-align: center;
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	border-bottom: 1px solid brown;
+	padding: 0px;
+}
