@@ -1,0 +1,24 @@
+{
+  "name": "donutPieChart",
+  "version": "1.0.0",
+  "size": {
+    "width": 4.5,
+    "height": 3.5
+  },
+  "mapping": [
+    {
+      "dataSetId": "60bbfbbb-f90a-4b4f-9877-acc1fcceac5c",
+      "alias": "fakePhoneSales",
+      "fields": [
+        {
+          "alias": "phone",
+          "columnName": "Phone"
+        },
+        {
+          "alias": "sales",
+          "columnName": "Sales"
+        }
+      ]
+    }
+  ]
+}

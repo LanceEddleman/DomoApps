@@ -1,0 +1,25 @@
+body {
+  height: 600px;
+  margin-top: 0px;
+  padding-left: 15px;
+  color: white;
+  font-size: 10px;
+  background-color: MintCream;
+}
+h1{
+  font-size: 30px;
+  text-align: center;
+  font-family: monospace;
+}
+
+.arc path {
+  stroke: #fff;
+}
+#title{
+  text-align: center;
+  font-size: 75px;
+  margin-top: 20px;
+  height: 100px;
+  font-family: monospace;
+  color: Indigo;
+}
