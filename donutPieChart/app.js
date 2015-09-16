@@ -55,12 +55,14 @@ domo.get('/data/v1/fakePhoneSales')
       .append("g")
         .attr("transform", "translate(" + width/2  + "," + height/2  + ")");
 
-d3.json("data/v1/fakePhoneSales", function(error, data){
-  data.forEach(function(d){
-    d.sales = +d.sales;
-  });
+// d3.json("data/v1/fakePhoneSales", function(error, myData){
+
+
+  // salesArray.forEach(function(d){
+  //   d.sales = +d.sales;
+  // });
     var g = svg.selectAll(".arc")
-        .data(pie(data))
+        .data(pie(fakePhoneSales))
       .enter().append("g")
         .attr("class", "arc");
 
@@ -74,6 +76,6 @@ d3.json("data/v1/fakePhoneSales", function(error, data){
 
         .style("text-anchor", "middle")
         .text(function(d) { return d.data.phone; });
-});
+// });
 
 });
