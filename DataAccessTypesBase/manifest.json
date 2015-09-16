@@ -1,0 +1,36 @@
+{
+  "name": "DataAccess2",
+  "version": "1.0.0",
+  "size": {
+    "width": 5,
+    "height": 2
+  },
+  "mapping": [
+    {
+      "dataSetId": "DataSource ID goes here",
+      "alias": "DAPersistent",
+      "fields": [
+        {
+          "alias": "name",
+          "columnName": "Name"
+        },
+        {
+          "alias": "age",
+          "columnName": "Age"
+        },
+        {
+          "alias": "offset",
+          "columnName": "Offset"
+        },
+        {
+          "alias": "id",
+          "columnName": "ID"
+        },
+        {
+          "alias": "date",
+          "columnName": "Date"
+        }
+      ]
+    }
+  ]
+}
