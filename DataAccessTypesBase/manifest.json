@@ -7,7 +7,7 @@
   },
   "mapping": [
     {
-      "dataSetId": "DataSource ID goes here",
+      "dataSetId": "Dataset id goes here",
       "alias": "DAPersistent",
       "fields": [
         {

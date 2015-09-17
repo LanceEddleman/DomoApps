@@ -14,7 +14,7 @@ domo.get('/data/v1/DAPersistent?limit=2').then(function(DAPersistent){
   domo_table.append('<div class="full tbold"><span>Name</span><span>Age</span><span>Date</span><span>Id</span><span>Offset</span></div>');
 
   DAPersistent.forEach(function(item) {
-    domo_rowCount++;
+  	domo_rowCount++;
     console.log(item);
     domo_table.append('<div class="full"><span>' + item.name + ' </span><span>'+ item.age +'</span><span>'+ item.date +'</span><span> '+ item.id +'</span><span> '+ item.offset +'</span></div>');
   })
@@ -40,7 +40,7 @@ $.get('/data/v1/DAPersistent?limit=3', function( data ) { // base
   jquery_table.append('<div class="full tbold"><span>Name</span><span>Age</span><span>Date</span><span>Id</span><span>Offset</span></div>');
 
   data.forEach(function(item) {
-    jquery_rowCount++;
+  	jquery_rowCount++;
     console.log(item);
     jquery_table.append('<div class="full"><span>' + item.name + ' </span><span>'+ item.age +'</span><span>'+ item.date +'</span><span> '+ item.id +'</span><span> '+ item.offset +'</span></div>');
   })
@@ -84,8 +84,8 @@ xhr.send();
 //GET /domo/users/v1?includeDetails={t|f}&limit={int}&offset={int}
 /*
 $.get("/domo/users/v1?includeDetails=true&limit=100&offset=0",function( boo )
-  { 
-    console.log("Start boo: " + boo);
-  }
+	{ 
+		console.log("Start boo: " + boo);
+	}
 );
 */
