@@ -1,3 +1,5 @@
+/*
+
 // domo.js
 var domo_footer = $("#domo_footer");
 
@@ -57,8 +59,10 @@ var xhr_cBy = "By: Lance Eddleman"
 
 var xhr = new XMLHttpRequest();
 var xhr_rowCount = 0;
+
 xhr_table.append('<div class="full tbold xhrTitle">-- XHR --</div>');
 xhr_table.append('<div class="full tbold"><span>Name</span><span>Age</span><span>Date</span><span>Id</span><span>Offset</span></div>');
+
 xhr.open('GET', 'data/v1/DAPersistent?limit=4', true);
 console.log("XHR start (xhr.open) -------------------------");
 xhr.onload = function(e) {
@@ -71,13 +75,44 @@ xhr.onload = function(e) {
       xhr_rowCount++;
       totalAge += json[i].age
     }
-    console.log("Sum of Ages: " + totalAge);
+    console.log("XHR Sum of Ages: " + totalAge);
   }
   xhr_footer.text(xhr_toDay + " - " + xhr_cBy + " - " + "xhr rows " + xhr_rowCount);
   console.log("xhr row count: " + xhr_rowCount);
   console.log("XHR end -------------------------");
 };
 xhr.send();
+*/
+
+// ------------------------- OBOE data -------------------------
+var oboe_footer = $("#oboe_footer");
+var oboe_table = $("#oboe_table");
+var oboe_toDay = "Created: Sep 15, 2015";
+var oboe_cBy = "By: Lance Eddleman"
+
+var oboe_rowCount = 0;
+var oboe_totalAge = 0;
+var oboe_totalId = 0;
+
+  console.log("OBOE start (Oboe.js) -------------------------");
+  oboe('data/v1/DAPersistent?limit=3')
+    .node('!.*', function(obj) {
+        oboe_totalAge += obj.age;
+        oboe_totalId += obj.id + "-";
+        oboe_rowCount++;
+    })
+    .done(function() {
+        res.render('pagefooter', writeHtml);
+        console.log("Oboe Sum of Ages: " + oboe_totalAge);
+        console.log("Oboe IDs: " + oboe_totalId);
+
+        console.log("OBOE end -------------------------");
+        console.log("oboeRowCount: " + oboe_rowCount);
+    });
+
+
+
+
 
 
 // for new avatar
