@@ -1,5 +1,3 @@
-/*
-
 // domo.js
 var domo_footer = $("#domo_footer");
 
@@ -25,7 +23,6 @@ domo.get('/data/v1/DAPersistent?limit=2').then(function(DAPersistent){
   console.log(domo_rowCount);
   console.log("DOMO.js end ---------------------------");
 });
-
 
 // ------------------------- jQuery data -------------------------
 var jquery_footer = $("#jquery_footer");
@@ -82,9 +79,9 @@ xhr.onload = function(e) {
   console.log("XHR end -------------------------");
 };
 xhr.send();
-*/
 
 // ------------------------- OBOE data -------------------------
+// examples found here: http://oboejs.com/examples
 var oboe_footer = $("#oboe_footer");
 var oboe_table = $("#oboe_table");
 var oboe_toDay = "Created: Sep 15, 2015";
@@ -94,24 +91,50 @@ var oboe_rowCount = 0;
 var oboe_totalAge = 0;
 var oboe_totalId = 0;
 
-  console.log("OBOE start (Oboe.js) -------------------------");
+
+oboe_table.append('<div class="full tbold oboeTitle">-- OBOE --</div>');
+oboe_table.append('<div class="full tbold"><span>Name</span><span>Age</span><span>Date</span><span>Id</span><span>Offset</span></div>');
+
+
   oboe('data/v1/DAPersistent?limit=3')
     .node('!.*', function(obj) {
         oboe_totalAge += obj.age;
         oboe_totalId += obj.id + "-";
         oboe_rowCount++;
+        oboe_table.append('<div class="full"><span>' + obj.name + ' </span><span>'+ obj.age +'</span><span>'+ obj.date +'</span><span> '+ obj.id +'</span><span> '+ obj.offset +'</span></div>');
     })
     .done(function() {
-        res.render('pagefooter', writeHtml);
+
+        console.log("OBOE start (Oboe.js) -------------------------");
         console.log("Oboe Sum of Ages: " + oboe_totalAge);
         console.log("Oboe IDs: " + oboe_totalId);
-
-        console.log("OBOE end -------------------------");
         console.log("oboeRowCount: " + oboe_rowCount);
+        console.log("OBOE end -------------------------");
+        oboe_footer.text(oboe_toDay + " - " + oboe_cBy + " - " + "oboe rows " + oboe_rowCount);
     });
 
+/*
+// ------------------------- Angular data -------------------------
+var angular_footer = $("#oboe_footer");
+var angular_table = $("#oboe_table");
+var angular_toDay = "Created: Sep 15, 2015";
+var angular_cBy = "By: Lance Eddleman"
+
+var angular_rowCount = 0;
+var angular_totalAge = 0;
+var angular_totalId = 0;
 
 
+angular_table.append('<div class="full tbold oboeTitle">-- Angular --</div>');
+angular_table.append('<div class="full tbold"><span>Name</span><span>Age</span><span>Date</span><span>Id</span><span>Offset</span></div>');
+
+
+$http.get('data/v1/DAPersistent?limit=2').
+  success(function(data, status, headers, config) {
+    for(var i = 0; i < data.length; i++)
+      $scope.salesSum += data[i].amount;
+  });
+*/
 
 
 
