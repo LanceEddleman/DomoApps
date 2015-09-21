@@ -51,7 +51,7 @@ $.get('/data/v1/DAPersistent?limit=3', function( data ) { // base
 // ------------------------- XHR data -------------------------
 var xhr_footer = $("#xhr_footer");
 var xhr_table = $("#xhr_table");
-var xhr_toDay = "Created: Sep 15, 2015";
+var xhr_toDay = "Created: Sep 16, 2015";
 var xhr_cBy = "By: Lance Eddleman"
 
 var xhr = new XMLHttpRequest();
@@ -84,7 +84,7 @@ xhr.send();
 // examples found here: http://oboejs.com/examples
 var oboe_footer = $("#oboe_footer");
 var oboe_table = $("#oboe_table");
-var oboe_toDay = "Created: Sep 15, 2015";
+var oboe_toDay = "Created: Sep 18, 2015";
 var oboe_cBy = "By: Lance Eddleman"
 
 var oboe_rowCount = 0;

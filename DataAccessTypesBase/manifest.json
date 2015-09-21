@@ -1,5 +1,5 @@
 {
-  "name": "DataAccess2",
+  "name": "DataAccessConnectors2",
   "version": "1.0.0",
   "size": {
     "width": 5,
@@ -7,7 +7,7 @@
   },
   "mapping": [
     {
-      "dataSetId": " -- Add datasource ID here -- ",
+      "dataSetId": " Add datasource ID here",
       "alias": "DAPersistent",
       "fields": [
         {
