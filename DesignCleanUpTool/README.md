@@ -37,7 +37,7 @@ Design Clean Up Tool Options
 -----------------------------
 This tool gives you 3 different options for deleting designs off of your server:
 
-##Option 1:##
+###Option 1:###
 Shows you your list of designs on that server.
 Then enter the line numbers of your design you wish to delete
 Then enter 'X' once you're finished selecting.
