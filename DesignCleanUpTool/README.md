@@ -39,8 +39,8 @@ This tool gives you 3 different options for deleting designs off of your server:
 
 ####Option 1:###
 Shows you your list of designs on that server.
-Enter the line numbers of your design you wish to delete.
-Then enter 'X' once you're finished selecting.
+Enter the line numbers of the designs you wish to delete.
+Enter 'X' once you're finished selecting.
 
 The tool will delete only the designs you selected, even if they are attached to cards.
 
