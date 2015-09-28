@@ -1,9 +1,9 @@
 -----------------------------
-DomoApps Design Clean Up Tool
+About DomoApps Design Clean Up Tool
 ------------------------------
 Version: 1.0.0
 
-Welcome to the DomoApps Design Clean Up Tool
+Welcome to the DomoApps Design Clean Up Tool!
 
 This program was designed to bulk delete old and duplicate designs on a server.
 
@@ -15,13 +15,21 @@ Please read the following information.
 Getting Started
 ---------------
 Open terminal
+
 Navigate to the scripts folder in the folder structure for this tool
+
 -- exmaple: cd Users/me/Desktop/DesignCleanUpTool/scripts
+
 Run the domoLogin.sh bash script from your terminal
+
 -- bash domoLogin.sh
+
 Login to your server
+
 Select 0 to continue to the clean up tool
+
 Select 1 to retry your Login
+
 Select 2 to quit
 
 -----------------------------
