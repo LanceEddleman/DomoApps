@@ -4,9 +4,12 @@ DomoApps Design Clean Up Tool
 Version: 1.0.0
 
 Welcome to the DomoApps Design Clean Up Tool
-This program was designed to bulk delete old and duplicate designs on a server
+
+This program was designed to bulk delete old and duplicate designs on a server.
+
 This program runs on the terminal.
-Please read the following information
+
+Please read the following information.
 
 ---------------
 Getting Started
