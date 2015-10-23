@@ -1,0 +1,37 @@
+{
+  "name": "DataAccessConnectors2",
+  "version": "1.0.0",
+  "size": {
+    "width": 5,
+    "height": 2
+  },
+  "mapping": [
+    {
+      "dataSetId": "61db8998-8426-4e8c-a78d-ce8437b1d8b7",
+      "alias": "DAPersistent",
+      "fields": [
+        {
+          "alias": "name",
+          "columnName": "Name"
+        },
+        {
+          "alias": "age",
+          "columnName": "Age"
+        },
+        {
+          "alias": "offset",
+          "columnName": "Offset"
+        },
+        {
+          "alias": "id",
+          "columnName": "ID"
+        },
+        {
+          "alias": "date",
+          "columnName": "Date"
+        }
+      ]
+    }
+  ],
+  "id": "4840eea6-f0f1-4c41-b0de-f7183c93e2e9"
+}
