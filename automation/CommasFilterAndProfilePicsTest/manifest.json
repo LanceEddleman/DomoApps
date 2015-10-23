@@ -1,0 +1,29 @@
+{
+  "name": "PersistentCommaFilterAvatarTest",
+  "version": "0.0.1",
+  "mapping": [
+    {
+      "alias": "DAj4",
+      "fields": [
+        {
+          "alias": "name",
+          "columnName": "Item"
+        },
+        {
+          "alias": "age",
+          "columnName": "Value"
+        },
+        {
+          "alias": "id",
+          "columnName": "Strings"
+        }
+      ],
+      "dataSetId": "8ae52e05-cb25-40b0-a417-dde9b6695121"
+    }
+  ],
+  "size": {
+    "width": 5,
+    "height": 2.5
+  },
+  "id": "3b05a4f8-5ff3-489d-959b-f3860e714549"
+}
