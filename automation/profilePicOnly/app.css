@@ -1,0 +1,22 @@
+body{
+  margin-top: 50px;
+  text-align: center;
+  font-family: sans-serif;
+  background-color: WhiteSmoke;
+
+}
+.green{
+  color: green;
+}
+.red{
+  color: red;
+}
+#avatar{
+  padding-top: 10px;
+  width: 50%;
+  padding-bottom: 10px;
+
+}
+.brd{
+  border: 10px solid black;
+}
