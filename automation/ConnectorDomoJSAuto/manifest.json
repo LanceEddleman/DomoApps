@@ -1,14 +1,14 @@
 {
-  "name": "DataAccessConnectors2",
-  "version": "1.0.0",
+  "name": "ConnectorDomoJSAuto",
+  "version": "1.0.1",
   "size": {
-    "width": 5,
-    "height": 2
+    "width": 3,
+    "height": 1.15
   },
   "mapping": [
     {
       "dataSetId": "61db8998-8426-4e8c-a78d-ce8437b1d8b7",
-      "alias": "DAPersistent",
+      "alias": "ConnectorDomoJSAuto",
       "fields": [
         {
           "alias": "name",
@@ -33,5 +33,5 @@
       ]
     }
   ],
-  "id": "4840eea6-f0f1-4c41-b0de-f7183c93e2e9"
+  "id": "9aa46650-c3b4-4b2a-bd6f-dacaf762d580"
 }
