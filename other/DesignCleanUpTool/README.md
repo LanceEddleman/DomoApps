@@ -1,7 +1,7 @@
 -----------------------------
 About DomoApps Design Clean Up Tool
 ------------------------------
-Version: 1.0.0
+Version: 1.2.0
 
 Welcome to the DomoApps Design Clean Up Tool!
 
