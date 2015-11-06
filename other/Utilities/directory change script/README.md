@@ -22,7 +22,7 @@ To use the tool:
 
       1. Open a new terminal window
             This should automatically put you in your main user directory where
-          you saved the script
+            you saved the script
 
       2. Run the following command:
             . domoCd.sh
