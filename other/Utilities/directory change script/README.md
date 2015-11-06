@@ -1,7 +1,7 @@
 ---------------------------------
 The Snappy Directory Change Tool
 ---------------------------------
-Want to change DomoApp directories *and* login to that server all in a snap?Well this tool is the tool for you!
+Want to change DomoApp directories *and* login to that server all in a snap? Well this tool is the tool for you!
 
 ---------------
 Getting Started
