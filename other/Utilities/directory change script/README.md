@@ -19,6 +19,7 @@ Using the Tool
 Now that you are all set up you can use this script to change directories and
 login to your server
 To use the tool:
+
       1. Open a new terminal window
             This should automatically put you in your main user directory where
           you saved the script
