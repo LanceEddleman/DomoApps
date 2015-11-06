@@ -39,6 +39,6 @@ Notes
 ------
 This script assumes that your DomoApps folder structure looks like this:
 
-           Users/yourname/domoapps
-           
+    * Users/yourname/domoapps
+
 Feel free to modify the script if this is not the case for your folder structure
