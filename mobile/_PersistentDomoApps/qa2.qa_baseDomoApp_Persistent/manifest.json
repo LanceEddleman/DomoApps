@@ -1,0 +1,37 @@
+{
+  "name": "Aug,7 2015",
+  "version": "0.0.1",
+  "mapping": [
+    {
+      "alias": "DAPD1",
+      "fields": [
+        {
+          "alias": "name",
+          "columnName": "Name"
+        },
+        {
+          "alias": "age",
+          "columnName": "Age"
+        },
+        {
+          "alias": "offset",
+          "columnName": "Offset"
+        },
+        {
+          "alias": "id",
+          "columnName": "ID"
+        },
+        {
+          "alias": "date",
+          "columnName": "Date"
+        }
+      ],
+      "dataSetId": "61db8998-8426-4e8c-a78d-ce8437b1d8b7"
+    }
+  ],
+  "size": {
+    "width": 5,
+    "height": 2
+  },
+  "id": "758c51f7-50e6-44b6-beff-243608be01ab"
+}
