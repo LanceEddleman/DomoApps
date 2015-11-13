@@ -1,0 +1,37 @@
+{
+  "name": "ConnectorOboe",
+  "version": "1.0.1",
+  "size": {
+    "width": 3,
+    "height": 1.15
+  },
+  "mapping": [
+    {
+      "dataSetId": "61db8998-8426-4e8c-a78d-ce8437b1d8b7",
+      "alias": "ConnectorOboe",
+      "fields": [
+        {
+          "alias": "name",
+          "columnName": "Name"
+        },
+        {
+          "alias": "age",
+          "columnName": "Age"
+        },
+        {
+          "alias": "offset",
+          "columnName": "Offset"
+        },
+        {
+          "alias": "id",
+          "columnName": "ID"
+        },
+        {
+          "alias": "date",
+          "columnName": "Date"
+        }
+      ]
+    }
+  ],
+  "id": "2f73a189-01ac-4ff3-9048-9bb742712e04"
+}
