@@ -1,0 +1,240 @@
+.bgc{
+	background-color:white;
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	overflow: auto;
+	padding: 0px;
+	margin: 0px;
+}
+
+html{
+	padding: 0px;
+	background: white;
+}
+
+#table {
+	position: absolute;
+	top: 230px;
+	width: calc(100% - 10px);
+	text-align: center;
+	background-color: transparent;
+//	background-color: red;
+	overflow-y: auto;
+	z-index: 100;
+	height: 305px;
+}
+
+table {
+//	align: center;
+}
+
+#utTitle {
+	position: absolute;
+	width: calc(100% - 10px);
+//	width: 100%;
+	text-align: center;
+	background-color: transparent;
+	z-index: 100;
+	height: 200px;
+}
+
+#uTable {
+	position: absolute;
+//	width: calc(100% - 20px);
+	width: 100%;
+	top: 28px;
+	text-align: center;
+	background-color: transparent;
+	overflow-y: auto;
+	z-index: 100;
+	height: 275px;
+//	border: 1px solid black;
+}
+
+#content {
+	border-style: solid;
+	border-width: 5px 5px 5px 5px;
+	border-color: black;
+	height: 455px;
+	width: calc(100% - 10px);
+}
+.avatar{
+	position: absolute;
+	float: left;
+	top: 0px;
+	z-index: 0;
+}
+
+#selection{
+	position: absolute;
+	top: 80px;
+	float: left;
+	z-index: 5;
+}
+
+span {
+	display: inline-block;
+	width: 200px;
+	text-align: center;
+}
+
+#title{
+	text-align: center;
+	font-size: 30px;
+	font-family: fantasy;
+	color: white !important;
+	background-color:red;
+	width: calc(100% - 10px);
+	height: 65px;
+	margin: 0 auto;
+	border:5px solid black;
+}
+
+.build, .logo, .date{
+	line-height: 65px;
+	float:right;
+	width:33%;
+	height: 105px;
+	vertical-align: middle;
+}
+
+div {
+	width: 100%;
+	overflow: hidden;
+}
+
+p {
+	width: 100%;
+	text-align:center;
+}
+
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+
+/* User Labels */
+#userLabel{
+	position: absolute;
+	top: 90px;
+	z-index: 5;
+	width: 100%;
+	display: block;
+//	background-color: yellow;
+}
+
+.ulWidth {
+	float: left;
+	width: 350px;
+	padding-left: 50px;
+	line-height: 30px;
+//	background-color: red;
+}
+.urWidth {
+	float: right;
+	width: 190px;
+	line-height: 30px;
+//	background-color: blue;
+}
+
+.op {
+	color: #ffffff;
+    text-shadow: 2px 2px 1px #000000;
+}
+.opT {
+	color: #000000;
+    text-shadow: 2px 2px 1px #ffffff;
+}
+
+.opE {
+	color: #b391ca;
+    text-shadow: 2px 1px 1px #000000;
+}
+.opO {
+	color: #99ccee;
+    text-shadow: 2px 1px 1px #000000;
+}
+
+.full {
+	width: 100%;
+//	text-align: center;
+}
+
+.tbold {
+	font-size: 24px;
+	font-weight: bolder;
+}
+
+.migrate {
+	color: white;
+}
+
+.avatar{
+	 width: 60px;
+	 height: 60px;
+}
+
+/* Navigation Start */
+#navItem {
+   width:100%;
+}
+#navItem ul {
+   clear:left;
+   float:left;
+   list-style:none;
+   margin:0;
+   padding:0;
+   text-align:center;
+}
+#navItem ul li {
+   display:block;
+   float:left;
+   list-style:none;
+   margin:0;
+   padding:0;
+   position:relative;
+}
+#navItem ul li a button{
+   display:block;
+   margin:0 0 0 1px;
+   padding:3px 10px;
+   background:#ddd;
+   color:#000;
+   text-decoration:none;
+   line-height:1.3em;
+}
+#navItem ul li button a:hover {
+}
+#navItem ul li button a.active,
+#navItem ul li button a.active:hover {
+   color:#fff;
+   background:#000;
+   font-weight:bold;
+}
+
+.tabrow li button {
+  text-shadow: 0.5px 0.5px #FFF;
+  margin: 0px;
+  padding: 0px;
+}
+
+.fbuttons { }
+
+.buttonM {
+	margin-left: 20px;
+}
+
+button {
+	width: 100px;
+	border : 0px;
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px;
+	border-radius:7px;
+	font-size: 16px;
+}
+/* Navigation End */
