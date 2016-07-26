@@ -1,0 +1,324 @@
+body{
+	overflow: auto;
+	padding: 0px;
+	margin: 0px;
+}
+
+html{
+	padding: 0px;
+	background: white;
+}
+
+div {
+	width: 100%;
+	overflow: hidden;
+}
+
+p {
+	width: 100%;
+	text-align:center;
+}
+
+table {
+
+}
+
+span {
+	display: inline-block;
+	text-align: center;
+}
+
+.bgc{
+	background-color:white;
+	margin: 0px;
+	padding: 0px;
+}
+
+#table {
+	position: absolute;
+	top: 230px;
+	width: calc(100% - 10px);
+	text-align: center;
+	background-color: transparent;
+//	background-color: red;
+	overflow-y: auto;
+	z-index: 100;
+	height: 280px;
+}
+
+#utTitle {
+	position: absolute;
+	width: calc(100% - 10px);
+//	width: 100%;
+	text-align: center;
+	background-color: transparent;
+	z-index: 100;
+	height: 200px;
+}
+
+#uTable {
+	position: absolute;
+//	width: calc(100% - 20px);
+	width: 100%;
+	top: 28px;
+	text-align: center;
+	background-color: transparent;
+	overflow-y: auto;
+	z-index: 100;
+	height: 250px;
+//	border: 1px solid black;
+}
+
+#content {
+	border-style: solid;
+	border-width: 5px 5px 5px 5px;
+	border-color: black;
+	height: 455px;
+	width: calc(100% - 10px);
+}
+
+#selection{
+	position: absolute;
+	top: 80px;
+	float: left;
+	z-index: 5;
+}
+
+.dName {
+	width: 200px;
+	text-align: center;
+}
+.dID {
+	width: 150px;
+	text-align: center;
+}
+
+.dName:hover, .dID:hover {
+	color: #ffffff;
+	font-weight: bold;
+}
+
+#title{
+	text-align: center;
+	font-size: 30px;
+	font-family: fantasy;
+	color: white !important;
+	background-color:red;
+	width: calc(100% - 10px);
+	height: 65px;
+	margin: 0 auto;
+	border:5px solid black;
+}
+
+.build, .logo, .date{
+	line-height: 65px;
+	float:right;
+	width:33%;
+	height: 65px;
+}
+
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+
+/* User Labels */
+#userLabel{
+	position: absolute;
+	top: 80px;
+	width: 100%;
+	z-index: inherit;
+	display: block;
+//	background-color: yellow;
+}
+
+.uCells {
+	float: left;
+	height: 30px;
+	width: 50px;
+	line-height: 30px;
+	padding-left: 15px;
+	text-align: right;
+//	background-color: green;
+	text-overflow: ellipsis;
+}
+
+.ulWidth {
+	float: left;
+	height: 30px;
+	width: 290px;
+	line-height: 30px;
+	padding-left: 5px;
+//	background-color: red;
+	text-overflow: ellipsis;
+}
+.urWidth {
+	float: right;
+	height: 30px;
+	width: 170px;
+	line-height: 30px;
+	padding-left: 5px;
+//	background-color: blue;
+	text-overflow: ellipsis;
+}
+
+.op {
+	color: #000000;
+	font-weight: bold;
+	background: rgba(255,255,255,0.3);
+}
+.opT {
+	color: #ffffff;
+	background: rgba(0,0,0,0.3)
+}
+
+.opE {
+	color: #387b26;
+    font-weight: bold;
+}
+.opO {
+	color: #31689b;
+    font-weight: bold;
+}
+
+.uSort, .uLink {
+	width: 30px;
+	padding-left: 10px;
+}
+
+.full {
+	width: 100%;
+
+}
+
+.fullH{
+	background: rgba(255,255,255,0.2);
+}
+
+.fullH:hover{
+	background: rgba(0,0,0,0.3);
+	cursor: pointer;
+	color: #ffffff;
+}
+
+.tbold {
+	font-size: 24px;
+	font-weight: bolder;
+}
+
+.migrate {
+	color: white;
+}
+
+.error {
+	color: red;
+
+}
+
+.avatar{
+	 width: 60px;
+	 height: 60px;
+	 margin-top: 2px;
+}
+
+#totalUsers {
+	position: absolute;
+	top: 68px;
+	width: calc(100% - 10px);
+	text-align: right;
+	z-index: 300;
+	font-size: 9pt;
+	color: #ffffff;
+}
+
+#viewFilters {
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+	width: calc(100% - 10px);
+	height: 25px;
+	line-height: 25px;
+	// text-align: right;
+	z-index: 300;
+	font-size: 10pt;
+	color: #ffffff;
+	background-color: red;
+}
+
+.filters {
+	position: absolute;
+	top: 0px;
+	left: 20px;
+}
+
+.testFilters {
+	position: absolute;
+	top: 0px;
+	left: 220px;
+}
+
+/* Navigation Start */
+#navItem {
+   width:100%;
+}
+#navItem ul {
+   clear:left;
+   float:left;
+   list-style:none;
+   margin:0;
+   padding:0;
+   text-align:center;
+}
+#navItem ul li {
+   display:block;
+   float:left;
+   list-style:none;
+   margin:0;
+   padding:0;
+   position:relative;
+}
+#navItem ul li a button{
+   display:block;
+   margin:0 0 0 1px;
+   padding:3px 10px;
+   background:#ddd;
+   color:#000;
+   text-decoration:none;
+   line-height:1.3em;
+}
+#navItem ul li button a:hover {
+}
+#navItem ul li button a.active,
+#navItem ul li button a.active:hover {
+   color:#fff;
+   background:#000;
+   font-weight:bold;
+}
+
+.tabrow li button {
+  text-shadow: 0.5px 0.5px #FFF;
+  margin: 0px;
+  padding: 0px;
+}
+
+.fbuttons { }
+
+.buttonM {
+	margin-left: 20px;
+}
+
+button {
+	width: 100px;
+	border : 0px;
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px;
+	border-radius:7px;
+	font-size: 16px;
+}
+/* Navigation End */
+
+/* Colors */
+.pink {color:brown;}
+.lime{color: orange;}
