@@ -36,13 +36,10 @@
 	var uNum = 0;
 	var nameFound = '';
 	var totalUsers = 0;
+	var userList = '';
+	var userTrap = [];
 	var userInfo = [];
-	var illegalName = ' -- Illegal Characters Found';
-	var shortName = ' -- Name to Short';
-	var notDefined = 'Not Definied';
-	var bogusEmail = ' -- Bogus Email';
-	var notSet = 'Not Set';
-
+	var validFilteredUsers = [];
 
 // no longer used
 // var oldUser = "Ayne Delgado";
@@ -51,7 +48,7 @@
 // Display User
 	function displayUser(defUser,userInfo) {
 		userClear();
-		console.log('Current User: ' + userInfo[0] + ' : ' + defUser + ' : ' + 'userList:',userInfo);
+		console.log('Current User: ' + userInfo[7] + ' : ' + defUser + ' : ' + 'userList:',userInfo);
 		if (defUser === dName) {
 			myPic = dAvatar;
 			avatar.attr("src",myPic);
@@ -133,15 +130,15 @@
 	}
 
 // Get Users
-	function getUsers(bob,filter) {
-		domo.get('/domo/users/v1?includeDetails=true&limit=10').then(function (users){
+	function getUsers() {
+		domo.get('/domo/users/v1?includeDetails=true&limit=150').then(function (users){
 		//domo.get('/domo/users/v1?includeDetails=true&limit=9999').then(function (users){
 			myUser = defUser;
 			uNum = 1;
 			table.append($uTableTitle);	// Adds table titles
 			// console.log("List user function", users);
 
-			// Sort by NAME ========== WORKING
+			// Sort by display name WORKING
 				users.sort(function(a, b){
 					var nameA=a.displayName.toLowerCase(), nameB=b.displayName.toLowerCase();
 					if (nameA < nameB) //sort string ascending
@@ -151,54 +148,50 @@
 					return 0; //default return value (no sorting)
 					});
 
-			// if (filter === true) {
-				// 	// filtered Users WORKING  =======================================================
-				// 		console.log('Filtered Users');
-				// 			var filCount = 1;
-				// 			for (i = 0; i < users.length; i++) {
-				// 				var fUser = users[i].displayName;
-				// 				var fiUser = fUser.toLowerCase();
-				// 					console.log("lowercase: " + fiUser);
-				// 				var filUser = fiUser.includes("user");
-				// 					console.log("filUser found at: " + fiUser);
-				// 				if(filUser === false ) {
-				// 					console.log("for loop: " + fUser);
-				// 					filCount = filCount +1;
-				// 				}
-				// 				else {
-				// 					console.log("for loop: " + fUser);
-				// 				}
-				// 			}
-				// 			console.log("total filtered users: " + filCount);
+			// // filtered Users WORKING  =======================================================
+				// 	var filCount = 1;
+				// 	for (i = 0; i < users.length; i++) {
+				// 		var fUser = users[i].displayName;
+				// 		var fiUser = fUser.toLowerCase();
+				// 			// console.log("lowercase: " + fiUser);
+				// 		var filUser = fiUser.includes("user");
+				// 			// console.log("filUser found at: " + fiUser);
+				// 		if(filUser === false ) {
+				// 			console.log("for loop: " + fUser);
+				// 			filCount = filCount +1;
+				// 		}
+				// 		else {
+				// 			// console.log("for loop: " + fUser);
+				// 		}
 				// 	}
+				// 	console.log("total filtered users: " + filCount);
 
 			// Create and Store user as array
 			users.forEach(function(item,uNum)
 			{
-				// var testName = item.displayName;
-				var displayName = item.displayName;
-				var badCharFound = displayName.indexOf('<');
+				var illegalName = ' -- Illegal Characters Found';
+				var shortName = ' -- Name to Short';
+				var notDefined = 'Not Definied';
+				var bogusEmail = ' -- Bogus Email';
+				var notSet = 'Not Set';
+
+				var testName = item.displayName;
+					console.log("testName length: " + testName.length);
+				var badCharFound = testName.indexOf('<');
+					if (badCharFound !== -1) {console.log("BAD Found: " + testName + "badChar: " + badCharFound);}
+				var displayName = testName;
 				var displayID = item.id;
 				var myPic = item.avatarKey;
 				var displayTitle = item.detail.title;
 				var displayRole = item.role;
 				var displayPhoneNumber = item.detail.phoneNumber;
 				var displayEmail = item.detail.email;
-				var userInfo = [{}];
 
-					if (displayName.length < 4) {
-						displayName = shortName;
-						userInfo[0] = displayName;
-						console.log("displayName length: " + displayName.length);
-					}
-					else if (badCharFound !== -1) {
-						console.log("badName found: " + displayName + "badChar: " + badCharFound);
-						displayName = illegalName;
-						userInfo[0] = displayName;
-					}
-					else {
-						userInfo[0] = displayName;
-					}
+				var userInfo = [];
+					if (testName.length < 4) {userInfo[0] = shortName;}
+					else if (badCharFound !== -1) {console.log("badName found: " + displayName + "badChar: " + badCharFound);
+						userInfo[0] = illegalName;}
+					else {userInfo[0] = testName;}
 
 					if (displayRole === undefined) {userInfo[1] = notDefined;}
 					else {userInfo[1] = displayRole;}
@@ -230,10 +223,8 @@
 					}
 					userInfo[7] = uNum;
 
-					// if(true) {userInfo.push({displayName,displayRole,displayID,myPic,displayTitle,displayPhoneNumber,displayEmail,uNum});}
-
 				// display User List
-					if (displayName.length >= 4){
+					if (testName.length >= 4){
 						if (badCharFound > -1) {
 							displayName = illegalName;
 							var $eUserBChar = $('<div id="user' + uNum + '" class="full fullH"><span class="left dName error">'+ displayName +'</span><span class="right dID error">'+ displayID +'</span></div>');
@@ -249,7 +240,7 @@
 							uTable.append($eUserE);
 							uFound = uNum;
 							$eUserE.on("click", function(){displayUser(displayName,userInfo);});
-							console.log("Even Index Number: " + uNum + ": " + displayName);
+							console.log("Even Index Number: " + uNum + ": " + testName);
 							// console.log("pos:" + uNum);
 						}
 						else {
@@ -257,171 +248,133 @@
 							uTable.append($eUserO);
 							uFound = uNum;
 							$eUserO.on("click", function(){displayUser(displayName,userInfo);});
-							console.log("user index: " + uNum + ": " + displayName);
+							console.log("user index: " + uNum + ": " + testName);
 							// console.log("pos:" + uNum);
 						}
 					}
-					else { // (displayName.length < 4 || displayName === undefined || displayName === "")
+					else { // (testName.length < 4 || testName === undefined || testName === "")
 						displayName = shortName;
 						var $eUserShort = $('<div id="user' + uNum + '" class="full fullH"><span class="left dName error">'+ displayName +'</span><span class="right dID error">'+ displayID +'</span></div>');
 						uTable.append($eUserShort);
 						uFound = uNum;
-						$eUserShort.on("click", function(){displayUser(displayName,userInfo);});
-								console.log("Display <= 3: " + uNum + ": " + displayName + ": " + shortName);
+						$eUserShort.on("click", function(){displayUser(testName,userInfo);});
+								console.log("Display <= 3: " + uNum + ": " + testName + ": " + shortName);
 								console.log("pos:" + uNum);
 					}
-				activeUser = displayName;
+
+				activeUser = testName;
 				totalUsers = uNum + 1;
 			});
 			console.log('total users: ' + totalUsers);
 			totalUserCount.append('Users: ' + totalUsers);
-			console.log(userInfo);
 			displayFilters(users);
-			filterUsers();
 		});
 	}
 
-// clear user fields, used to display selected user
-	function userClear(){
-		document.getElementById("uName").innerHTML = "";
-		document.getElementById("uRole").innerHTML = "";
-		document.getElementById("uEmail").innerHTML = "";
-		document.getElementById("uID").innerHTML = "";
-		document.getElementById("uTitle").innerHTML = "";
-		document.getElementById("uPhone").innerHTML = "";
-	}
+	// clear user fields, used to display selected user
+		function userClear(){
+			document.getElementById("uName").innerHTML = "";
+			document.getElementById("uRole").innerHTML = "";
+			document.getElementById("uEmail").innerHTML = "";
+			document.getElementById("uID").innerHTML = "";
+			document.getElementById("uTitle").innerHTML = "";
+			document.getElementById("uPhone").innerHTML = "";
+		}
 
 
+		// filter1 = 'user';
+		// filter2 = 'test';
+		// filter3 = [1,2,3,4,5,6,7,8,9,0];
 		badFilters = ['<','user','test',1,2,3,4,5,6,7,8,9,0];
 
-// Displays the filter option
-	function displayFilters(list,userInfoList) {
-		var $showFilters = $('<div id="Filters" class="full fullH left"><span class="filters">Filter Bogus Names</span></div>');
-		viewFilters.append($showFilters);
-		$showFilters.on("click", function(){filterBogus(badFilters,list);});
-	}
+	// Displays the filter option
+		function displayFilters(list,userInfoList) {
+			var $showFilters = $('<div id="Filters" class="full fullH left"><span class="filters">Filter Bogus Names</span></div>');
+			viewFilters.append($showFilters);
+			// $showFilters.on("click", function(){filterBogus(filter1,filter2,filter3,badFilters,list);});
+			$showFilters.on("click", function(){filterBogus(badFilters,list);});
+		}
 
-// Displays the filter option
-	function filterUsers() {
-		var $showFilters = $('<div id="TestFilters" class="full fullH left"><span class="testFilters">Test Filter</span></div>');
-		viewFilters.append($showFilters);
-		$showFilters.on("click", function(){getUsers(badFilters,true);});
-	}
-
-
-// Run Filters
 	function filterBogus(t4,tUL) {
-		var vuIndex = 0;
-		var vuNewIndex = 0;
 		var filCount = 0;
-		var vuName = '';
-		var vuID = '';
-		var vuPic = '';
-		var vuRole = '';
-		var vuTitle = '';
-		var vuPhoneNumber = '';
-		var vuEmail = '';
-		var vFU = [];
-			console.log('filters: ' + t4);
-			console.log("");
-			console.log('userList: ' + tUL);
-			console.log('filteredList:');
-			document.getElementById("uTable").innerHTML = "";
+		console.log('filters: ' + t4);
+		// console.log('filter1: ' + t1 + ', filter2: ' + t2 + ', filter3: ' + t3 + ', filter4: ' + t4);
+		console.log("");
+		console.log(tUL);
 
-		// Build new array from all users
+		// console.log("in FilterBogus" + users);
 		for (i = 0; i < tUL.length; i++) {
 			var fUser = tUL[i].displayName.toLowerCase();
 
-			vuIndex = i;
-			vuNewIndex = filCount;
-			vuName = tUL[i].displayName;
-			vuID = tUL[i].id;
-			vuPic = tUL[i].avatarKey;
-			vuRole = tUL[i].role;
-			vuTitle = tUL[i].detail.title;
-			vuPhoneNumber = tUL[i].detail.phoneNumber;
-			vuEmail = tUL[i].detail.email;
+			var vuIndex = i;
+			var vuNewIndex = filCount;
+			var vuName = tUL[i].displayName;
+			var vuID = tUL[i].id;
+			var vuPic = tUL[i].avatarKey;
+			var vuRole = tUL[i].role;
+			if (tUL.detail !== undefined) {
+				var vuTitle = tUL[i].details.title;
+				var vuPhoneNumber = tUL[i].details.phoneNumber;
+				var vuEmail = tUL[i].details.email;
+			}
 
-				if (vuPic === undefined)								// Avatar
-				{
-					pAvatar = '/images/genericAvatar/g' + (Math.floor(Math.random() * 7) + 1) + '.png';
-					vuPic = pAvatar;
-				}
-				else {vuPic = vuPic;}
-				if (vuTitle === undefined || vuTitle === "")			// Title
-				{
-					vuTitle = notSet;
-				}
-				else {vuTitle = vuTitle;}
-				if (vuPhoneNumber === undefined || vuPhoneNumber === "")// Phone
-				{
-					vuPhoneNumber = notSet;
-				}
-				else {vuPhoneNumber = vuPhoneNumber;}
-				if (vuEmail === undefined || vuEmail === "")			// Email
-				{
-					vuEmail = notSet;
-				}
-				else {vuEmail = vuEmail;}
-
-			// Test new object array against filters
+			// var fiUser = fUser.toLowerCase();
+			//var f1User = fUser.includes(t1);
+				// console.log("has 'user' : " + f1User);
+			//var f2User = fUser.includes(t2);
+				// console.log("has 'test' : " + f2User);
+			//var f3User = fUser.includes(t3);
+				//console.log('user : ' + f1User + ', test : ' + f2User + ', 1 : ' + f3User);
 			var f4User = false;
-			for(j = 0; j < t4.length; j++) {
-				if(fUser.indexOf(t4[j]) !== -1) {
+//			console.log("user: " + fUser);
+//			console.log('T4 length' + t4.length);
+			for(c = 0; c < t4.length; c++) {
+//				console.log('starting T4 loop');
+				// var badCharFound = testName.indexOf('<');
+				// if (badCharFound !== -1) {console.log("BAD Found: " + testName + "badChar: " + badCharFound);}
+//				console.log('test item: ' + c + ' : ' + t4[c] + ' : ' +  fUser.indexOf(t4[c]));
+				if(fUser.indexOf(t4[c]) !== -1) {
 						f4User = true;
 						break;
+						// console.log("removed by" + f4User[c] + ' : ' + fUser);
+						// console.log('T4 length' + t4.length);
+						// for(c = 0; c < t4.length; c++) {
+						// 	if(f4User[c] === true) {console.log("removed by" + f4User[c] + ' : ' + fUser);
+						// 	}
+						// }
 					}
 				else {
 					f4User = false;
 					vuIndex = i;
 				}
 			}
-			var className = '';
-			if(f4User === true) {vFU.push({vuName,vuRole,vuID,vuPic,vuTitle,vuPhoneNumber,vuEmail,vuIndex,vuNewIndex})}
-			else if (vuNewIndex % 2 === 0) {
-				classname = 'full fullH opO';
-			// remove
-				// console.log("valid name: ========================== index:" + vuIndex + ', name: ' + fUser + ', ID: ' + vuID + ', Role: ' + vuRole + ', Title: ' + vuTitle + ', Phone: ' + vuPhoneNumber + ', Email: ' + vuEmail);
-				// vFU.push({vuName,vuRole,vuID,vuPic,vuTitle,vuPhoneNumber,vuEmail,vuIndex,vuNewIndex});
-				// filCount = filCount + 1;
-				// var $eUserShort = $('<div id="fUser' + vuIndex + '" class="full fullH opE"><span class="left dName">'+ vuName +'</span><span class="right dID">'+ vuID +'</span></div>');
-				// uTable.append($eUserShort);
-				// // uFound = uNum;
-				// $eUserShort.on("click", function(){displayUser(vuName,vFU[vuIndex]);});
-		 	}
+
+			// if(f1User === true) {//console.log("removed 'user' : " + fUser);
+			// }
+			// else if(f2User === true) {//console.log("removed 'test' : " + fUser);
+			// }
+			// else if(f3User === true) {//console.log("removed number '1' : " + fUser);
+			// }
+			if(f4User === true) {//console.log("removed number '1' : " + fUser);
+			}
 			else {
-				classname = 'full fullH opO';
-			// remove
-				// console.log("valid name: ========================== index:" + vuIndex + ', name: ' + fUser + ', ID: ' + vuID + ', Role: ' + vuRole + ', Title: ' + vuTitle + ', Phone: ' + vuPhoneNumber + ', Email: ' + vuEmail);
-				// vFU.push({vuName,vuRole,vuID,vuPic,vuTitle,vuPhoneNumber,vuEmail,vuIndex,vuNewIndex});
-				// filCount = filCount + 1;
-				// var $eUserShort = $('<div id="fUser' + vuIndex + '" class="full fullH opO"><span class="left dName">'+ vuName +'</span><span class="right dID">'+ vuID +'</span></div>');
-				// uTable.append($eUserShort);
-				// // uFound = uNum;
-				// $eUserShort.on("click", function(){displayUser(vuName,vFU[vuIndex]);});
-		 	}
-		 	// write user list
-				console.log("valid name: ========================== index:" + vuIndex + ', name: ' + fUser + ', ID: ' + vuID + ', Role: ' + vuRole + ', Title: ' + vuTitle + ', Phone: ' + vuPhoneNumber + ', Email: ' + vuEmail);
-				vFU.push({vuName,vuRole,vuID,vuPic,vuTitle,vuPhoneNumber,vuEmail,vuIndex,vuNewIndex});
+				console.log("valid name: ========================== " + fUser + "baseIndex: " + vuIndex);
 				filCount = filCount + 1;
-				var $eUserShort = $('<div id="fUser' + vuIndex + '" class="' + className + '"><span class="left dName">'+ vuName +'</span><span class="right dID">'+ vuID +'</span></div>');
-				uTable.append($eUserShort);
-				// uFound = uNum;
-				$eUserShort.on("click", function(){displayUser(vuName,vFU[vuIndex]);});
+				//console.log("");
 
-
-		 	// use this for only having one set of the code for color change
-		 	// var className = '';
-
-		 	// if (true) {
-		 	// 	className = 'one';
-		 	// } else {
-		 	// 	className = 'two';
-		 	// }
-
-		 	// var $eUserShort = $('<div class="' + className '"></div>');
+				// validFilteredUsers[i] = {};
+					validFilteredUsers[0] = vuName;
+					validFilteredUsers[1] = vuRole;
+					validFilteredUsers[2] = vuID;
+					validFilteredUsers[3] = vuPic;
+					validFilteredUsers[4] = vuTitle;
+					validFilteredUsers[5] = vuPhoneNumber;
+					validFilteredUsers[6] = vuEmail;
+					validFilteredUsers[7] = vuIndex;
+					validFilteredUsers[8] = vuNewIndex;
+		 	}
+				//validFilteredUsers = [];
 		}
 		console.log("total filtered users: " + filCount);
-		console.log("vFU: ", vFU);
-		getUsers(vFU);
+		console.log("Valid Users: ", validFilteredUsers);
 	}

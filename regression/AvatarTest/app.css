@@ -24,11 +24,11 @@ html{
 //	background-color: red;
 	overflow-y: auto;
 	z-index: 100;
-	height: 305px;
+	height: 280px;
 }
 
 table {
-//	align: center;
+
 }
 
 #utTitle {
@@ -50,7 +50,7 @@ table {
 	background-color: transparent;
 	overflow-y: auto;
 	z-index: 100;
-	height: 275px;
+	height: 250px;
 //	border: 1px solid black;
 }
 
@@ -60,12 +60,6 @@ table {
 	border-color: black;
 	height: 455px;
 	width: calc(100% - 10px);
-}
-.avatar{
-	position: absolute;
-	float: left;
-	top: 0px;
-	z-index: 0;
 }
 
 #selection{
@@ -77,8 +71,20 @@ table {
 
 span {
 	display: inline-block;
+	text-align: center;
+}
+.dName {
 	width: 200px;
 	text-align: center;
+}
+.dID {
+	width: 150px;
+	text-align: center;
+}
+
+.dName:hover, .dID:hover {
+	color: #ffffff;
+	font-weight: bold;
 }
 
 #title{
@@ -97,8 +103,7 @@ span {
 	line-height: 65px;
 	float:right;
 	width:33%;
-	height: 105px;
-	vertical-align: middle;
+	height: 65px;
 }
 
 div {
@@ -121,48 +126,80 @@ p {
 /* User Labels */
 #userLabel{
 	position: absolute;
-	top: 90px;
-	z-index: 5;
+	top: 80px;
 	width: 100%;
+	z-index: inherit;
 	display: block;
 //	background-color: yellow;
 }
 
+.uCells {
+	float: left;
+	height: 30px;
+	width: 50px;
+	line-height: 30px;
+	padding-left: 15px;
+	text-align: right;
+//	background-color: green;
+	text-overflow: ellipsis;
+}
+
 .ulWidth {
 	float: left;
-	width: 350px;
-	padding-left: 50px;
+	height: 30px;
+	width: 290px;
 	line-height: 30px;
+	padding-left: 5px;
 //	background-color: red;
+	text-overflow: ellipsis;
 }
 .urWidth {
 	float: right;
-	width: 190px;
+	height: 30px;
+	width: 170px;
 	line-height: 30px;
+	padding-left: 5px;
 //	background-color: blue;
+	text-overflow: ellipsis;
 }
 
 .op {
-	color: #ffffff;
-    text-shadow: 2px 2px 1px #000000;
+	color: #000000;
+	font-weight: bold;
+	background: rgba(255,255,255,0.3);
 }
 .opT {
-	color: #000000;
-    text-shadow: 2px 2px 1px #ffffff;
+	color: #ffffff;
+	background: rgba(0,0,0,0.3)
 }
 
 .opE {
-	color: #b391ca;
-    text-shadow: 2px 1px 1px #000000;
+	color: #387b26;
+    font-weight: bold;
 }
 .opO {
-	color: #99ccee;
-    text-shadow: 2px 1px 1px #000000;
+	color: #31689b;
+    font-weight: bold;
+}
+
+.uSort, .uLink {
+	width: 30px;
+	padding-left: 10px;
 }
 
 .full {
 	width: 100%;
-//	text-align: center;
+
+}
+
+.fullH{
+	background: rgba(255,255,255,0.2);
+}
+
+.fullH:hover{
+	background: rgba(0,0,0,0.3);
+	cursor: pointer;
+	color: #ffffff;
 }
 
 .tbold {
@@ -174,9 +211,51 @@ p {
 	color: white;
 }
 
+.error {
+	color: red;
+
+}
+
 .avatar{
 	 width: 60px;
 	 height: 60px;
+	 margin-top: 2px;
+}
+
+#totalUsers {
+	position: absolute;
+	top: 68px;
+	width: calc(100% - 10px);
+	text-align: right;
+	z-index: 300;
+	font-size: 9pt;
+	color: #ffffff;
+}
+
+#viewFilters {
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+	width: calc(100% - 10px);
+	height: 25px;
+	line-height: 25px;
+	// text-align: right;
+	z-index: 300;
+	font-size: 10pt;
+	color: #ffffff;
+	background-color: red;
+}
+
+.filters {
+	position: absolute;
+	top: 0px;
+	left: 20px;
+}
+
+.testFilters {
+	position: absolute;
+	top: 0px;
+	left: 220px;
 }
 
 /* Navigation Start */

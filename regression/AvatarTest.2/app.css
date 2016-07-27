@@ -164,43 +164,43 @@ span {
 	text-overflow: ellipsis;
 }
 
+.full {
+	width: 100%;
+}
+
+.fullH{
+	background: rgba(255,255,255,0.5);
+}
+
+.fullH:hover{
+	background: rgba(0,0,0,0.4);
+	cursor: pointer;
+	color: #ffffff;
+}
+
+.opTitle {
+	background: rgba(0,0,0,0.6);
+	color: #ffffff;
+}
+
 .op {
-	color: #000000;
-	font-weight: bold;
-	background: rgba(255,255,255,0.3);
+//	background: rgba(255,255,255,0.4);
 }
 .opT {
-	color: #ffffff;
-	background: rgba(0,0,0,0.3)
+//	background: rgba(112,128,144,0.4)
 }
 
 .opE {
 	color: #387b26;
-    font-weight: bold;
+	background: rgba(220,220,220,0.4)
 }
 .opO {
 	color: #31689b;
-    font-weight: bold;
 }
 
 .uSort, .uLink {
 	width: 30px;
 	padding-left: 10px;
-}
-
-.full {
-	width: 100%;
-
-}
-
-.fullH{
-	background: rgba(255,255,255,0.2);
-}
-
-.fullH:hover{
-	background: rgba(0,0,0,0.3);
-	cursor: pointer;
-	color: #ffffff;
 }
 
 .tbold {
@@ -320,5 +320,5 @@ button {
 /* Navigation End */
 
 /* Colors */
-.pink {color:brown;}
-.lime{color: orange;}
+.brown {color:brown;}
+.orange{color: orange;}
