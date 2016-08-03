@@ -2,6 +2,7 @@
 	background-color:white;
 	margin: 0px;
 	padding: 0px;
+	width: 100%;
 }
 
 body{
@@ -34,24 +35,21 @@ table {
 #utTitle {
 	position: absolute;
 	width: calc(100% - 10px);
-//	width: 100%;
-	text-align: center;
+//	text-align: center;
 	background-color: transparent;
 	z-index: 100;
-	height: 200px;
+//	height: 200px;
 }
 
 #uTable {
 	position: absolute;
-//	width: calc(100% - 20px);
 	width: 100%;
 	top: 28px;
+	bottom: 5px;
 	text-align: center;
 	background-color: transparent;
 	overflow-y: auto;
 	z-index: 100;
-	height: 250px;
-//	border: 1px solid black;
 }
 
 #content {
@@ -76,9 +74,10 @@ span {
 .dName {
 	width: 200px;
 	text-align: center;
+	padding-left: 15px;
 }
 .dID {
-	width: 150px;
+	width: 120px;
 	text-align: center;
 }
 
@@ -92,7 +91,7 @@ span {
 	font-size: 30px;
 	font-family: fantasy;
 	color: white !important;
-	background-color:red;
+	background-color: #99ccee;
 	width: calc(100% - 10px);
 	height: 65px;
 	margin: 0 auto;
@@ -114,6 +113,12 @@ div {
 p {
 	width: 100%;
 	text-align:center;
+}
+
+.uReady {
+	color: #ffffff;
+	background: rgba(0,0,0,0.7);
+	text-align: center;
 }
 
 .left {
@@ -170,7 +175,7 @@ p {
 }
 .opT {
 	color: #ffffff;
-	background: rgba(0,0,0,0.3)
+	background: rgba(0,0,0,0.6)
 }
 
 .opE {
@@ -189,7 +194,6 @@ p {
 
 .full {
 	width: 100%;
-
 }
 
 .fullH{
@@ -211,15 +215,29 @@ p {
 	color: white;
 }
 
-.error {
-	color: red;
+.error { color: red; }
 
+
+.myAvatar {
+	color: white;
+}
+.myAvatar:hover {
+	font-weight: bolder;
+	color: red;
+	cursor: pointer;
+}
+.myAvatar:before {
+    display: inline-block;
+}
+.myAvatar:hover:before {
+    content: 'My Avatar';
 }
 
 .avatar{
 	 width: 60px;
 	 height: 60px;
 	 margin-top: 2px;
+	cursor: pointer;
 }
 
 #totalUsers {
@@ -239,24 +257,30 @@ p {
 	width: calc(100% - 10px);
 	height: 25px;
 	line-height: 25px;
-	// text-align: right;
 	z-index: 300;
-	font-size: 10pt;
-	color: #ffffff;
-	background-color: red;
+	font-size: 12pt;
+	background-color: #99ccee;
+	color: #000;
+	//font-weight: bold;
+	border-top: 5px black solid;
+	text-align: center;
 }
 
-.filters {
+/*.filters {
+	text-align: center;
 	position: absolute;
 	top: 0px;
 	left: 20px;
 }
-
-.testFilters {
-	position: absolute;
-	top: 0px;
-	left: 220px;
+*/
+#TestFilters:hover{
+	cursor: pointer;
+	color: #ffffff;
 }
+.badFilters {
+	padding-left: 15px;
+}
+
 
 /* Navigation Start */
 #navItem {
