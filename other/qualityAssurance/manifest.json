@@ -1,0 +1,15 @@
+{
+  "name": "qualityAssurance",
+  "version": "1.0.0",
+  "size": {
+    "width": 1,
+    "height": 1
+  },
+  "mapping": [
+    {
+      "dataSetId": "61db8998-8426-4e8c-a78d-ce8437b1d8b7",
+      "alias": "qaData",
+      "fields": []
+    }
+  ]
+}

@@ -1,0 +1,295 @@
+@font-face {
+    font-family: OpenSans;
+    src: url(/fonts/OpenSans-Light.ttf);
+}
+
+@font-face {
+    font-family: OpenSans-Bold;
+    src: url(/fonts/OpenSans-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: OpenSans-Bolder;
+    src: url(/fonts/OpenSans-ExtraBold.ttf);
+    font-weight: bolder;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+	font-family: OpenSans;
+}
+
+div {
+  margin: 0px;
+  padding: 0px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+}
+thead, th, tr, td, tbody {
+    margin: 0px;
+    padding: 0px;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.clear {
+  clear: both;			
+}
+
+#page {
+	height: 100%;
+	width: 100%;
+}
+
+#header {
+    position: absolute;
+    width: 1165px;
+    height: 100px;
+    z-index: 600;
+}
+
+#header2 {
+    position: absolute;
+    width: 1165px;
+    height: 100px;
+    z-index: 5;
+}
+
+.header {
+    z-index: 100;
+    padding-right: 35px;
+    float: right;
+}
+
+.header2 {
+    z-index: 1;
+    padding-right: 28px;
+    padding-top: 7px;
+    float: right;
+}
+
+.domoFont {
+    font-family: OpenSans-Bold;
+    font-size: 90px;
+    font-weight: 700;
+    letter-spacing: -16;
+    line-height: 90px;
+}
+
+#nav {
+    position: absolute;
+    top: 85px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    z-index: 80;
+}
+
+#navItem {
+
+}
+
+#content {
+    position: absolute;
+    top: 135px;
+	height: 530px;
+    width: 1165px;
+    overflow: hidden;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0px;
+    height: 20px;
+    width: 100%;
+}
+
+#fire {
+    height: 540px;
+    width: 1165px;
+    overflow: hidden;
+}
+
+#fireText {
+	padding-bottom: 10px;
+	color: #000;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+}
+
+.pTop {
+ 	margin-top: 15px;
+ }
+
+
+.title {
+    padding-top: 10px;
+    padding-bottom: 9px;
+    text-align: center;
+    color: #000;
+    font-family: OpenSans-Bold;
+	font-weight: bold;
+    border-bottom: 1px solid black;
+}
+
+.infoTitle {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #000;
+}
+
+/* Navigation Start */
+#navItem {
+   width:100%;
+}
+#navItem ul {
+   clear:left;
+   float:left;
+   list-style:none;
+   margin:0;
+   padding:0;
+   text-align:center;
+}
+#navItem ul li {
+   display:block;
+   float:left;
+   list-style:none;
+   margin:0;
+   padding:0;
+   position:relative;
+}
+#navItem ul li a button{
+   display:block;
+   margin:0 0 0 1px;
+   padding:3px 10px;
+   background:#ddd;
+   color:#000;
+   text-decoration:none;
+   line-height:1.3em;
+}
+#navItem ul li button a:hover {
+}
+#navItem ul li button a.active,
+#navItem ul li button a.active:hover {
+   color:#fff;
+   background:#000;
+   font-weight:bold;
+}
+
+.tabrow li button {
+//  background: linear-gradient(to bottom, #ECECEC 50%, #666 100%);
+//  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.4), inset 0 1px 0 #666;
+  text-shadow: 0.5px 0.5px #FFF;
+  margin: 0px;
+  padding: 0px;
+}
+
+.fbuttons {
+//	background: linear-gradient(to bottom, #A50038 95%, #000 100%);
+}
+
+.buttonM {
+	margin-left: 20px;
+}
+
+button {
+	width: 100px;
+//	outline: 0;
+//	background: none;
+	border : 0px;
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px;
+	border-radius:7px;
+	font-size: 16px;
+}
+/* Navigation End */
+
+#sectionTitle {
+	width: 100%;
+	height: 20px;
+    border-bottom: 1px solid black;
+    font-family: OpenSans-Bold;
+	line-height: 20px;
+}
+
+.fRow {
+	width: 100%;
+	background-color: #f1f2f2;
+	display: inline-block;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.fRowE {
+	width: 100%;
+	background-color: #b0b1b2;
+	color: #000;
+	display: inline-block;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.tableHeader {
+    font-weight: bolder;
+}
+
+.tableRows {
+    font-weight: normal;
+}
+
+
+/* Field Widths */
+.wsquad {width: 10%; float: left; text-align: center; white-space: nowrap;}
+.wstatus {width: 10%; float: left; text-align: center; white-space: nowrap;}
+.wjira {width: 10%; float: left; text-align: center; white-space: nowrap;}
+.wsummary {width: 20%; float: left; text-align: left;}
+.wnotes {width: 20%; float: left; text-align: left;}
+.wreason {width: 10%; float: left; text-align: left;}
+.wsprint {width: 10%; float: left; text-align: left; white-space: nowrap;}
+.wtest {width: 10%; float: left; text-align: left;}
+
+/* Colors */
+.domoBlue {color: #99ccee;}
+.domoBlueBG {background-color: #99ccee;}
+.darkBlue {color: #707F8A;}
+.darkBlueBG {background-color: #707F8A;}
+.white {color: #fff;}
+.whiteBG {background-color: #fff;}
+.red {text-shadow: 0.5px 0px red;}
+.green {text-shadow: 0.5px 0px green;}
+.oddRow {background-color: lightgrey;}
+
+/* Traditional clearfix */
+.clearfix:after {
+//    content: ".";
+    display: block;
+    height: 0px;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {display: inline-block;}
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+
+/* Custom CSS for the page layout */
+.columns .column1 {float: left;}
+.columns .column2 {float: left;}
+
+.intro {
+    font-size: 90px;
+    font-weight: 700;
+	text-align: center;
+	line-height: 150px;
+}
