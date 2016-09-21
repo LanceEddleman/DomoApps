@@ -1,0 +1,31 @@
+/**
+ * Creating a moving 3d box with CSS transitions and Javascript (SO)
+ * http://stackoverflow.com/q/13549568/1397351
+ */
+body { padding: 5em 0 0; perspective: 600em; }
+button { cursor: pointer; }
+.house { 
+	position: relative;
+	margin: 2em auto;
+	transform-style: preserve-3d;
+	transition: transform 1s;
+}
+.house, .face { width: 10em; height: 10em; }
+.face {
+	box-sizing: border-box;
+	position: absolute;
+	padding: 1em;
+}
+.front { transform: rotateY(0deg) translateZ(5em); background: rgba(255, 165, 0, .75); }
+.back { 
+	transform: rotateY(180deg) translateZ(5em);
+	background: rgba(30, 144, 255, .75);
+}
+.right {
+	transform: rotateY(90deg) translateZ(5em);
+	background: rgba(220, 20, 60, .75);
+}
+.left {
+	transform: rotateY(-90deg) translateZ(5em);
+	background: rgba(127, 255, 0, .75);
+}

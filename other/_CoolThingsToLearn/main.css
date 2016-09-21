@@ -1,0 +1,86 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: auto;
+}
+
+.menu {
+	width: calc(100%; - 20px);
+	height: 40px;
+	color: #999999;
+	background-color:#cccccc;
+	border-bottom: 1px solid #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+	font-weight: bolder;
+	padding: 10px;
+}
+
+.content {
+	height: calc(100% - 41px);
+	width: 100%;
+	background-color: #ab3;
+	overflow-x: hidden;
+}
+
+#tab1 {
+	margin-left: -400px;
+//	width: calc(100%; - 20px);
+	}
+	
+#tab2 {
+	margin-left: -400px;
+//	width: calc(100%; - 20px);
+	}
+	
+#tab3 {
+	margin-left: -400px;
+//	width: calc(100%; - 20px);
+	}
+
+.tabs {
+	position: absolute;
+	top: 0;
+	left: auto;
+	float: left;
+	height: auto;
+	min-height: 100%;
+	width: 300px;
+    background-color: #cccccc;
+	transition:all 1s linear;
+    visibility: hidden;
+}	
+#tab1:target {
+	margin-left: 10%;
+    transition:all 1s linear;
+    visibility: visible;
+	}
+	
+#tab2:target {
+	margin-left: 10%;
+    transition:all 1s linear;
+    visibility: visible;
+	}
+	
+#tab3:target {
+	margin-left: 10%;
+    transition:all 1s linear;
+    visibility: visible;
+	}
+
+div.box {
+/*
+-moz-transform: rotate(45deg);
+-webkit-transform: rotate(45deg);
+-o-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+transform: rotate(45deg);
+-moz-transform-origin: 30% 100%;
+-webkit-transform-origin: 30% 100%;
+-o-transform-origin: 30% 100%;
+-ms-transform-origin: 30% 100%;
+transform-origin: 30% 100%;
+*/
+	transition:all 1s linear;
+}

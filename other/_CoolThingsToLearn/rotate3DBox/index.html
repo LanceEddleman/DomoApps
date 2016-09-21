@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<meta charset="utf-8"></meta>
+		<title>Creating a moving 3d box with CSS transitions and Javascript (SO) ✿ Dabblet result</title>
+<!-- 
+		<style>
+			/**
+			 * Creating a moving 3d -webkit-box with CSS transitions and Javascript (SO)
+			 * http://stackoverflow.com/q/13549568/1397351
+			 */
+			body { padding: 5em 0 0; perspective: 500em; }
+			button { cursor: pointer; }
+			.house { 
+				position: relative;
+				margin: 2em auto;
+				transform-style: preserve-3d;
+				transition: transform 1s;
+			}
+			.house, .face { width: 10em; height: 10em; }
+			.face {
+				box-sizing: border-box;
+				position: absolute;
+				padding: 1em;
+			}
+			.front { transform: translateZ(5em); background: rgba(255, 165, 0, .75); }
+			.back { 
+				transform: rotateY(180deg) translateZ(5em);
+				background: rgba(30, 144, 255, .75);
+			}
+			.right {
+				transform: rotateY(90deg) translateZ(5em);
+				background: rgba(220, 20, 60, .75);
+			}
+			.left {
+				transform: rotateY(-90deg) translateZ(5em);
+				background: rgba(127, 255, 0, .75);
+			}
+		</style>
+ -->
+	    <link rel="stylesheet" href="main.css" />
+
+		<script src="main.js"></script>
+
+<!-- 
+ 		<script>
+			if (parent === window) {
+				document.addEventListener('DOMContentLoaded', function() {
+					(function() {
+				var btnsEl = document.querySelector('.buttons'), currentAngle = 0;
+				btnsEl.addEventListener('click', function(e) {
+					var b = e.target.innerHTML.toLowerCase(), 
+						house = document.querySelector('.house'), 
+						btns = {'front': 0, 'left': 90, 'back': 180, 'right': -90}, 
+						dif = btns[b] - currentAngle%360;
+					if(!e.target.classList.contains('btn') || dif === 0) return;
+					currentAngle += (Math.abs(dif) > 180) ? 
+									(Math.abs(dif) - 360)*Math.abs(dif)/dif : 
+									dif;
+					house.style['-webkit-transform'] = 'rotateY(' + currentAngle + 'deg)';
+					house.style['transform'] = 'rotateY(' + currentAngle + 'deg)';
+				}, false); 
+			}());		
+				});
+			}
+		</script>
+ -->
+		<script src="render.js"></script>
+
+	</head>
+	<body>
+		<div class="buttons">
+			<button class="btn">Front</button>
+			<button class="btn">Left</button>
+			<button class="btn">Back</button>
+			<button class="btn">Right</button>
+		</div>
+		<div class="house" style="transform: rotateY(540deg);">
+			<div class="face front">Front</div>
+			<div class="face back">Back</div>
+			<div class="face right">Right</div>
+			<div class="face left">Left</div>
+		</div>
+	</body>
+</html>

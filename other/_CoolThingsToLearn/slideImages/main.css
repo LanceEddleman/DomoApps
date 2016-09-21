@@ -1,0 +1,19 @@
+.box {
+    -webkit-transition: background-position 1s ease-out;
+    -moz-transition: background-position 1s ease-out;
+    -ms-transition: background-position 1s ease-out;
+    -o-transition: background-position 1s ease-out;
+    transition: background-position 1s ease-out;
+    
+    background-image: url(http://lorempixel.com/500/300);
+    
+    width: 350px;
+    height: 200px;
+    margin: 10px auto;
+}
+
+.box.rtl { background-position: 0 center; }
+.box.rtl:hover { background-position: 100% center; }
+
+.box.ltr { background-position: 100% center; }
+.box.ltr:hover { background-position: 0 center; }

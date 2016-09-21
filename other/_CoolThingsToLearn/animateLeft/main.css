@@ -1,0 +1,13 @@
+#logo_img {
+  height: 55px;
+  width: 55px;
+  background-color: red;
+  margin-left: calc(50% - 55px);
+  margin-right: auto;
+  display: block;
+  transition: all 1s ease-in-out;
+}
+#logo_img.tiny {
+  height: 45px;
+  margin-left: 0;
+}

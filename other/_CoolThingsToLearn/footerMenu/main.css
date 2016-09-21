@@ -1,0 +1,28 @@
+#footer {
+  position: absolute;
+  background-color: #497044;
+  bottom: 0px;
+  width: 100%;
+  height: 45px;
+  padding: 5px; }
+
+div.menu {
+  position: relative;
+  height: 45px;
+  width: 480px;
+  left: 50%;
+  margin-left: -240px; }
+
+div.menu a {
+  float:left;
+  width: 80px;
+  height: 50px;
+  border: 3px dashed;
+  margin-left: 5px;
+  text-align: center;
+  transition: margin-top .2s;
+  -moz-transition: margin-top .2s;}
+div.menu a:hover {
+    margin-top:-50px;
+  background-color:white;
+  height: 100px; }

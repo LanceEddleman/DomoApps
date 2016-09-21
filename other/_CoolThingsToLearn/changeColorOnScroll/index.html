@@ -1,0 +1,41 @@
+<!-- Please note I am using jQuery.  -->
+
+<html>
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="googlebot" content="noindex, nofollow">
+    <link rel="stylesheet" href="main.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+	<script type="text/javascript">//<![CDATA[
+	window.onload=function(){
+	$(window).scroll(function() {    
+	    var scroll = $(window).scrollTop();
+
+	    if (scroll >= 500) {
+	        $(".header").addClass("scrolling");
+	    } else {
+	        $(".header").removeClass("scrolling");
+	    }
+	});
+	};//]]> 
+
+	</script>
+  </head>
+  	<body>
+		<header class="header scrolling">
+		    <ul class="header-ul">
+		        <li>List one</li>
+		        <li>List two</li>
+		    </ul>
+		    <h3 class="brand">Brand</h3>
+		</header>
+
+		<div class="main">
+		</div>
+
+		<script src="main.js"></script>
+
+	</body>
+</html>
