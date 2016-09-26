@@ -1,0 +1,50 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+	text-align: center;
+}
+#answer {
+	height: 40px;
+	width: 200px;
+	background-color: lightblue;
+	text-align: center;
+	font-size: 36;
+	margin: 0 auto 0 auto;
+}
+
+.center {
+	text-align: center;
+}
+.fullWidth {
+	width: 100%;
+}
+.iFields {
+	width: 100px;
+	text-align: right;
+}
+
+.bLoc {
+	margin: 20px 0 20px 0;
+}
+
+.floatLeft {
+	float: left;
+}
+.floatRight {
+	float: right;
+}
+
+
+.runningTotal {
+	background-color: lightgreen;
+	height: 20px;
+	width: 200px;
+}
+.celsius {
+	background-color: lightyellow;
+	height: 20px;
+	width: 200px;
+}

@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="app.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	</head>
+	<body>
+		<h1>calc</h1>
+		<div class="center">
+			<input id="a" type="text" name="" value="5" class="iFields">
+			<input id="b" type="text" name="" value="10" class="iFields">
+			<input id="c" type="text" name="" value="2" class="iFields">
+		</div>
+		<div id="bLoc" class="center bLoc">
+			<input type="button" value="Add" class="button" onclick="result('add',a.value,b.value,c.value)" />
+			<input type="button" value="Subtract" class="button" onclick="result('sub',a.value,b.value,c.value)" />
+			<input type="button" value="Multiply" class="button" onclick="result('multi',a.value,b.value,c.value)" />
+			<input type="button" value="Divide" class="button" onclick="result('divide',a.value,b.value,c.value)" />
+			<input type="button" value="Average" class="button" onclick="result('avg',a.value,b.value,c.value)" />
+		</div>
+		<div class="fullWidth center">
+			<div>
+				<div id="resetTotal" class="floatLeft"><input type="button" value="Reset Total" class="button" onclick="reset()" /></div>
+				<div id="rTotal" class="runningTotal"></div>
+			</div>
+			<div id="answer" class="floatLeft"></div>
+			<div>
+				<div id="convert2C" class="floatRight"><input type="button" value="Convert to Celsius" class="button" onclick="c2c()" /></div>
+				<div id="celsius" class="celsius"></div>
+			</div>
+		</div>
+
+		<!-- domo.js optional utils -->
+		<script src="domo.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
