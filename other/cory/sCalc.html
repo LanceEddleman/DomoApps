@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="css/nav.css" />
+		<link rel="stylesheet" href="app.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="calc.html">Calc</a></li>
+				<li><a href="sCalc.html">Super Calc</a></li>
+			</ul>
+		</nav>
+		<content>
+			<h1 onclick="resetAll()" class="mTop">Super Calc</h1>
+			<div class="center">
+				<input id="a" type="text" name="" value="5" class="iFields">
+				<input id="b" type="text" name="" value="10" class="iFields">
+				<input id="c" type="text" name="" value="2" class="iFields">
+			</div>
+			<div id="bLoc" class="center bLoc">
+				<input type="button" value="Add" class="button" onclick="result('add',a.value,b.value,c.value)" />
+				<input type="button" value="Subtract" class="button" onclick="result('sub',a.value,b.value,c.value)" />
+				<input type="button" value="Multiply" class="button" onclick="result('multi',a.value,b.value,c.value)" />
+				<input type="button" value="Divide" class="button" onclick="result('divide',a.value,b.value,c.value)" />
+				<input type="button" value="Average" class="button" onclick="result('avg',a.value,b.value,c.value)" />
+			</div>
+			<div class="fullWidth center">
+				<div id="answer" class="results"></div>
+			</div>
+				<div id="rowFull" class="fullWidth bLoc center">
+					<div id="rowLeft" class="halfWidth floatLeft">
+						<div id="rowTop" class="fullWidth floatLeft"><input type="button" value="Reset Total" class="button" onclick="reset()" /></div>
+						<div id="rowBottom" class="fullWidth floatLeft mTop">
+							<div id="rowTop" class="halfWidth floatLeft"><div class="extra tRight">Total:</div></div>
+							<div id="rowBottom" class="halfWidth floatLeft"><div id="rTotal" class="floatLeft runningTotal answerWidth results extra"></div></div>
+						</div>
+					</div>
+					<div id="rowRight" class="halfWidth floatLeft">
+						<div id="rowTop" class="fullWidth floatLeft"><input type="button" value="Convert to Celsius" class="button" onclick="c2c()" /></div>
+						<div id="rowBottom" class="fullWidth floatLeft mTop ex">
+							<div id="rowTop" class="halfWidth floatLeft"><div class="extra tRight">Celsius:</div></div>
+							<div id="rowBottom" class="halfWidth floatLeft"><div id="celsius" class="floatLeft celsius answerWidth results extra"></div></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</content>
+		<!-- domo.js optional utils -->
+		<script src="domo.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>

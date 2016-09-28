@@ -1,0 +1,96 @@
+body{
+  margin: 0;
+  padding: 0;
+  width: 460px;
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+content {
+	position: absolute;
+	top: 23px;
+	width: calc(100% - 2px);
+	height: calc(100% - 25px);
+//	background-color: lightgreen;
+}
+
+
+.content {
+	border: 1px solid black;
+}
+
+#answer {
+	height: 40px;
+	width: 200px;
+	text-align: center;
+	font-size: 36;
+	margin: 0 auto 0 auto;
+}
+
+.center {
+	text-align: center;
+}
+.allCenter {
+	align-content: center;
+}
+
+
+.fullWidth {
+	width: 100%;
+}
+.halfWidth {
+	width: 50%;
+}
+
+.answerWidth {
+	width: 50px;
+}
+
+.iFields {
+	width: 85px;
+	text-align: right;
+}
+
+.bLoc {
+	margin: 20px 0 20px 0;
+}
+
+.extra {
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.mLeft {
+	margin-left: 20%;
+}
+.mTop {
+	margin-top: 10px;
+}
+
+.floatLeft {
+	float: left;
+}
+.floatRight {
+	float: right;
+}
+.tRight {
+	text-align: right;
+}
+.tLeft {
+	text-align: left;
+}
+
+.runningTotal {
+	height: 16px;
+}
+.celsius {
+	height: 16px;
+}
+
+.results {
+	background-color: lightblue;
+}
