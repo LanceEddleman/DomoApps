@@ -29,13 +29,13 @@ li {
 }
 
 nav ul li a button{
-//   display:block;
-//   margin:0 0 0 1px;
-//   padding:3px 10px;
-//   background:#ddd;
-//   color:#000;
-//   text-decoration:none;
-//   line-height:1.3em;
+   display:block;
+   margin:0 0 0 1px;
+   padding:3px 10px;
+   background:#ddd;
+   color:#000;
+   text-decoration:none;
+   line-height:1.3em;
 }
 
 nav ul li button a:hover {
