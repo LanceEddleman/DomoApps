@@ -1,0 +1,118 @@
+body{
+  margin: 0;
+  padding: 0;
+  width: 460px;
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+content {
+	position: absolute;
+	top: 88px;
+	width: calc(100% - 2px);
+	height: calc(100% - 90px);
+	background-color: #fff;
+}
+
+div {
+  margin: 0px;
+  padding: 0px;
+}
+
+table {
+	border-collapse: collapse;
+	margin: 0px;
+	padding: 0px;
+}
+thead, th, tr, td, tbody {
+	margin: 0px;
+	padding: 0px;
+}
+
+p {
+	margin: 0px;
+	padding: 0px;
+}
+
+.clear {
+  clear: both;			
+}
+.contentBox {border: 1px solid black;}
+
+.center {text-align: center;}
+.allCenter {align-content: center;}
+
+.fullWidth {width: 100%;}
+
+.halfWidth {width: 50%;}
+
+.mLeft {margin-left: 20%;}
+.mTop {//margin-top: 10px;}
+
+.floatLeft {float: left;}
+.floatRight {float: right;}
+
+.op {
+	color: #000000;
+	font-weight: bold;
+	background: rgba(255,255,255,0.3);
+}
+.opT {
+	color: #ffffff;
+	background: rgba(0,0,0,0.6)
+}
+
+.opE {
+	color: #387b26;
+    font-weight: bold;
+}
+.opO {
+	color: #31689b;
+    font-weight: bold;
+}
+
+.uSort, .uLink {
+	width: 30px;
+	padding-left: 10px;
+}
+
+.fullH{
+	background: rgba(255,255,255,0.2);
+}
+
+.fullH:hover{
+	background: rgba(0,0,0,0.3);
+	cursor: pointer;
+	color: #ffffff;
+}
+
+.tbold {
+	font-size: 24px;
+	font-weight: bolder;
+}
+
+.dName {
+	width: 200px;
+	text-align: center;
+	padding-left: 15px;
+}
+.dID {
+	width: 120px;
+	text-align: center;
+}
+
+.tType {
+	width: 60px;
+	text-align: center;
+	float: right;
+}
+
+
+.dName:hover, .dID:hover {
+	color: #ffffff;
+	font-weight: bold;
+}

@@ -1,0 +1,97 @@
+@font-face {
+	font-family: OpenSans;
+	src: url(/fonts/OpenSans-Light.ttf);
+}
+
+@font-face {
+	font-family: OpenSans-Bold;
+	src: url(/fonts/OpenSans-Bold.ttf);
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: OpenSans-Bolder;
+	src: url(/fonts/OpenSans-ExtraBold.ttf);
+	font-weight: bolder;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: OpenSans;
+}
+
+#header {
+	position: absolute;
+	right: 15px;
+	height: 100px;
+	z-index: 6;
+}
+
+#header2 {
+	position: absolute;
+	right: 15px;
+	height: 100px;
+	z-index: 5;
+}
+
+.header {
+	position: absolute;
+	right: 35px;
+	z-index: 100;
+}
+.header:hover {
+	color: #99ccee;
+	text-shadow: 1px 1px 8px #000;
+	transition: all 3s ease;
+}
+
+.header2 {
+	position: absolute;
+	right: 27px;
+	top: 5px;
+	z-index: 1;
+}
+
+.domoFont {
+	font-family: OpenSans-Bold;
+	font-size: 90px;
+	font-weight: 700;
+	letter-spacing: -16;
+	line-height: 90px;
+}
+
+/* Colors */
+.domoBlue {color: #99ccee;}
+.domoBlueBG {background-color: #99ccee;}
+.darkBlue {color: #707F8A;}
+.darkBlueBG {background-color: #707F8A;}
+.white {color: #fff;}
+.whiteBG {background-color: #fff;}
+.red {text-shadow: 0.5px 0px red;}
+.green {text-shadow: 0.5px 0px green;}
+.oddRow {background-color: lightgrey;}
+
+/* Traditional clearfix */
+.clearfix:after {
+//    content: ".";
+	display: block;
+	height: 0px;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {display: inline-block;}
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+
+/* Custom CSS for the page layout */
+.columns .column1 {float: left;}
+.columns .column2 {float: left;}
+
+.intro {
+	font-size: 90px;
+	font-weight: 700;
+	text-align: center;
+	line-height: 150px;
+}
