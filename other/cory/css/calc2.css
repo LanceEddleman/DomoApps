@@ -1,0 +1,103 @@
+
+.main {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: lightsteelblue;
+}
+
+/*
+#answer {
+	height: 30px;
+	width: 100px;
+	text-align: center;
+	font-size: 24;
+	margin: 0 auto 0 auto;
+}
+*/
+
+.button {
+	margin: 5px 2px 5px 2px;
+}
+
+/*
+.center {
+	text-align: center;
+}
+*/
+/*
+.allCenter {
+	align-content: center;
+}
+*/
+
+
+.fullWidth {
+	width: 100%;
+}
+
+.halfWidth {
+	width: 50%;
+}
+
+/*
+.answerWidth {
+	width: 150px;
+}
+*/
+
+.iFields {
+	width: 85px;
+	text-align: right;
+}
+
+.dataField {
+	height: 20px;
+	width: 100px;
+	background-color: #fff;
+}
+
+.bLoc {
+	margin: 10px 0 10px 0;
+}
+
+.extra {
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.mLeft {
+	margin-left: 20%;
+}
+.mTop {
+	margin-top: 10px;
+}
+
+.floatLeft {
+	float: left;
+}
+.floatRight {
+	float: right;
+}
+.tRight {
+	text-align: right;
+}
+.tLeft {
+	text-align: left;
+}
+
+.resultTest {
+	background-color: orange;
+	height: 20px;
+	line-height: 20px;
+}
+
+.result {
+	width: 100px;
+	height: 20px;
+}
+
+.lb {
+	background-color: lightblue;	
+}

@@ -23,6 +23,11 @@ function calc() {
 	$("#content").load("calc.html");
 }
 
+function calc2() {
+	document.getElementById("content").innerHTML = '';
+	$("#content").load("calc2.html");
+}
+
 function sCalc() {
 	document.getElementById("content").innerHTML = '';
 	$("#content").load("sCalc.html");
