@@ -5,3 +5,14 @@
 	height: 100%;
 	background-color: #C56E8B;
 }
+
+/* Field Widths */
+.sname {width: 20%; min-width: 50px; float: left; 
+	text-align: left; white-space: nowrap;
+}
+.stype {width: 20%; min-width: 25px; float: left;
+	text-align: center; white-space: nowrap;
+}
+.fields {
+	padding: 0 10px 0 10px;
+}
