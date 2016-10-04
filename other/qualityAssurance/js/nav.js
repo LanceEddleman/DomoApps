@@ -1,31 +1,27 @@
 // UI elements
 var content = $('#content');
 
-function home() {
-	document.getElementById("content").innerHTML = '';
-	$("#content").load("home.html");
-}
-function calc() {
-	document.getElementById("content").innerHTML = '';
-	$("#content").load("calc.html");
-}
-function sCalc() {
-	document.getElementById("content").innerHTML = '';
-	$("#content").load("sCalc.html");
-}
-function servers() {
-	document.getElementById("content").innerHTML = '';
-	$("#content").load("servers.html");
-	getServerList();
-}
-function sprintIssues() {
-	document.getElementById("content").innerHTML = '';
-	$("#content").load("sprintIssues.html");
-}
-function teams() {
-	document.getElementById("content").innerHTML = '';
-	$("#content").load("teams.html");
-}
+// Home
+	function home() {
+		document.getElementById("content").innerHTML = '';
+		$("#content").load("home.html");
+	}
+// Servers
+	function servers() {
+		document.getElementById("content").innerHTML = '';
+		$("#content").load("servers.html");
+		serverTitleFade();
+	}
+// Sprint
+	function sprints() {
+		document.getElementById("content").innerHTML = '';
+		$("#content").load("sprintIssues.html");
+	}
+// Team
+	function teams() {
+		document.getElementById("content").innerHTML = '';
+		$("#content").load("teams.html");
+	}
 
 // Current Date
 	function showDate(){
@@ -39,3 +35,4 @@ function teams() {
 		console.log(cDate);
 		message.append(cDate);
 	}
+

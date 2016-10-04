@@ -3,16 +3,80 @@
 	top: 0;
 	width: 100%;
 	height: 100%;
-	background-color: #C56E8B;
+	//background-color: #C56E8B;
+	background-color: #FFCC99;
 }
+#serverBody {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	background-color: #FFCC99;
+}
+#servertitles {
+	position: fixed;
+	top: 89px;
+	height: 33px;
+	border-bottom: 1px solid black;
+}
+.servertop {position: fixed; top: 123px;}
+.servers {position: relative; height: 30px; line-height: 30px; width: calc(100% - 2px);}
+.ga {background-color: #FFCC99;}
+.fa {background-color: #FFE5CC;}
+.dev {background-color: #F0F8FF;}
+.branch {background-color: #B9D3EE;}
 
 /* Field Widths */
-.sname {width: 20%; min-width: 50px; float: left; 
-	text-align: left; white-space: nowrap;
-}
-.stype {width: 20%; min-width: 25px; float: left;
-	text-align: center; white-space: nowrap;
 }
 .fields {
-	padding: 0 10px 0 10px;
+	white-space: nowrap;
+}
+.wname {
+	width: 150px;
+	text-align: left;
+	padding-left: 15px;
+}
+.wsname {
+	width: 300px;
+	text-align: left;
+	padding-left: 15px;
+}
+.wlink {
+	width: 373px;
+	text-align: left;
+	padding-left: 15px;
+}
+.wnotes {
+	width: 180px;
+	text-align: left;
+	padding-left: 15px;
+}
+.wtype {
+	width: 80px;
+	text-align: center;
+	float: right;
+	padding-right: 18px;
+	margin-right: 2px;
+}
+
+.titleFade {
+	opacity: 1;
+	height: 100%;
+	width: 100%;
+	line-height: 500px;
+	font-size: 48;
+	font-style: bolder;
+	background-color: #FFE5CC;
+}
+.titleFade.hide {
+	opacity: 0;
+	transition: all 3s ease;
+}
+
+.serverFade {
+	opacity: 0;
+}
+.serverFade.show {
+	opacity: 1;
+	//background-color: #FFCC99;
+	transition: all 2s ease;
 }

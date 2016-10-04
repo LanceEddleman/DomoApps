@@ -1,6 +1,8 @@
 var content = $('#content');
-var main = $('#main');
+var serverMain = $('#serverMain');
 var serverBody = $('#serverBody');
+var serverListings = $('#serverListings');
+var serverPageTitle = $('#serverTitle');
 
 var sList = '';
 var defMissing = 'Not Listed';
@@ -61,11 +63,16 @@ var serverInfo = [];
 
 // Display Server List
 	function displayServerList(sList){
+		setTimeout(function() {
+			$('.serverFade').addClass('show');
+		}, 500);
 
 		//console.clear();
 		document.getElementById("serverBody").innerHTML = "";
-		var slTitles = $('<div class="fullWidth tbold opT"><span class="floatLeft sname">Name</span><span class="floatLeft sname">Short Name</span><span class="floatLeft sname">Link</span><span class="floatRight sname">Notes</span><span class="floatRight stype">Type</span></div>');
+		var slTitles = $('<div id="servertitles" class="fullWidth tbold opT"><span class="floatLeft fields wname">Name</span><span class="floatLeft wsname fields">Short Name</span><span class="floatLeft wlink fields">Link</span><span class="floatLeft wnotes fields">Notes</span><span class="floatLeft wtype fields">Type</span></div>');
+		var serverListings = $('<div id="serverListings" class="fullwidth servertop"></div');
 		serverBody.append(slTitles);			// Adds table titles
+		serverBody.append(serverListings);			// Adds table titles
 		var u = sList;
 		var uNum = 0;
 
@@ -95,14 +102,26 @@ var serverInfo = [];
 			console.log(link);
 
 			// UI
-			if (uNum % 2 === 0) {
-				className = 'full fullH opE';
-		 	}
-			else {
-				className = 'full fullH opO';
-		 	}
-			var slPop = $('<div id="server' + uNum + '" class="' + className + '" onclick="displayServer(' + link + ')"><span class="floatLeft sname">'+ name +'</span><span class="floatLeft sname">'+ shortName +'</span><span class="floatLeft sname">'+ link +'</span><span class="floatLeft sname">'+ notes +'</span><span class="floatLeft stype">'+ type +'</span></div>');
-			serverBody.append(slPop);
+			className = 'fullH servers';
+			if(type === 'GA') {className = className + ' ga';}
+			else if(type === 'FA') {className = className + ' fa';}
+			else if(type === 'D') {className = className + ' dev';}
+			else if(type === 'R') {className = className + ' branch';}
+			else {className = className;}
+
+			if (uNum % 2 === 0) {className = className + ' opE';}
+			else {className = className + ' opO';}
+		 	
+		 	// display each server and add click function
+			var slPop = $('<div id="server' + uNum + '" class="' + className + '"><span class="floatLeft wname fields">'+ name +'</span><span class="floatLeft wsname fields">'+ shortName +'</span><span class="floatLeft wlink fields">'+ link +'</span><span class="floatLeft wnotes fields">'+ notes +'</span><span class="floatLeft wtype fields">'+ type +'</span></div>');
+
+			// create now function and executes
+			(function(){
+				var locallink = link;
+				slPop.click(function(){displayServer(locallink);});				
+			})();
+
+			serverListings.append(slPop);
 			uNum = uNum + 1;
 		}
 		console.log('total servers: ' + uNum);
@@ -110,13 +129,25 @@ var serverInfo = [];
 
 // Display Server Info
 	function displayServer(link) {
-		console.log(link);
-		//ll = link.length;
-		//console.log(ll);
-		//domo.navigate(link, true);
+		console.log('running displayServer');
+		domo.navigate(link, true);
 	}
 
 // Display Server Info
 	function displayServerInfo(siList) {
 		// display info
 	}
+
+// Display server title splash
+	function serverTitleFade() {
+		setTimeout(function() {
+			$('.titleFade').addClass('hide');
+		}, 100);
+		setTimeout(function() {
+			getServerList();
+		}, 1000);
+	}
+
+
+//     	domo.navigate("http://flightdeck.domo.com/release/releases",true)
+

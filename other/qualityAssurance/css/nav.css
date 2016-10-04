@@ -1,12 +1,91 @@
+/*
+http://css-snippets.com/simple-horizontal-navigation/#code
+http://matthewjamestaylor.com/blog/beautiful-css-centered-menus-no-hacks-full-cross-browser-support#
+http://www.menucool.com/horizontal/tab-menu#view2
+*/
+
 /* Navigation Start */
-nav {
+.nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 90px;
+	line-height: 90px;
+	width:100%;
+}
+.nav ul {
+	list-style:none;
+	background-color: #444;
+	padding:0;
+	margin:0;
+}
+
+.nav li {
+  font-family: OpenSans;
+  font-size: 1em;
+  //line-height: 40px;
+  height: 40px;
+  text-align:center;
+  border-bottom: 1px solid #888;
+  white-space: no-wrap;
+}
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: .3s background-color;
+}
+.nav a:hover {
+  background-color: #005f5f;
+}
+
+.nav a.active {
+  background-color: #fff;
+  color: #444;
+  cursor: default;
+}
+
+@media screen and (min-width: 600px) {
+  .nav li {
+    width: 120px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+  }
+ 
+  /* Option 1 - Display Inline */
+  .nav li {
+    display: inline-block;
+    margin-right: -4px;
+  }
+ 
+  /* Options 2 - Float
+  .nav li {
+    float: left;
+  }
+  .nav ul {
+    overflow: auto;
+    width: 600px;
+    margin: 0 auto;
+  }
+  .nav {
+    background-color: #444;
+  }
+  */
+}
+
+
+
+/* Navigation Start */
+/*.nav {
 	position: absolute;
 	top: 0;
 	height: 90px;
 	line-height: 90px;
 	width:100%;
 }
-nav ul {
+.nav ul {
 	clear:left;
 	float:left;
 	list-style:none;
@@ -15,7 +94,7 @@ nav ul {
 	text-align:center;
 }
 
-nav ul li {
+.nav ul li {
 	display:block;
 	float:left;
 	list-style:none;
@@ -24,13 +103,13 @@ nav ul li {
 	position:relative;
 }
 
-li {
+.li {
 	width: 100px;
 	text-decoration:none;
 	//padding: 10px 20px 10px 20px;
 }
 
-nav ul li a button{
+.nav ul li a button{
 	display:block;
 	margin:0 0 0 1px;
 	padding:3px 10px;
@@ -40,14 +119,14 @@ nav ul li a button{
 	line-height:1.3em;
 }
 
-nav ul li button a:hover {
+.nav ul li button a:hover {
 	color: yellow;
 	background-color: blue;
 	text-decoration:none;
 }
 
-nav ul li button a.active,
-nav ul li button a.active:hover {
+.nav ul li button a.active,
+.nav ul li button a.active:hover {
 	color:#fff;
 	background:#000;
 	font-weight:bold;
@@ -55,6 +134,15 @@ nav ul li button a.active:hover {
 }
 
 button {
+	width: 100px;
+	border : 0px;
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px;
+	border-radius:7px;
+	font-size: 16px;
+}
+
+.button {
 	width: 100px;
 	border : 0px;
 	-moz-border-radius:7px;
@@ -115,5 +203,5 @@ li#sprint2 a input {
 	padding-bottom: 2px;
 	width: 75px;
 }
-
+*/
 /* Navigation End */
