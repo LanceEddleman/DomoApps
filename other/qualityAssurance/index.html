@@ -1,12 +1,10 @@
 <html>
 	<head>
-	    <link rel="stylesheet" href="index.css" />
+		<link rel="stylesheet" href="index.css" />
 		<link rel="stylesheet" href="css/nav.css" />
 		<link rel="stylesheet" href="css/app.css" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-		<script>$(document).ready(function(){home();});</script>
-
-<!--		<script>$("#content").load("home.html");</script>-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script>$(document).ready(function(){home('home');});</script>
 	</head>
 	<body>
 		<div id="header"><div class="header domoFont white">DOMO&nbsp;-&nbsp;QA</div></div>
@@ -15,10 +13,10 @@
 		<menu>
 			<div class="nav">
 			<ul>
-				<li id="home" onclick="home()"><a href="#">Home</a></li>
- 				<li id="sprints" onclick="sprints()"><a class="active" href="#">Sprints</a></li>
-				<li id="teams" onclick="teams()"><a href="#">Teams</a></li>
-				<li id="servers" onclick="servers()"><a href="#">Servers</a></li>
+				<li id="home" onclick="home('home')"><a href="#" class="active">Home</a></li>
+ 				<li id="sprints" onclick="sprints('sprint')"><a href="#">Sprints</a></li>
+				<li id="teams" onclick="teams('team')"><a href="#">Teams</a></li>
+				<li id="servers" onclick="servers('server')"><a href="#">Servers</a></li>
 			</ul>
 			</div>
 		</menu>
@@ -32,40 +30,6 @@
 		<script src="app.js"></script>
 		<script src="js/nav.js"></script>
 		<script src="js/servers.js"></script>
+		<script src="js/sprint.js"></script>
 	</body>
 </html>
-
-
-<!-- <html>
-	<head>
-	    <link rel="stylesheet" href="index.css" />
-		<link rel="stylesheet" href="css/nav.css" />
-		<link rel="stylesheet" href="css/app.css" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-		<script>$(document).ready(function(){home();});</script>
-	</head>
-	<body>
-		<div id="header"><div class="header domoFont white">DOMO&nbsp;-&nbsp;QA</div></div>
-		<div id="header2"><div class="header2 domoFont darkBlue">DOMO&nbsp;-&nbsp;QA</div></div>
-
-		<header class="nav navFont darkBlue">
-			<ul>
-				<li id="home" onclick="home()" class="tabrow button">Home</li>
- 				<li id="sprints" onclick="sprints()" class="tabrow button">Sprint Issues</li>
-				<li id="teams" onclick="teams()" class="tabrow button">Teams</li>
-				<li id="servers" onclick="servers()" class="tabrow button">Servers</li>
-			</ul>
-		</header>
-
-		<content id="content" class="contentBox">
-
-		</content>
-		
-
-		<script src="domo.js"></script>
-		<script src="app.js"></script>
-		<script src="js/nav.js"></script>
-		<script src="js/servers.js"></script>
-	</body>
-</html>
- -->

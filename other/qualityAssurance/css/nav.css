@@ -15,18 +15,18 @@ http://www.menucool.com/horizontal/tab-menu#view2
 }
 .nav ul {
 	list-style:none;
-	background-color: #444;
-	padding:0;
+	background-color: #99ccee;
+	padding-left: 20px;
 	margin:0;
 }
 
 .nav li {
-  font-family: OpenSans;
-  font-size: 1em;
-  //line-height: 40px;
+  font-family: OpenSans, sans-serif;
+  font-size: 1.2em;
+  line-height: 40px;
   height: 40px;
+  font-weight: bold;
   text-align:center;
-  border-bottom: 1px solid #888;
   white-space: no-wrap;
 }
 .nav a {
@@ -36,12 +36,12 @@ http://www.menucool.com/horizontal/tab-menu#view2
   transition: .3s background-color;
 }
 .nav a:hover {
-  background-color: #005f5f;
+  background-color: #707F8A;
 }
 
 .nav a.active {
   background-color: #fff;
-  color: #444;
+  color: #707F8A;
   cursor: default;
 }
 
@@ -70,138 +70,9 @@ http://www.menucool.com/horizontal/tab-menu#view2
     margin: 0 auto;
   }
   .nav {
-    background-color: #444;
+    background-color: #707F8A;
   }
   */
 }
 
-
-
-/* Navigation Start */
-/*.nav {
-	position: absolute;
-	top: 0;
-	height: 90px;
-	line-height: 90px;
-	width:100%;
-}
-.nav ul {
-	clear:left;
-	float:left;
-	list-style:none;
-	margin:0;
-	padding:0;
-	text-align:center;
-}
-
-.nav ul li {
-	display:block;
-	float:left;
-	list-style:none;
-	margin:0;
-	padding:0;
-	position:relative;
-}
-
-.li {
-	width: 100px;
-	text-decoration:none;
-	//padding: 10px 20px 10px 20px;
-}
-
-.nav ul li a button{
-	display:block;
-	margin:0 0 0 1px;
-	padding:3px 10px;
-	background:#ddd;
-	color:#000;
-	text-decoration:none;
-	line-height:1.3em;
-}
-
-.nav ul li button a:hover {
-	color: yellow;
-	background-color: blue;
-	text-decoration:none;
-}
-
-.nav ul li button a.active,
-.nav ul li button a.active:hover {
-	color:#fff;
-	background:#000;
-	font-weight:bold;
-	text-decoration:none;
-}
-
-button {
-	width: 100px;
-	border : 0px;
-	-moz-border-radius:7px;
-	-webkit-border-radius:7px;
-	border-radius:7px;
-	font-size: 16px;
-}
-
-.button {
-	width: 100px;
-	border : 0px;
-	-moz-border-radius:7px;
-	-webkit-border-radius:7px;
-	border-radius:7px;
-	font-size: 16px;
-}
-
-.nav {
-	background-color: #99ccee;
-}
-.navFont {
-	font-family: OpenSans-Bold;
-	font-size: 20px;
-	font-variant: small-caps;
-	letter-spacing: -1;
-	line-height: 90px;
-}
-
-
-.tabrow li button {
-	text-shadow: 0.5px 0.5px #FFF;
-	margin: 0px;
-	padding: 0px;
-}
-
-.tabrow li button a:hover {
-	color: yellow;
-	background-color: blue;
-	text-decoration:none;
-}
-
-.buttonM {
-	margin-left: 20px;
-}
-.buttonH {
-	height: 80px;
-	padding-bottom: 2px;
-	width: 75px;
-	background-image: src(url="images/home.png")
-}
-.buttonS {
-	margin-left: 20px;
-}
-.buttonP {
-	margin-left: 20px;
-}
-.buttonI {
-	margin-left: 20px;
-}
-
-li#sprint2 a input {
-	background: url("/images/home.png") no-repeat;
-	color: #000000;
-	cursor: pointer;
-	font-weight: bold;
-	height: 80px;
-	padding-bottom: 2px;
-	width: 75px;
-}
-*/
 /* Navigation End */

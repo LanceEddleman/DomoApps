@@ -5,3 +5,236 @@
 	height: 100%;
 	background-color: lightgray;
 }
+
+
+table {
+	border-collapse: collapse;
+	margin: 0px;
+	padding: 0px;
+}
+thead, th, tr, td, tbody {
+	margin: 0px;
+	padding: 0px;
+}
+
+p {
+	margin: 0px;
+	padding: 0px;
+}
+
+.clear {
+  clear: both;			
+}
+
+#page {
+	height: 100%;
+	width: 100%;
+}
+
+#buttonOptions {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+}
+
+#contentSection {
+	position: absolute;
+	top: 50px;
+	bottom: 22px;
+	height: calc(100% - 72px);
+	width: 100%;
+}
+
+#footer {
+	position: absolute;
+	bottom: 0px;
+	height: 22px;
+	width: 100%;
+}
+.message {
+	position: absolute;
+	right: 10px;
+}
+
+.rCount {
+	position: absolute;
+	left: 10px;
+}
+
+#fire {
+//	height: 540px;
+//	height: calc(100% - 22px);
+	height: 100%;
+//	width: 1165px;
+//	overflow: hidden;
+}
+
+#fireText {
+	padding-bottom: 10px;
+	color: #000;
+	overflow: auto;
+	height: calc(100% - 42px);
+	width: 100%;
+}
+
+.pTop {margin-top: 15px;}
+
+
+.title {
+	padding-top: 10px;
+	padding-bottom: 9px;
+	text-align: center;
+	color: #000;
+	font-family: OpenSans-Bold;
+	font-weight: bold;
+	border-bottom: 1px solid black;
+}
+
+/*.infoTitle {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	color: #000;
+}
+*/
+/* Navigation Start */
+#navItem {
+   //width:100%;
+}
+#navItem ul {
+//   clear:left;
+//   float:left;
+//   list-style:none;
+   margin:0;
+   padding:0;
+//   text-align:center;
+}
+#navItem ul li {
+	display:block;
+	float:left;
+//   list-style:none;
+   margin:0;
+   padding:0;
+//   position:relative;
+}
+#navItem ul li a button{
+//   display:block;
+//   margin:0 0 0 1px;
+//   padding:3px 10px;
+//   background:#ddd;
+//   color:#000;
+//   text-decoration:none;
+//   line-height:1.3em;
+}
+#navItem ul li button a:hover {
+//	color: red;
+//	background-color: blue;
+}
+#navItem ul li button a.active,
+#navItem ul li button a.active:hover {
+//   color:#fff;
+//   background:#000;
+//   font-weight:bold;
+}
+
+.tabrow li button {
+//  text-shadow: 0.5px 0.5px #FFF;
+//  margin: 0px;
+  padding: 0px;
+}
+
+.buttonM {
+	margin-left: 20px;
+}
+
+li#sprint2 a input {
+//  background: url("/images/home.png") no-repeat;
+//  color: #000000;
+//  cursor: pointer;
+//  font-weight: bold;
+//  height: 80px;
+//  padding-bottom: 2px;
+//  width: 75px;
+}
+
+button {
+	width: 100px;
+	border : 0px;
+	font-size: 16px;
+}
+/* Navigation End */
+
+#sectionTitle {
+	width: 100%;
+	height: 20px;
+	border-bottom: 1px solid black;
+	font-family: OpenSans-Bold;
+	line-height: 20px;
+}
+
+.fRow {
+	width: 100%;
+	background-color: #f1f2f2;
+	display: inline-block;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.fRowE {
+	width: 100%;
+	background-color: #b0b1b2;
+	color: #000;
+	display: inline-block;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.tableRows {font-weight: normal;}
+
+/* Field Widths */
+/*
+.wsquad {width: 15%; float: left; text-align: center; white-space: nowrap;}
+*/
+.wsquad {width: 150px; float: left; text-align: center; white-space: wrap;}
+.wstatus {width: 5%; float: left; text-align: center; white-space: nowrap;}
+/*
+.wjira {width: 10%; float: left; text-align: center; white-space: nowrap;}
+*/
+.wjira {width: 150px; float: left; text-align: center;}
+/*
+.wsummary {width: 20%; float: left; text-align: left;}
+*/
+.wsummary {width: calc(100% - 400px); float: left; text-align: left;}
+.wnotes {width: 20%; float: left; text-align: left;}
+.wreason {width: 10%; float: left; text-align: left;}
+/*
+.wsprint {width: 10%; float: left; text-align: left; white-space: nowrap;}
+*/
+.wsprint {width: 100px; float: left; text-align: center; white-space: nowrap;}
+.wtest {width: 10%; float: left; text-align: left;}
+
+/* Traditional clearfix */
+.clearfix:after {
+//    content: ".";
+	display: block;
+	height: 0px;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {display: inline-block;}
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+
+/* Custom CSS for the page layout */
+.columns .column1 {float: left;}
+.columns .column2 {float: left;}
+
+.intro {
+	font-size: 90px;
+	font-weight: 700;
+	text-align: center;
+	line-height: 150px;
+}
