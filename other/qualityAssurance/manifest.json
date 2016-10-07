@@ -7,49 +7,73 @@
   "qa2staging.qa_testers": "datasourceID: 8d8ea0b1-711b-41fe-abec-061cd1b4ead8",
   "fullpage": true,
   "size": {
-    "width": 5,
-    "height": 2.5
+	"width": 5,
+	"height": 2.5
   },
   "mapping": [
-    {
-      "dataSetId": "2309b1f8-0f17-4b0f-b60a-675fe0919493",
-      "alias": "serverList",
-      "fields": []
-    },
-    {
-      "dataSetId": "8d8ea0b1-711b-41fe-abec-061cd1b4ead8",
-      "alias": "teamList",
-      "fields": []
-    },
-    {
-      "dataSetId": "fef20312-fe5c-4da4-ba46-c2f06aa4564e",
-      "alias": "qasi",
-      "fields": [{
-        "alias": "squad",
-        "columnName": "Squad"
-      }, {
-        "alias": "status",
-        "columnName": "Status"
-      }, {
-        "alias": "jira",
-        "columnName": "JiraNumber"
-      }, {
-        "alias": "summary",
-        "columnName": "Summary"
-      }, {
-        "alias": "notes",
-        "columnName": "Notes"
-      }, {
-        "alias": "reason",
-        "columnName": "Reason"
-      }, {
-        "alias": "sprint",
-        "columnName": "Sprint"
-      }, {
-        "alias": "test",
-        "columnName": "Left2Test"
-      }
-    ]
+	{
+	  "dataSetId": "2309b1f8-0f17-4b0f-b60a-675fe0919493",
+	  "alias": "serverList",
+	  "fields": []
+	},
+	{
+	  "dataSetId": "8d8ea0b1-711b-41fe-abec-061cd1b4ead8",
+	  "alias": "teamList",
+	  "fields": [
+		{
+			"alias": "team",
+			"columnName": "Team"
+			}, {
+			"alias": "qa1",
+			"columnName": "QA1"
+			}, {
+			"alias": "qa2",
+			"columnName": "QA2"
+			}, {
+			"alias": "qa3",
+			"columnName": "QA3"
+			}, {
+			"alias": "i1",
+			"columnName": "Intern1"
+			}, {
+			"alias": "i2",
+			"columnName": "Intern2"
+			}, {
+			"alias": "features",
+			"columnName": "Features"
+			}
+		]
+	},
+	{
+	  "dataSetId": "fef20312-fe5c-4da4-ba46-c2f06aa4564e",
+	  "alias": "qasi",
+	  "fields": [
+	  {
+		"alias": "squad",
+		"columnName": "Squad"
+	  }, {
+		"alias": "status",
+		"columnName": "Status"
+	  }, {
+		"alias": "jira",
+		"columnName": "JiraNumber"
+	  }, {
+		"alias": "summary",
+		"columnName": "Summary"
+	  }, {
+		"alias": "notes",
+		"columnName": "Notes"
+	  }, {
+		"alias": "reason",
+		"columnName": "Reason"
+	  }, {
+		"alias": "sprint",
+		"columnName": "Sprint"
+	  }, {
+		"alias": "test",
+		"columnName": "Left2Test"
+	  }
+	]
 }  ],
   "oldID": "e3a9bbf6-2ddc-4ef8-9cfd-6bd5c0f4c09a",
   "id": "d2ff31a6-6cd6-46c1-929a-c3ab6eb445d2"
