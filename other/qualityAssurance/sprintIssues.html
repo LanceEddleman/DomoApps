@@ -17,10 +17,10 @@
 							<option value="1">All Issues</option>
 						</select>
 					</li>
-					<li id="fireAll" onclick="showSelection('fire',0)"><a href="#">Fire Items</a></li>
-					<li id="fire5" onclick="showSelection('fire',5)"><a href="#">Fire Top 5</a></li>
-					<li id="fire10" onclick="showSelection('fire',10)"><a href="#">Fire Top 10</a></li>
-					<li id="allIssues" onclick="showSelection('all',9999)"><a href="#" class="active">All Issues</a></li>
+					<li id="fireAll" onclick="showSelection('fire',0);serverActive('fireAll')"><a href="#">Fire Items</a></li>
+					<li id="fire5" onclick="showSelection('fire',5);serverActive('fire5')"><a href="#">Fire Top 5</a></li>
+					<li id="fire10" onclick="showSelection('fire',10);serverActive('fire10')"><a href="#">Fire Top 10</a></li>
+					<li id="allIssues" onclick="showSelection('all',9999);serverActive('allIssues')"><a href="#" class="active">All Issues</a></li>
 				</ul>
 			</div>
 	  		<div id="contentSection" class="whiteBG clear">

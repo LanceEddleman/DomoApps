@@ -56,7 +56,7 @@
 		 		 	return 0;
 		 		 });
 		 	}
-			for(c=0; c<sprintInfo.length; c++) {
+			for(var c=0; c<sprintInfo.length; c++) {
 			SL.append('<option value="' + slc + '">' + sprintInfo[c].sprintDate + '</option>');
 			slc = slc + 1;
 			console.log(sprintInfo[c].sprintDate);
@@ -106,7 +106,7 @@
 				document.getElementById("groupTitle").innerHTML = 'Sprint: ' + sprint;
 				domo.get('/data/v1/qasi?orderby=sprint descending').then(function(qasi){
 					rCount = 0;
-					className = 'tableRows';
+					var className = 'tableRows';
 					qasi.forEach(function(item) {
 						console.log(item);
 						if(rCount % 2 === 0) {
