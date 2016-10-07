@@ -6,26 +6,10 @@
 	background-color: lightgray;
 }
 
-/*table {
-	border-collapse: collapse;
-	margin: 0px;
-	padding: 0px;
-}
-thead, th, tr, td, tbody {
-	margin: 0px;
-	padding: 0px;
-}
-*/
-
 .clear {
   clear: both;			
 }
 
-/*#page {
-	height: 100%;
-	width: 100%;
-}
-*/
 #contentSection {
 	position: absolute;
 	top: 50px;
@@ -54,44 +38,31 @@ thead, th, tr, td, tbody {
 }
 
 #fire {
-/*
-	height: 540px;
-	height: calc(100% - 22px);
-*/
 	height: 100%;
-/*
-	width: 1165px;
-	overflow: hidden;
-*/
 }
 
 #fireText {
-	padding-bottom: 10px;
+	//padding-bottom: 10px;
 	color: #000;
 	overflow: auto;
-	height: calc(100% - 42px);
+	height: calc(100% - 30px);
 	width: 100%;
 }
 
-/*.pTop {margin-top: 15px;}*/
-
-
 .title {
-	padding-top: 10px;
-	padding-bottom: 9px;
-	text-align: center;
-	color: #000;
-	font-family: OpenSans-Bold;
-	font-weight: bold;
-	border-bottom: 1px solid black;
+	height: 30px;
+	line-height: 30px;
 }
 
 #sectionTitle {
+	position: absolute;
+	top: 0;
 	width: 100%;
-	height: 20px;
+	height: 30px;
+	line-height: 30px;
 	border-bottom: 1px solid black;
 	font-family: OpenSans-Bold;
-	line-height: 20px;
+
 }
 
 .fRow {
@@ -114,14 +85,15 @@ thead, th, tr, td, tbody {
 .tableRows {font-weight: normal;}
 
 /* Field Widths */
-.wsquad {width: 150px; float: left; text-align: center; white-space: wrap;}
-.wstatus {width: 5%; float: left; text-align: center; white-space: nowrap;}
+.wsquad {width: 200px; float: left; text-align: center; white-space: wrap;}
 .wjira {width: 150px; float: left; text-align: center;}
-.wsummary {width: calc(100% - 400px); float: left; text-align: left;}
+.wsummary {width: calc(100% - 450px); float: left; text-align: left;}
+.wsprint {width: 100px; float: left; text-align: center; white-space: nowrap;}
+
 .wnotes {width: 20%; float: left; text-align: left;}
 .wreason {width: 10%; float: left; text-align: left;}
-.wsprint {width: 100px; float: left; text-align: center; white-space: nowrap;}
 .wtest {width: 10%; float: left; text-align: left;}
+.wstatus {width: 5%; float: left; text-align: center; white-space: nowrap;}
 
 .intro {
 	font-size: 90px;
@@ -131,8 +103,7 @@ thead, th, tr, td, tbody {
 }
 
 /* Navigation Start */
-
-.serverNav {
+.sprintNav {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -142,7 +113,7 @@ thead, th, tr, td, tbody {
 	width:100%;
 }
 
-.serverNav ul {
+.sprintNav ul {
 	list-style: none;
 	height: 20px;
 	line-height: 50px;
@@ -151,7 +122,7 @@ thead, th, tr, td, tbody {
 	padding: 0;
 }
 
-.serverNav li {
+.sprintNav li {
 	font-family: OpenSans, sans-serif;
 	font-size: 1.0em;
 	font-weight: bold;
@@ -160,13 +131,14 @@ thead, th, tr, td, tbody {
 	float: left;
 }
 
-.serverNav a {
+.sprintNav a {
   text-decoration: none;
   color: #fff;
   display: block;
   transition: .3s background-color;
 }
-.serverNav a:hover {
+
+.sprintNav a:hover {
 	background-color: #99ccee;
 	color: #000;
 	font-weight: bolder;
@@ -174,7 +146,7 @@ thead, th, tr, td, tbody {
 	border-right: 1px solid black;
 }
 
-.serverNav a.active {
+.sprintNav a.active {
   background-color: #fff;
   color: #707F8A;
   cursor: default;
@@ -209,22 +181,4 @@ thead, th, tr, td, tbody {
   }
   */
 }
-
 /* Navigation End */
-
-/* Traditional clearfix */
-.clearfix:after {
-//    content: ".";
-	display: block;
-	height: 0px;
-	clear: both;
-	visibility: hidden;
-}
-
-.clearfix {display: inline-block;}
-* html .clearfix {height: 1%;}
-.clearfix {display: block;}
-
-/* Custom CSS for the page layout */
-.columns .column1 {float: left;}
-.columns .column2 {float: left;}

@@ -17,6 +17,11 @@
       "fields": []
     },
     {
+      "dataSetId": "8d8ea0b1-711b-41fe-abec-061cd1b4ead8",
+      "alias": "teamList",
+      "fields": []
+    },
+    {
       "dataSetId": "fef20312-fe5c-4da4-ba46-c2f06aa4564e",
       "alias": "qasi",
       "fields": [{
@@ -43,9 +48,6 @@
       }, {
         "alias": "test",
         "columnName": "Left2Test"
-      }, {
-        "alias": "sprintlist",
-        "columnName": "SprintList"
       }
     ]
 }  ],

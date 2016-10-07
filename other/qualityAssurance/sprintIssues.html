@@ -1,6 +1,6 @@
  	<head>
 		<link rel="stylesheet" href="css/sprint.css" />
-		<!-- <link rel="stylesheet" href="css/app.css" /> -->
+		<link rel="stylesheet" href="css/app.css" />
 		<script src="js/sprint.js"></script>
 		<script src="domo.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -10,7 +10,7 @@
 
 	<main class="main">
 		<div id="page">
-			<div class="serverNav">
+			<div class="sprintNav">
 				<ul>
 					<li><select id="sprintList" class="buttonM" onchange="chooseSprint()">
 							<!-- <option value="0">Select Release</option> -->
@@ -18,8 +18,10 @@
 						</select>
 					</li>
 					<li id="fireAll" onclick="showSelection('fire',0);serverActive('fireAll')"><a href="#">Fire Items</a></li>
+<!-- 
 					<li id="fire5" onclick="showSelection('fire',5);serverActive('fire5')"><a href="#">Fire Top 5</a></li>
 					<li id="fire10" onclick="showSelection('fire',10);serverActive('fire10')"><a href="#">Fire Top 10</a></li>
+ -->
 					<li id="allIssues" onclick="showSelection('all',9999);serverActive('allIssues')"><a href="#" class="active">All Issues</a></li>
 				</ul>
 			</div>

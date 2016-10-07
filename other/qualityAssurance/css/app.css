@@ -77,6 +77,15 @@ p {
     font-weight: bold;
 }
 
+.opRed {
+	color: #B83E52;
+    font-weight: bold;
+}
+.opOrange {
+	color: #DA803C;
+    font-weight: bold;
+}
+
 .uSort, .uLink {
 	width: 30px;
 	padding-left: 10px;

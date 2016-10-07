@@ -3,9 +3,10 @@
 	var sectionTitle = '<div id="sectionTitle"><div class="wsquad">Squad</div><div class="wjira">Jira #</div><div class="wsummary">Summary</div><div class="wsprint">Sprint</div></div>';
 
 	var titleText = 'Make a selection';
-	var groupTitle = '<div>' + titleText + '</div>';
+	var groupTitleText = '<div>' + titleText + '</div>';
 	var fireDiv = $("#fire");
 	var fireText = $("#fireText");
+	var groupTitle = $("#groupTitle");
 	var message = $("#message");
 	var postRowCount = $("#rCount");
 	var sprint = 0;
@@ -16,6 +17,7 @@
 	var sprintInfo = [];
 	var sprintOrder = [];
 	var clicked = 'allIssues';
+	var className = '';
 
 // Current Date
 	function showDate(){
@@ -30,38 +32,62 @@
 		message.append(cDate);
 	}
 
-// Sprint List
+// Sprint List, capture and sort
 	function getSprintsList(){
-		console.log('build Sprint list');
+		// console.log('Build Sprint list');
 		var SL = $(document.getElementById("sprintList"));
 		var slc = 2; 			// sprint list counter
+		var sprintDate = '';
 
 		domo.get('/data/v1/qasi?orderby=sprint ascending').then(function(qasi){
 			qasi.forEach(function(item) {
-				if (item.sprintlist === null) {	// empty or null
+				if (item.sprint === null) {	// empty or null
 				}
 				else {
-					var sprintDate = item.sprintlist;
+					//var sprintDate = item.sprintlist;
+					sprintDate = item.sprint;
 					sprintInfo.push({sprintDate});
 				}
 			});
-		// ========== Sort by NAME Descending ==========
+			// console.log("sprintInfo? ", sprintInfo);
+		// ========== Get unique list ==========
+				var unique = {};
+				var distinct = [];
+				for( var i = 0; i<sprintInfo.length; i++ ){
+					if( typeof(unique[sprintInfo[i].sprintDate]) == "undefined"){
+					distinct.push(sprintInfo[i].sprintDate);
+					}
+				unique[sprintInfo[i].sprintDate] = 0;
+				}
+				// console.log("distinct sprintList? ", distinct);
+
+		// ========== Sort Descending ==========
 	 		var sort = true;
 			if (sort){
-	 			sprintInfo.sort(function(a, b){
-					var nameA=a.sprintDate.toLowerCase();
-		 		 	var nameB=b.sprintDate.toLowerCase();
+	 			distinct.sort(function(a, b){
+					var nameA=a;
+		 		 	var nameB=b;
 		 		 	if (nameA > nameB){return -1;}
 		 		 	if (nameA < nameB){return 1;}
 		 		 	return 0;
 		 		 });
 		 	}
-			for(var c=0; c<sprintInfo.length; c++) {
-			SL.append('<option value="' + slc + '">' + sprintInfo[c].sprintDate + '</option>');
+
+			for(var d = 0; d < distinct.length; d++) {
+			SL.append('<option value="' + slc + '">' + distinct[d] + '</option>');
 			slc = slc + 1;
-			console.log(sprintInfo[c].sprintDate);
+			console.log(distinct[d]);
 			}
 		});
+		showSelection('all',num);
+	}
+
+// Reset to base page
+	function runReset() {
+		//location.reload(parent);
+		document.getElementById("fireDiv").innerHTML = '';
+		document.getElementById("groupTitle").innerHTML = '';
+		fireDiv.append('<div id="fireText" class="tableRows">&nbsp;</div>');
 		showSelection('all',num);
 	}
 
@@ -69,44 +95,78 @@
 	function chooseSprint() {
 		var option = document.getElementById("sprintList").value;
 		var optionText = $('#sprintList :selected').text(); 
-		console.log(option);console.log(optionText);
+		console.log("choose sprint function running");
+		console.log(option + ' : ' + optionText);
 		var sprint = optionText;
 		
-		if (optionText == 'Select Release') {
-			console.log('run RESET');
-			runReset();
+		// if (optionText == 'Select Release') {
+		// 	console.log('run RESET');
+		// 	runReset();
+		// 	showSelection('all',num);
+		// }
+		// else {
 			showSelection('all',num);
-		}
-		else {
-			showSelection('all',num);
-		}
-	}
-
-// Reset to base page
-	function runReset() {
-		//location.reload(parent);
-		document.getElementById("fire").innerHTML = '';
-		fireDiv.append('<div id="groupTitle" class="title">Select A Release To Review</div>');
-		fireDiv.append('<div id="fireText" class="tableRows">&nbsp;</div>');
-		showSelection('all',num);
+		// }
 	}
 
 // Show Slection
 	function showSelection(status,num) {
+
 		var rCount = 1;
 		var sprintNo = document.getElementById("sprintList").value;
 		var sprint = $('#sprintList :selected').text();
-		console.log('sprintNo: ' + sprintNo + ' sprint: ' + sprint + ' status: ' + status + ' num: ' + num);
+		console.log(' status: ' + status + ' num: ' + num);
+		document.getElementById("groupTitle").innerHTML = '';
+		groupTitle.append(sectionTitle);
 		document.getElementById("fireText").innerHTML = sectionTitle;
 
 		if (sprintNo == 0 || sprintNo == 1) {
-			// console.log("sprint selected: " + sprintNo);
 			if (status == 'all') {
-				// console.log("sprint = 0 or 1 and status = all");
-				document.getElementById("groupTitle").innerHTML = 'Sprint: ' + sprint;
 				domo.get('/data/v1/qasi?orderby=sprint descending').then(function(qasi){
 					rCount = 0;
-					var className = 'tableRows';
+					qasi.forEach(function(item) {
+						// console.log(item);
+						if(rCount % 2 === 0) {
+							className = 'tableRows fRowE';
+							rCount = rCount+1;
+						}
+						else {
+							className = 'tableRows fRow';
+							rCount = rCount+1;
+						}
+						fireText.append('<div class="' + className + '"><div class="wsquad">' + item.squad + '</div><div class="wjira">' + item.jira + '</div><div class="wsummary">' + item.summary + '</div><div class="wsprint">' + item.sprint + '&nbsp;</div></div>');
+				   });
+				document.getElementById("rCount").innerHTML = '';
+				postRowCount.append('Rows: ' + rCount);
+				});
+			}
+			else {
+				console.log("sprint = 0 or 1 and status != all ");
+				domo.get('/data/v1/qasi?filter=notes contains "CRI" &limit='+ num + '&orderby=sprint descending').then(function(qasi){
+					rCount = 0;
+					qasi.forEach(function(item) {
+						console.log(item);
+						if(rCount % 2 === 0) {
+							className = 'tableRows fRowE opRed';
+							rCount = rCount+1;
+						}
+						else {
+							className = 'tableRows fRow opOrange';
+							rCount = rCount+1;
+						}
+						fireText.append('<div class="' + className + '"><div class="wsquad">' + item.squad + '</div><div class="wjira">' + item.jira + '</div><div class="wsummary">' + item.summary + '</div><div class="wsprint">' + item.sprint + '&nbsp;</div></div>');
+				   });
+				console.log('Rows: ' + rCount);	
+				document.getElementById("rCount").innerHTML = '';
+				postRowCount.append('Rows: ' + rCount);
+				});
+			}
+		}
+		else {
+			serverActive('allIssues');
+			if (status == 'all') {
+				domo.get('/data/v1/qasi?filter=sprint = ' + sprint + '&limit='+ num + '&orderby=sprint descending').then(function(qasi){
+					rCount = 0;
 					qasi.forEach(function(item) {
 						console.log(item);
 						if(rCount % 2 === 0) {
@@ -119,67 +179,25 @@
 						}
 						fireText.append('<div class="' + className + '"><div class="wsquad">' + item.squad + '</div><div class="wjira">' + item.jira + '</div><div class="wsummary">' + item.summary + '</div><div class="wsprint">' + item.sprint + '&nbsp;</div></div>');
 				   });
-				// console.log('Rows: ' + rCount);	
-				document.getElementById("rCount").innerHTML = '';
-				postRowCount.append('Rows: ' + rCount);
-				});
-			}
-			else {
-				console.log("sprint = 0 or 1 and status != all ");
-				domo.get('/data/v1/qasi?filter=status contains "fire" &limit='+ num + '&orderby=sprint descending').then(function(qasi){
-					rCount = 0;
-					qasi.forEach(function(item) {
-						console.log(item);
-						if(rCount % 2 === 0) {
-							fireText.append('<div class="tableRows fRowE"><div class="wsquad">' + item.squad + '</div><div class="wjira">' + item.jira + '</div><div class="wsummary">' + item.summary + '</div><div class="wsprint">' + item.sprint + '&nbsp;</div></div>');
-							rCount = rCount+1;
-						}
-						else {
-							fireText.append('<div class="tableRows fRow"><div class="wsquad">' + item.squad + '</div><div class="wjira">' + item.jira + '</div><div class="wsummary">' + item.summary + '</div><div class="wsprint">' + item.sprint + '&nbsp;</div></div>');
-							rCount = rCount+1;
-						}
-				   });
-				console.log('Rows: ' + rCount);	
-				document.getElementById("rCount").innerHTML = '';
-				postRowCount.append('Rows: ' + rCount);
-				});
-			}
-		}
-		else {
-			if (status == 'all') {
-				document.getElementById("groupTitle").innerHTML = 'Sprint: ' + sprint;
-				domo.get('/data/v1/qasi?filter=sprint = ' + sprint + '&limit='+ num + '&orderby=sprint descending').then(function(qasi){
-					rCount = 0;
-					qasi.forEach(function(item) {
-						console.log(item);
-						if(rCount % 2 === 0) {
-							fireText.append('<div class="fRowE"><div class="wsquad">' + item.squad + '</div><div class="wjira">' + item.jira + '</div><div class="wsummary">' + item.summary + '</div><div class="wsprint">' + item.sprint + '&nbsp;</div></div>');
-							rCount = rCount+1;
-						}
-						else {
-							fireText.append('<div class="tableRows"><div class="wsquad">' + item.squad + '</div><div class="wjira">' + item.jira + '</div><div class="wsummary">' + item.summary + '</div><div class="wsprint">' + item.sprint + '&nbsp;</div></div>');
-							rCount = rCount+1;
-						}
-				   });
 				console.log('Rows: ' + rCount);	
 				document.getElementById("rCount").innerHTML = '';
 				postRowCount.append('Rows: ' + rCount);
 				});
 			}
 			else {
-				document.getElementById("groupTitle").innerHTML = 'Sprint: ' + sprint;
-				domo.get('/data/v1/qasi?filter=sprint = ' + sprint + ',status contains "fire" &limit='+ num + '&orderby=sprint descending').then(function(qasi){
+				domo.get('/data/v1/qasi?filter=sprint = ' + sprint + ',notes contains "CRI" &limit='+ num + '&orderby=sprint descending').then(function(qasi){
 					rCount = 0;
 					qasi.forEach(function(item) {
 						console.log(item);
 						if(rCount % 2 === 0) {
-							fireText.append('<div class="tableRows fRowE"><div class="wsquad">' + item.squad + '</div><div class="wjira">' + item.jira + '</div><div class="wsummary">' + item.summary + '</div><div class="wsprint">' + item.sprint + '&nbsp;</div></div>');
+							className = 'tableRows fRowE opRed';
 							rCount = rCount+1;
 						}
 						else {
-							fireText.append('<div class="tableRows fRow"><div class="wsquad">' + item.squad + '</div><div class="wjira">' + item.jira + '</div><div class="wsummary">' + item.summary + '</div><div class="wsprint">' + item.sprint + '&nbsp;</div></div>');
+							className = 'tableRows fRow opOrange';
 							rCount = rCount+1;
 						}
+						fireText.append('<div class="' + className + '"><div class="wsquad">' + item.squad + '</div><div class="wjira">' + item.jira + '</div><div class="wsummary">' + item.summary + '</div><div class="wsprint">' + item.sprint + '&nbsp;</div></div>');
 				   });
 				console.log('Rows: ' + rCount);	
 				document.getElementById("rCount").innerHTML = '';
@@ -189,25 +207,31 @@
 		}
 	}
 
+				// need to add check for multi filter result of 0 rows
+				// if(rCount === 0) {
+				// document.getElementById("fireText").innerHTML = '';
+				// fireText.append('<div id="notFound" class="">No FIRE / CLI items found in ' + sprint + '</div>');					
+				// }
+
 // ShowSprint -------------------------  unused
-	function showSprint(sprint){
-		if (sprint == "All Issues") {
-			domo.get('/data/v1/qasi?orderby=sprint descending').then(function(qasi){
-				qasi.forEach(function(item) {
-					console.log(item);
-					fireText.append(fsquad + item.squad + fstatus + item.status + fjira + item.jira + fsummary + item.summary + fnotes + item.notes + freason + item.reason + fsprint + item.sprint + ftest + item.test + fend);
-				});
-			});
-		}
-		else {
-			domo.get('/data/v1/qasi?filter=sprint = ' + sprint).then(function(qasi){
-				qasi.forEach(function(item) {
-					console.log(item);
-					fireText.append(fsquad + item.squad + fstatus + item.status + fjira + item.jira + fsummary + item.summary + fnotes + item.notes + freason + item.reason + fsprint + item.sprint + ftest + item.test + fend);
-			   });
-			});
-		}
-   }
+	// function showSprint(sprint){
+	// 	if (sprint == "All Issues") {
+	// 		domo.get('/data/v1/qasi?orderby=sprint descending').then(function(qasi){
+	// 			qasi.forEach(function(item) {
+	// 				console.log(item);
+	// 				fireText.append(fsquad + item.squad + fstatus + item.status + fjira + item.jira + fsummary + item.summary + fnotes + item.notes + freason + item.reason + fsprint + item.sprint + ftest + item.test + fend);
+	// 			});
+	// 		});
+	// 	}
+	// 	else {
+	// 		domo.get('/data/v1/qasi?filter=sprint = ' + sprint).then(function(qasi){
+	// 			qasi.forEach(function(item) {
+	// 				console.log(item);
+	// 				fireText.append(fsquad + item.squad + fstatus + item.status + fjira + item.jira + fsummary + item.summary + fnotes + item.notes + freason + item.reason + fsprint + item.sprint + ftest + item.test + fend);
+	// 		   });
+	// 		});
+	// 	}
+ //   }
 
 
 
