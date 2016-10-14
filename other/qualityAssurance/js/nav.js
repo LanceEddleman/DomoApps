@@ -26,14 +26,28 @@ var clicked = 'home';
 		active(clicked);
 		document.getElementById("content").innerHTML = '';
 		$("#content").load("teams.html");
+		teamTitleFade();
+		getTeamList();
 	}
+
+// Team
+	function hfSquad(clicked) {
+		active(clicked);
+		document.getElementById("content").innerHTML = '';
+		$("#content").load("hotfix.html");
+		hfTitleFade();
+		getHFSquad();
+	}
+
 
 // Active menu
 	function active(clicked) {
 		$("#home a").removeClass('active');
 		$("#sprints a").removeClass('active');
 		$("#teams a").removeClass('active');
+		$("#hfSquad a").removeClass('active');
 		$("#servers a").removeClass('active');
+		console.clear();
 		if(clicked === 'home') {
 			$("#home a").addClass('active');
 		}
@@ -42,6 +56,9 @@ var clicked = 'home';
 		}
 		if(clicked === 'team') {
 			$("#teams a").addClass('active');
+		}
+		if(clicked === 'hfSquad') {
+			$("#hfSquad a").addClass('active');
 		}
 		if(clicked === 'server') {
 			$("#servers a").addClass('active');

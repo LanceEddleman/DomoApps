@@ -25,7 +25,6 @@
 .branch {background-color: #B9D3EE;}
 
 /* Field Widths */
-}
 .fields {
 	white-space: nowrap;
 }
@@ -76,6 +75,5 @@
 }
 .serverFade.show {
 	opacity: 1;
-	//background-color: #FFCC99;
 	transition: all 2s ease;
 }

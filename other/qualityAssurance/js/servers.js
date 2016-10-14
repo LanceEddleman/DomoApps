@@ -145,7 +145,7 @@ var serverInfo = [];
 		}, 100);
 		setTimeout(function() {
 			getServerList();
-		}, 1000);
+		}, 500);
 	}
 
 
