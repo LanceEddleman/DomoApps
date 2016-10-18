@@ -40,6 +40,7 @@ body {
 	right: 35px;
 	z-index: 100;
 }
+
 .header:hover {
 	color: #99ccee;
 	text-shadow: 1px 1px 8px #000;
@@ -53,6 +54,17 @@ body {
 	z-index: 1;
 }
 
+.header3 {
+	position: absolute;
+	top: -1px;
+	right: -12px;
+	height: 16px;
+	font-size: 12px;
+	width: 200px;
+	text-align: right;
+	opacity: 0;
+}
+
 .domoFont {
 	font-family: OpenSans-Bold;
 	font-size: 90px;
@@ -60,6 +72,13 @@ body {
 	letter-spacing: -16;
 	line-height: 90px;
 }
+
+.tHover {}
+.tHover:hover .header3 {
+	opacity: 1;
+	transition: all 3s ease;
+}
+
 
 /* Colors */
 .domoBlue {color: #99ccee;}
@@ -71,6 +90,63 @@ body {
 .red {text-shadow: 0.5px 0px red;}
 .green {text-shadow: 0.5px 0px green;}
 .oddRow {background-color: lightgrey;}
+
+#footer {
+	position: absolute;
+	bottom: 1px;
+	left: 1px;
+	height: 22px;
+	width: calc(100% - 2px);
+	color: #fff;
+	background-color: #99ccee;
+	border-top: 1px solid black;
+	transition: all 2s ease;
+	z-index: 10;
+}
+
+.message {
+	position: absolute;
+	text-align: right;
+	right: 10px;
+	width: 20%;
+	min-width: 150px;
+}
+
+.rCount {
+	position: absolute;
+	width: 80%;
+	min-width: 450px;
+	left: 10px;
+}
+
+#newstuff {
+	position: absolute;
+	bottom: 0px;
+	left: -10px;
+	color: #000;
+	width: 100%;
+	padding: 5px;
+	border-left: 15px solid #99ccee;
+	height: 0px;
+	opacity: 0;
+	z-index: -50;
+}
+
+#div-new:hover #newstuff {
+	color: #000;
+  	bottom: 12px;
+	height: 100px;
+	opacity: 1;
+	transition: all 0.4s ease;
+}
+
+.newTitle:hover {
+	font-weight: bolder;
+	color: #000;
+	background-color: #99ccee;
+}
+
+
 
 /* Traditional clearfix */
 .clearfix:after {

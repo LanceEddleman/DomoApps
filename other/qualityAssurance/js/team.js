@@ -18,14 +18,15 @@
 
 // Display team intro title splash
 	function teamTitleFade() {
+				document.getElementById("content").innerHTML = '';
 		setTimeout(function() {	$('.titleFade').addClass('hide'); }, 100);
-		setTimeout(function() { /* getServerList(); */ }, 1000);
+		setTimeout(function() { }, 500);
 	}
 
 // Get all data, create arrays
 	function getTeamList(){
 		domo.get('/data/v1/teamList').then(function(qaTeam){
-			// console.log("qaTeams ", qaTeam);
+			 console.log("qaTeams ", qaTeam);
 			// console.log(qaTeam.length);
 			uNum = 0;
 
@@ -35,8 +36,8 @@
 				var qa1 = qaTeam[t].qa1;
 				var qa2 = qaTeam[t].qa2;
 				var qa3 = qaTeam[t].qa3;
-				var i1 = qaTeam[t].intern1;
-				var i2 = qaTeam[t].intern2;
+				var i1 = qaTeam[t].i1;
+				var i2 = qaTeam[t].i2;
 				var features = qaTeam[t].features;
 
 				if (team.length <= 1) { team = tMiss; }	else { team = team; } // team
@@ -55,7 +56,7 @@
 				}
 				teamList.push({team,qa1,qa2,qa3,i1,i2,features,uNum});
 				uNum = uNum + 1;
-				// console.log(team + ' : ', teamList[t]);
+				 console.log(team + ' : ', teamList[t]);
 			}
 			displayTeamList();
 		});
@@ -76,8 +77,8 @@
 			var qa1 = teamList[w].qa1;
 			var qa2 = teamList[w].qa2;
 			var qa3 = teamList[w].qa3;
-			var i1 = teamList[w].intern1;
-			var i2 = teamList[w].intern2;
+			var i1 = teamList[w].i1;
+			var i2 = teamList[w].i2;
 			var features = teamList[w].features;
 			var row = teamList[w].uNum;
 			var u = undefined;

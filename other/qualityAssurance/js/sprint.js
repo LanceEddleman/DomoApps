@@ -20,17 +20,17 @@
 	var className = '';
 
 // Current Date
-	function showDate(){
-	var today = new Date();
-		var viewToday = (
-			(today.getMonth() + 1) + "/" +
-			today.getDate() + "/" +
-			today.getFullYear()
-		);
-		cDate = 'Today is: ' + viewToday;
-		console.log(cDate);
-		message.append(cDate);
-	}
+	// function showDate(){
+	// var today = new Date();
+	// 	var viewToday = (
+	// 		(today.getMonth() + 1) + "/" +
+	// 		today.getDate() + "/" +
+	// 		today.getFullYear()
+	// 	);
+	// 	cDate = 'Today is: ' + viewToday;
+	// 	console.log(cDate);
+	// 	message.append(cDate);
+	// }
 
 // Sprint List, capture and sort
 	function getSprintsList(){

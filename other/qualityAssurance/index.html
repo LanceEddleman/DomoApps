@@ -4,10 +4,15 @@
 		<link rel="stylesheet" href="css/nav.css" />
 		<link rel="stylesheet" href="css/app.css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-		<script>$(document).ready(function(){home('home');});</script>
+		<script src="domo.js"></script>
+		<script src="app.js"></script>
+		<script>$(document).ready(function(){home('home');displayDate();updated();});</script>
 	</head>
 	<body>
-		<div id="header"><div class="header domoFont white">DOMO&nbsp;-&nbsp;QA</div></div>
+		<div id="header" class="tHover">
+			<div class="header domoFont white">DOMO&nbsp;-&nbsp;QA</div>
+			<span class="header3 darkBlue">v 2.0.1 - 10/18/2016</span>
+		</div>
 		<div id="header2"><div class="header2 domoFont darkBlue">DOMO&nbsp;-&nbsp;QA</div></div>
 
 		<menu>
@@ -22,13 +27,10 @@
 			</div>
 		</menu>
 
-		<content id="content" class="contentBox">
+		<content id="content" class="contentBox"></content>
 
-		</content>
-		
-		<!-- domo.js optional utils -->
-		<script src="domo.js"></script>
-		<script src="app.js"></script>
+		<div id="footer" class=""><div id="rCount" class="rCount"></div><div id="message" class="message"></div></div>
+
 		<script src="js/nav.js"></script>
 		<script src="js/servers.js"></script>
 		<script src="js/sprint.js"></script>
