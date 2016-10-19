@@ -99,6 +99,11 @@
 	line-height: 150px;
 }
 
+.redText {
+	color: #B83E52;
+    font-weight: bold;
+}
+
 /* Navigation Start */
 .sprintNav {
 	position: absolute;

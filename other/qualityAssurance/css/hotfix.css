@@ -1,39 +1,31 @@
-.hotfixtitleFade {
-	opacity: 1;
-	height: 50%;
-	width: 100%;
-	line-height: 500px;
-	font-size: 48;
-	font-style: bolder;
-	background-color: #FFE5CC;
-}
-
-// copied from team page cleanup names
-
 .hotfixMain {
 	position: absolute;
 	top: 0;
 	width: 100%;
 	height: calc(100% - 22px);
-	background-color: #FFE5CC;
 }
 
 #hotfixBody {
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	background-color: #99ccee;
+}
+
+.hotfixTitle {
+	height: 100%;
+	width: 100%;
+	line-height: 500px;
+	font-size: 48;
+	font-style: bolder;
 }
 
 .hotfixTitleFade {
 	opacity: 1;
 	height: 100%;
 	width: 100%;
-	line-height: 500px;
-	font-size: 48;
-	font-style: bolder;
 	background-color: #FFE5CC;
 }
+
 .hotfixTitleFade.hide {
 	opacity: 0;
 	background-color: #fccf84;
@@ -41,11 +33,13 @@
 }
 
 .hotfixFade {
-	background-color: #FFE5CC;
+	background-color: #fccf84;
 	opacity: 0;
 }
 .hotfixFade.show {
 	background-color: #FFE5CC;
+	height: 100%;
+	width: 100%;
 	opacity: 1;
 	transition: all 2s ease;
 }
@@ -62,8 +56,6 @@
 	height: 30px;
 	line-height: 30px;
 	width: 100%;
-	background-color: #fccf84;
-	color: #fff;
 	border-bottom: 1px black solid;
 	margin-right: 20px;
 }
@@ -104,19 +96,11 @@
 	background-color: fccf84;
 	height: 30px;
 	line-height: 30px;
-	//font-weight: bolder;
 	font-size: 1.2em;
-	text-transform: capitalize;
 }
 
-.squadInfo.show {
-	height: calc(100% - 22px);
-}
-
-.squadInfo.hide {
-	height: 30px;
-	transition: all 2s ease;
-}
+.squadInfo.show {height: calc(100% - 22px);}
+.squadInfo.hide {height: 30px;transition: all 2s ease;}
 
 #footer {
 	background-color: #99ccee;

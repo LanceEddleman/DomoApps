@@ -1,0 +1,26 @@
+.titleFade {
+	opacity: 1;
+	height: 100%;
+	width: 100%;
+	line-height: 500px;
+	font-size: 48;
+	font-style: bolder;
+	background-color: #B42115;
+}
+
+.titleFade.hide {
+	opacity: 0;
+	height: 0;
+	transition: all 3s ease;
+}
+
+#linksBody {
+	position: absolute;
+	top: 0;
+	height: calc(100% - 22px);
+}
+
+.lfields {
+	width: 33.33%;
+	text-align: center;
+}

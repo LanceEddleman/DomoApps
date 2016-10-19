@@ -39,6 +39,15 @@ var clicked = 'home';
 		getHFSquad();
 	}
 
+// Links
+	function linksShow(clicked) {
+		active(clicked);
+		document.getElementById("content").innerHTML = '';
+		$("#content").load("links.html");
+		// hotfixTitleFade();
+		// getHFSquad();
+	}
+
 
 // Active menu
 	function active(clicked) {
@@ -51,7 +60,9 @@ var clicked = 'home';
 		$("#teams a").removeClass('active');
 		$("#hfSquad a").removeClass('active');
 		$("#servers a").removeClass('active');
-		// console.clear();
+		$("#links a").removeClass('active');
+
+		//console.clear();
 		if(clicked === 'home') {
 			$("#home a").addClass('active');
 		}
@@ -66,6 +77,9 @@ var clicked = 'home';
 		}
 		if(clicked === 'server') {
 			$("#servers a").addClass('active');
+		}
+		if(clicked === 'links') {
+			$("#links a").addClass('active');
 		}
 	}
 

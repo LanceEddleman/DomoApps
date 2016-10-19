@@ -57,8 +57,8 @@ var serverInfo = [];
 
 // Console server list and info
 	function consoleServers(sList,sInfo) {
-		console.log("serverList", sList);
-		console.log("serverInfo", sInfo);
+		// console.log("serverList", sList);
+		// console.log("serverInfo", sInfo);
 	}
 
 // Display Server List
@@ -75,21 +75,6 @@ var serverInfo = [];
 		serverBody.append(serverListings);			// Adds table titles
 		var u = sList;
 		var uNum = 0;
-
-		// ========== Sort by NAME Ascending ==========
-	 		// var sort = true;
-	 		// if (indexCount > 0 || sort === true){
-	 		// 	console.log('Sorting User Array');
-	 		// 	u.sort(function(a, b){
-	 		// 		var nameA=a.shortName.toLowerCase();
-	 		// 		var nameB=b.shortName.toLowerCase();
-	 		// 		if (nameA < nameB) 			//sort string ascending
-				// 		{return -1;}
-	 		// 		if (nameA > nameB)
-	 		// 			{return 1;}
-	 		// 		return 0;					//default return value (no sorting)
-	 		// 	});
-		 	// }
 
 		// Display List Variables
 		for(var i = 0; i < u.length; i++){

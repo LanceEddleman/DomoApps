@@ -26,8 +26,8 @@
 // Get all data, create arrays
 	function getTeamList(){
 		domo.get('/data/v1/teamList').then(function(qaTeam){
-			 console.log("qaTeams ", qaTeam);
-			// console.log(qaTeam.length);
+			// console.log("qaTeams ", qaTeam);
+
 			uNum = 0;
 
 			for(var t = 0; t < qaTeam.length; t++)

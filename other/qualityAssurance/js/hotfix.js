@@ -21,6 +21,7 @@
 	var squad = '';
 	var tsState = 0;
 	var hfSquads = [];
+	var hfsOrdered = [];
 	var lead1 = "Lance Eddleman";
 	var lead2 = "Lee Decker";
 	var lead3 = "Craig Frost";
@@ -45,10 +46,13 @@
 				else if (qa === lead2) {qa = '* ' + qa;lead = 1;}
 				else if (qa === lead3) {qa = '* ' + qa;lead = 1;}
 				else {lead = 0;}
+
 				hfSquads.push({squad,qa,area,lead,uNum});
 				uNum = uNum + 1;
 				console.log(squad + ' : ', hfSquads[h]);
 			}
+			hfSquads.sort(function(a, b) {return b.lead - a.lead;});
+			// console.log("leads first push ", hfSquads);
 			displaySquadList();
 		});
 	}
@@ -86,7 +90,6 @@
 			var delta = ' delta';
 
 			if (lead == 1) {cSquad = cSquad + cLead;}
-			
 			if (squadName === 'bravo'){cSquad = cSquad + bravo;}
 			if (squadName === 'charlie'){cSquad = cSquad + charlie;}
 			if (squadName === 'delta'){cSquad = cSquad + delta;}
@@ -110,7 +113,7 @@
 		// animation and stats load
 	function squadTitleDisplay() {
 		$('.squadInfo').addClass('hide');
-		var squadFeatures = '<div id="squadNamesTitles" class="fullWidth floatLeft"><div class="squadWidth bravo">Bravo</div><div class="squadWidth charlie">Charlie</div><div class="squadWidth delta">Delta</div></div>';
+		var squadFeatures = '<div id="squadNamesTitles" class="fullWidth floatLeft"><div class="squadWidth bravo">BRAVO</div><div class="squadWidth charlie">CHARLIE</div><div class="squadWidth delta">DELTA</div></div>';
 		squadInfo.append(squadFeatures);
 	}
 

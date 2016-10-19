@@ -19,22 +19,8 @@
 	var clicked = 'allIssues';
 	var className = '';
 
-// Current Date
-	// function showDate(){
-	// var today = new Date();
-	// 	var viewToday = (
-	// 		(today.getMonth() + 1) + "/" +
-	// 		today.getDate() + "/" +
-	// 		today.getFullYear()
-	// 	);
-	// 	cDate = 'Today is: ' + viewToday;
-	// 	console.log(cDate);
-	// 	message.append(cDate);
-	// }
-
 // Sprint List, capture and sort
 	function getSprintsList(){
-		// console.log('Build Sprint list');
 		var SL = $(document.getElementById("sprintList"));
 		var slc = 2; 			// sprint list counter
 		var sprintDate = '';
@@ -44,12 +30,11 @@
 				if (item.sprint === null) {	// empty or null
 				}
 				else {
-					//var sprintDate = item.sprintlist;
+
 					sprintDate = item.sprint;
 					sprintInfo.push({sprintDate});
 				}
 			});
-			// console.log("sprintInfo? ", sprintInfo);
 		// ========== Get unique list ==========
 				var unique = {};
 				var distinct = [];
@@ -59,7 +44,8 @@
 					}
 				unique[sprintInfo[i].sprintDate] = 0;
 				}
-				// console.log("distinct sprintList? ", distinct);
+
+
 
 		// ========== Sort Descending ==========
 	 		var sort = true;
@@ -95,8 +81,8 @@
 	function chooseSprint() {
 		var option = document.getElementById("sprintList").value;
 		var optionText = $('#sprintList :selected').text(); 
-		console.log("choose sprint function running");
-		console.log(option + ' : ' + optionText);
+		// console.log("choose sprint function running");
+		// console.log(option + ' : ' + optionText);
 		var sprint = optionText;
 		
 		// if (optionText == 'Select Release') {
@@ -115,7 +101,26 @@
 		var rCount = 1;
 		var sprintNo = document.getElementById("sprintList").value;
 		var sprint = $('#sprintList :selected').text();
-		console.log(' status: ' + status + ' num: ' + num);
+		var sWarning = ' redText';
+
+		// working on setting color if it is with in x days of today =============
+		var dateNow = new Date();
+		var viewNow = (
+			(dateNow.getMonth() + 1) + "/" +
+			dateNow.getDate() + "/" +
+			dateNow.getFullYear()
+		);
+		cDate = 'Today is: ' + viewNow;
+		console.log(cDate);
+
+		var viewM = (dateNow.getMonth() + 1);
+		var viewD = dateNow.getDate();
+		var viewY = dateNow.getFullYear();
+		console.log(viewM + ':' + viewD + ':' + viewY);
+		console.log(dateNow.getMonth());
+		// ===================================================================end=
+
+		// console.log(' status: ' + status + ' num: ' + num);
 		document.getElementById("groupTitle").innerHTML = '';
 		groupTitle.append(sectionTitle);
 		document.getElementById("fireText").innerHTML = sectionTitle;
@@ -212,27 +217,6 @@
 				// document.getElementById("fireText").innerHTML = '';
 				// fireText.append('<div id="notFound" class="">No FIRE / CLI items found in ' + sprint + '</div>');					
 				// }
-
-// ShowSprint -------------------------  unused
-	// function showSprint(sprint){
-	// 	if (sprint == "All Issues") {
-	// 		domo.get('/data/v1/qasi?orderby=sprint descending').then(function(qasi){
-	// 			qasi.forEach(function(item) {
-	// 				console.log(item);
-	// 				fireText.append(fsquad + item.squad + fstatus + item.status + fjira + item.jira + fsummary + item.summary + fnotes + item.notes + freason + item.reason + fsprint + item.sprint + ftest + item.test + fend);
-	// 			});
-	// 		});
-	// 	}
-	// 	else {
-	// 		domo.get('/data/v1/qasi?filter=sprint = ' + sprint).then(function(qasi){
-	// 			qasi.forEach(function(item) {
-	// 				console.log(item);
-	// 				fireText.append(fsquad + item.squad + fstatus + item.status + fjira + item.jira + fsummary + item.summary + fnotes + item.notes + freason + item.reason + fsprint + item.sprint + ftest + item.test + fend);
-	// 		   });
-	// 		});
-	// 	}
- //   }
-
 
 
 // Active menu
