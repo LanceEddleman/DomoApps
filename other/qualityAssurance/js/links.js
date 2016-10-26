@@ -1,5 +1,6 @@
 var linkPage = $('#linksPage');
 var linkBody = $('#linksBody');
+var linkListing = $('#linkListings');
 var sList = '';
 var defMissing = 'Not Listed';
 var linksList = [];
@@ -12,100 +13,77 @@ getLinksList();
 		domo.get('/data/v1/linksList').then(function(links){
 			uNum = 0;
 
-			for(var sl = 0; sl < links.length; sl++)
+			for(var l = 0; l < links.length; l++)
 				{
-					var name = links[sl].Name;
-					var notes = links[sl].Notes;
-					var info = links[sl].InfoSource;
+					var name = links[l].Name;
+					var notes = links[l].Notes;
+					var alinks = links[l].Link;
+					var info = links[l].InfoSource;
 
-					if (name === undefined)  { name = defMissing; }else { name = name; }
-					if (notes === undefined)  { notes = sList; }else { notes = notes; }
-					if (info === undefined)  { info = defMissing; }else { info = info; }
+					if (name === undefined)  { name = defMissing; } else { name = name; }
+					if (notes === undefined)  { notes = sList; } else { notes = notes; }
+					if (alinks === undefined)  { alinks = sList; } else { alinks = alinks; }
+					if (info === undefined)  { info = defMissing; } else { info = info; }
+					// console.log('link? - ' + name + ':' + notes + ':' + alinks + ':' + info + ':' + uNum);
 
 					if(name !== '') {
-						linksList.push({name,notes,info,uNum});
+						linksList.push({name,notes,alinks,info,uNum});
 						uNum = uNum + 1;
 					}
 					else {
 						// obsolete items are not added to new array
 					}
 				}
-
-			consoleLinks(linksList);
 			displayLinksList(linksList);
 		});
 	}
 
 // Console server list and info
-	function consoleLinks(sList,sInfo) {
-		 console.log("list", sList);
-	}
+	function consoleLinks(sList) {console.log("list", sList);}
 
 // Display Server List
 	function displayLinksList(sList){
-		setTimeout(function() {$('.titleFade').addClass('hide');}, 500);
+		setTimeout(function() {$('.titleLFade').addClass('hide');}, 100);
+		setTimeout(function() {$('.bodyShow').addClass('show');}, 999);
 
-		//document.getElementById("linksPage").innerHTML = "";
-		var slTitles = $('<div id="linkTitles" class="fullWidth tbold"><span class="floatLeft lfields">Name</span><span class="floatLeft lfields">Notes</span><span class="floatLeft lfields">InfoSource</span></div>');
-		var serverListings = $('<div id="serverListings" class="fullwidth servertop"></div');
-		linkPage.append(slTitles);			// Adds table titles
-		linkPage.append(serverListings);			// Adds table titles
+		var slTitles = $('<div id="linkTitles" class="tbold lTitles"><span class="floatLeft lfields lname">Name</span><span class="floatLeft lfields lnotes">Notes</span><span class="floatRight lfields linfo">InfoSource</span></div>');
+		linkListing = $('<div id="linkListings" class="fullwidth"></div');
+		linkBody.append(slTitles);			// Adds table titles
+		linkBody.append(linkListing);			// Adds table titles
 		var u = sList;
 		var uNum = 0;
 
 		// Display List Variables
 		for(var i = 0; i < u.length; i++){
 			var name = u[i].name;
-			var shortName = u[i].shortName;
-			var link = u[i].link;
 			var notes = u[i].notes;
-			var type = u[i].serverType;
-			var alternate = u[i].alternate;
-			console.log(link);
+			var link = u[i].alinks;
+			var info = u[i].info;
+			// console.log('current link: ' + link);
 
-			// UI
-			className = 'fullH servers';
-			if(type === 'GA') {className = className + ' ga';}
-			else if(type === 'FA') {className = className + ' fa';}
-			else if(type === 'D') {className = className + ' dev';}
-			else if(type === 'R') {className = className + ' branch';}
-			else {className = className;}
+			// UI  adding class names
+			var className = 'linkRows fullG';
 
-			if (uNum % 2 === 0) {className = className + ' opE';}
-			else {className = className + ' opO';}
+			// Adding odd and even row highlighting
+			if (uNum % 2 === 0) {className = className + ' opY';}
+			else {className = className + ' opX';}
 		 	
-		 	// display each server and add click function
-			var slPop = $('<div id="server' + uNum + '" class="' + className + '"><span class="floatLeft wname fields">'+ name +'</span><span class="floatLeft wsname fields">'+ shortName +'</span><span class="floatLeft wlink fields">'+ link +'</span><span class="floatLeft wnotes fields">'+ notes +'</span><span class="floatLeft wtype fields">'+ type +'</span></div>');
+		 	// display each link and add click function
+			var lPop = $('<div id="link' + uNum + '" class="' + className + '"><span class="floatLeft lfields lname">'+ name +'</span><span class="floatLeft lfields lnotes">'+ notes +'</span><span class="floatRight lfields linfo">'+ info +'</span></div>');
 
 			// create now function and executes
 			(function(){
-				var locallink = link;
-				slPop.click(function(){displayServer(locallink);});				
+				var locallink = u[i].alinks;
+				lPop.click(function(){displayLink(locallink);});				
 			})();
 
-			serverListings.append(slPop);
+			linkListing.append(lPop);
 			uNum = uNum + 1;
 		}
-		console.log('total servers: ' + uNum);
 	}
 
-// Display Server Info
-	function displayServer(link) {
-		console.log('running displayServer');
-		domo.navigate(link, true);
+// Display selected link
+	function displayLink(link) {
+		console.log('Clicked Link: ' + link);
+		domo.navigate('"' + link + '"', true);
 	}
-
-// Display Server Info
-	function displayServerInfo(siList) {
-		// display info
-	}
-
-// Display server title splash
-	function serverTitleFade() {
-		setTimeout(function() {$('.titleFade').addClass('hide');}, 100);
-		setTimeout(function() {getServerList();}, 500);
-	}
-
-
-//     	domo.navigate("http://flightdeck.domo.com/release/releases",true)
-

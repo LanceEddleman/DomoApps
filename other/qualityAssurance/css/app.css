@@ -39,28 +39,17 @@ p {
 	padding: 0px;
 }
 
-#footer {
-//	background-color: #707F8A;
-	transition: all 2s ease;
-}
+#footer {transition: all 2s ease;}
 
-.clear {
-  clear: both;			
-}
+.clear {clear: both;}
 .contentBox {border: 1px solid black;}
-
 .center {text-align: center;}
 .allCenter {align-content: center;}
-
 .fullWidth {width: 100%;}
-
 .halfWidth {width: 50%;}
-
 .fullheight{height: 100%; min-height: 100%;}
-
 .mLeft {margin-left: 20%;}
-.mTop {//margin-top: 10px;}
-
+.mTop {}
 .floatLeft {float: left;}
 .floatRight {float: right;}
 
@@ -97,9 +86,7 @@ p {
 	padding-left: 10px;
 }
 
-.fullH{
-	background: rgba(255,255,255,0.2);
-}
+.fullH{background: rgba(255,255,255,0.2);}
 
 .fullH:hover{
 	background: rgba(0,0,0,0.3);

@@ -44,8 +44,6 @@ var clicked = 'home';
 		active(clicked);
 		document.getElementById("content").innerHTML = '';
 		$("#content").load("links.html");
-		// hotfixTitleFade();
-		// getHFSquad();
 	}
 
 
