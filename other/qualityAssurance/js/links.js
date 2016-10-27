@@ -7,6 +7,7 @@ var linksList = [];
 
 
 getLinksList();
+showAsActive();
 
 // Get server list
 	function getLinksList(){
@@ -85,5 +86,10 @@ getLinksList();
 // Display selected link
 	function displayLink(link) {
 		console.log('Clicked Link: ' + link);
-		domo.navigate('"' + link + '"', true);
+		domo.navigate(link, true);
+	}
+
+// Shows link as Active
+	function showAsActive() {
+		
 	}

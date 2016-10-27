@@ -148,7 +148,7 @@ body {
 }
 
 /* Helpful Links */
-.linkLocation {
+.linkLocation a {
 	position: absolute;
 	bottom: 1px;
 	width: 60px;
@@ -161,12 +161,8 @@ body {
 	background-position: center;
 }
 
-.linkLocation a {opacity: 0;}
-
-.linkLocation:hover {
-	z-index: 100;
-	background-image: url(linkDark.png);
-}
+.linkLocation a:hover {background-image: url(linkDark.png);}
+#links a.active {background-image: url(linkActive.png);}
 
 /* links end */
 
