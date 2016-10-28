@@ -38,6 +38,7 @@
 				var qa3 = qaTeam[t].qa3;
 				var i1 = qaTeam[t].i1;
 				var i2 = qaTeam[t].i2;
+				var director = qaTeam[t].director;
 				var features = qaTeam[t].features;
 
 				if (team.length <= 1) { team = tMiss; }	else { team = team; } // team
@@ -46,6 +47,7 @@
 				if (qa3 === undefined || qa3 === null || qa3 === "" || qa3 === 'TBH') { qa3 = uMiss; } else { qa3 = qa3; } // qa3
 				if (i1 === undefined || i1 === null || i1 === "" || i1 === 'TBH') { i1 = uMiss; } else { i1 = i1; } // intern1
 				if (i2 === undefined || i2 === null || i2 === "" || i2 === 'TBH') { i2 = uMiss; } else { i2 = i2; } // intern2
+				if (director === undefined || director === null || director === "" || director === 'TBH') { director = uMiss; } else { director = director; } // intern2
 				if (features === undefined || features === null || features === "") { features = fMiss; }	// features
 				else { 
 					if(features.indexOf(", ")) {
@@ -54,7 +56,7 @@
 					}
 					else {features = features;}
 				}
-				teamList.push({team,qa1,qa2,qa3,i1,i2,features,uNum});
+				teamList.push({team,qa1,qa2,qa3,i1,i2,director,features,uNum});
 				uNum = uNum + 1;
 				 console.log(team + ' : ', teamList[t]);
 			}
@@ -79,6 +81,7 @@
 			var qa3 = teamList[w].qa3;
 			var i1 = teamList[w].i1;
 			var i2 = teamList[w].i2;
+			var director = teamList[w].director;
 			var features = teamList[w].features;
 			var row = teamList[w].uNum;
 			var u = undefined;
@@ -94,6 +97,8 @@
 			if (i1 === u || i1 === n || i1 === "" || i1 === 'TBH') { i1 = uMiss; } else { i1 = i1; }
 			// intern2
 			if (i2 === u || i2 === n || i2 === "" || i2 === 'TBH') { i2 = uMiss; } else { i2 = i2; }
+			// director
+			if (director === u || director === n || director === "" || director === 'TBH') { director = uMiss; } else { director = director; }
 			// features
 			if (features === u || features === n || features === "") { features = fMiss; } else {features = features;}
 		
@@ -112,7 +117,7 @@
 			
 			if (features === fMiss) {classTeam = classTeam + ' md';}
 			
-			squad = $('<div id="' + team + '" class="' + classTeam + '"><span class="floatLeft teamsList")>' + team + '</span><span class="floatLeft qaList">' + qa + '</span><span class="floatLeft featuresList">' + features + '</span></div>');
+			squad = $('<div id="' + team + '" class="' + classTeam + '"><span class="floatLeft teamsList")>' + team + '</span><span class="floatLeft qaList">' + qa + '</span><span class="floatLeft featuresList">' + features + '</span><span class="floatLeft directorList">' + director + '</span></div>');
 			//			onclick="teamStats(' + team + ')">
 			squadList.append(squad);
 		}

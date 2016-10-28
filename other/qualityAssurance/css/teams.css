@@ -46,11 +46,11 @@
 #teamText {
 	height: 30px;
 	line-height: 30px;
+	width: calc(100% - 15px);
 	width: 100%;
 	background-color: #707F8A;
 	color: #fff;
 	border-bottom: 1px black solid;
-	margin-right: 20px;
 }
 
 .squadList {
@@ -58,13 +58,17 @@
 	height: calc(100% - 31px);
 	display: inline-block;
 	overflow-x: hidden;
-	overflow-y: auto;
+	//overflow-y: auto;
 }
 
 /*	widths	*/
-.teamsList {width: 18%; min-width: 200px;min-height: 20px;text-align: center;}
-.qaList{width: 18%; min-width: 200px;min-height: 20px;text-align: center;}
-.featuresList{width: 64%; min-width: 200px;min-height: 20px;}
+.teamsList {width: 15%; min-width: 150px;min-height: 20px;text-align: center;}
+.qaList{width: 15%; min-width: 150px;min-height: 20px;text-align: center;}
+.featuresList{width: 55%; min-width: 200px;min-height: 20px;}
+.ffeaturesList{width: calc(55% - 15px);}
+.directorList{text-align: right; width: 15%; min-width: 150px;
+	min-height: 20px;text-align: center;//background-color: red;}
+
 /* width end */
 
 /*  Row coloring */

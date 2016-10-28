@@ -77,6 +77,10 @@
           "columnName": "Intern2"
         },
         {
+          "alias": "director",
+          "columnName": "Director"
+        },
+        {
           "alias": "features",
           "columnName": "Features"
         }
