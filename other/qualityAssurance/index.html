@@ -6,19 +6,19 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script src="domo.js"></script>
 		<script src="app.js"></script>
-		<script>$(document).ready(function(){home('home');displayDate();updated();});</script>
+		<script>$(document).ready(function(){homePage('homePage');displayDate();vText();});</script>
 	</head>
 	<body>
 		<div id="header" class="tHover">
 			<div class="header domoFont white">DOMO&nbsp;-&nbsp;QA</div>
-			<span class="header3 darkBlue">v 2.0.4 - 10/28/2016</span>
+			<span id="version" class="header3 darkBlue">v 2.0.5 - 11/04/2016</span>
 		</div>
 		<div id="header2"><div class="header2 domoFont darkBlue">DOMO&nbsp;-&nbsp;QA</div></div>
 
 		<menu>
 			<div class="nav">
 			<ul>
-				<li id="home" onclick="home('home')"><a href="#" class="active">Home</a></li>
+				<li id="homePage" onclick="homePage('homePage')"><a href="#" class="active">Home</a></li>
 				<li id="teams" onclick="teams('team')"><a href="#">Teams</a></li>
 				<li id="servers" onclick="servers('server')"><a href="#">Servers</a></li>
 				<li id="hfSquad" onclick="hfSquad('hfSquad')"><a href="#">Hotfix</a></li>

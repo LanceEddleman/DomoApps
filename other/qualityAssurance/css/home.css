@@ -7,3 +7,110 @@
 	font-style: bolder;
 //	background-color: #FFE5CC;
 }
+
+.nextLocation {
+	position: absolute;
+	z-index: 999;
+	text-align: center;
+	padding-right: 10px;
+	font-style: bolder;
+	font-size: 16;
+	right: 0px;
+	background-color: #fccf84;
+	width: 21%;
+}
+.displayNextTitle {
+	bottom: 63px;
+	border: 1px black solid;
+	border-right: 0px;
+	height: 20px;
+	line-height: 20px;
+	border-top-left-radius: 15px;
+}
+
+.displayNextSquad {
+	line-height: 40px;
+	bottom: 23px;
+	height: 40px;
+	border-top: 1px black solid;
+	border-left: 1px black solid;
+}
+
+.lSquad {
+	padding-right: 5px;
+	padding-left: 10px;
+	border-right: 1px black solid;
+}
+.lDay {
+	padding-right: 5px;
+	padding-left: 5px;
+	border-right: 1px black solid;
+}
+.lDate {
+	padding-left: 5px;
+}
+
+.button {
+	width: 30px;
+    border: none;
+    text-decoration: none;
+	outline: none;
+    background-color: transparent;
+    color: #000;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bolder;
+	line-height: 14px;
+}
+.button:active {
+	transform: translateY(1px);
+}
+
+.displayNPButtons {
+	position: absolute;
+	bottom: 65;
+	z-index: 1000;
+	right: 0px;
+	width: 60px;
+}
+
+.nextButton {
+	//border-top-right-radius: 10px;
+	//border-bottom-right-radius: 10px;
+	background-color: #E3BB77;
+
+}
+.prevButton {
+	//border-top-left-radius: 10px;
+	//border-bottom-left-radius: 10px;
+	background-color: #E3BB77;
+}
+
+.nextButton:hover {background-color: #99ccee;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	transition: all .3s ease;}
+.prevButton:hover {background-color: #99ccee;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	transition: all .3s ease;}
+
+.displayCButton {
+	position: absolute;
+	bottom: 65;
+	z-index: 1000;
+	right: 224px;
+	width: 30px;
+	background-color: #E3BB77;
+	border-top-left-radius: 15px;
+}
+
+.displayCButton:hover {
+	background-color: #99ccee;
+	transition: all .3s ease;
+}
+
+
+
+
+

@@ -1,6 +1,6 @@
 {
   "name": "qualityAssurance",
-  "version": "2.0.4",
+  "version": "2.0.7",
   "domo.domo": "datasourceID: 41522a1b-fd44-452f-8e9a-5dea7b40bef9",
   "===============": "==================================================",
   "domo.demo_sprintIssues_qasi": "datasourceID: e16b3d4a-2ce6-4b02-a9dc-47e4685c42f0",
@@ -123,7 +123,25 @@
           "columnName": "Left2Test"
         }
       ]
-    }
+    },
+    {
+      "dataSetId": "4da2f819-09d5-494f-8969-dc97d84c90ea",
+      "alias": "hfSchedule",
+      "fields": [
+        {
+          "alias": "hfsDate",
+          "columnName": "Date"
+        },
+        {
+          "alias": "hfsDay",
+          "columnName": "Day of Week"
+        },
+        {
+          "alias": "hfsTeam",
+          "columnName": "Team"
+        }
+      ]
+    }    
   ],
   "oldID": "e3a9bbf6-2ddc-4ef8-9cfd-6bd5c0f4c09a",
   "domo.domo - id": "7aeefdc5-7549-46dc-b242-3f93247d0d20",

@@ -3,10 +3,10 @@ var content = $('#content');
 var clicked = 'home';
 
 // Home
-	function home(clicked) {
+	function homePage(clicked) {
 		active(clicked);
 		document.getElementById("content").innerHTML = '';
-		$("#content").load("home.html");
+		$("#content").load("homePage.html");
 	}
 // Servers
 	function servers(clicked) {
@@ -53,7 +53,7 @@ var clicked = 'home';
 			document.getElementById("rCount").innerHTML = "";
 		}
 
-		$("#home a").removeClass('active');
+		$("#homePage a").removeClass('active');
 		$("#sprints a").removeClass('active');
 		$("#teams a").removeClass('active');
 		$("#hfSquad a").removeClass('active');
@@ -61,8 +61,8 @@ var clicked = 'home';
 		$("#links a").removeClass('active');
 
 		//console.clear();
-		if(clicked === 'home') {
-			$("#home a").addClass('active');
+		if(clicked === 'homePage') {
+			$("#homePage a").addClass('active');
 		}
 		if(clicked === 'sprint') {
 			$("#sprints a").addClass('active');
