@@ -6,35 +6,20 @@
 	background-color: orange;
 }
 
-#answer {
-	height: 40px;
-	width: 200px;
-	text-align: center;
-	font-size: 36;
-	margin: 0 auto 0 auto;
-}
+.center {text-align: center;}
 
-.center {
-	text-align: center;
-}
-.allCenter {
-	align-content: center;
-}
+.fullWidth {width: 100%;}
+.halfWidth {width: 50%;}
 
-
-.fullWidth {
-	width: 100%;
-}
-.halfWidth {
-	width: 50%;
-}
-
-.answerWidth {
-	width: 50px;
-}
+.red {background-color: red;}
+.blue {background-color: blue;}
 
 .iFields {
 	width: 85px;
+	text-align: right;
+}
+.formula {
+	width: 185px;
 	text-align: right;
 }
 
@@ -47,33 +32,16 @@
 	line-height: 18px;
 }
 
-.mLeft {
-	margin-left: 20%;
-}
-.mTop {
-	margin-top: 10px;
+.mTop {margin-top: 10px;}
+
+.floatLeft {float: left;}
+.floatRight {float: right;}
+.tRight {text-align: right;}
+
+button {text-decoration: none;}
+
+input:-moz-read-only { /* For Firefox */ 
+	background-color: yellow;
 }
 
-.floatLeft {
-	float: left;
-}
-.floatRight {
-	float: right;
-}
-.tRight {
-	text-align: right;
-}
-.tLeft {
-	text-align: left;
-}
-
-.runningTotal {
-	height: 16px;
-}
-.celsius {
-	height: 16px;
-}
-
-.results {
-	background-color: lightblue;
-}
+input:read-only {background-color: yellow;}
