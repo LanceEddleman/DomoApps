@@ -38,10 +38,26 @@
 .floatRight {float: right;}
 .tRight {text-align: right;}
 
-button {text-decoration: none;}
+button {
+	text-decoration: none;
+	outline:none;
+}
 
 input:-moz-read-only { /* For Firefox */ 
 	background-color: yellow;
 }
 
 input:read-only {background-color: yellow;}
+
+.clearButton {
+	margin: 0px;
+	margin-left: 10px;
+	padding: 0px;
+	border-radius: 40%;
+	z-index: 100;
+	width: 19px;
+	height: 19px;
+	background-color: #da8e04;
+	outline: none;
+}
+

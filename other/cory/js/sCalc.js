@@ -11,7 +11,6 @@ var nTotal = 0;
 function setValue(x) {
 	var nTest = document.getElementById("a").value;
 	console.log("current value: " + nTest);
-	// nStore = nStore+x;
 	nSum = nSum + nStore;
 	if (nTest == 0) {
 		nStore = x;
@@ -31,27 +30,27 @@ function setValue(x) {
 function postSum() {
 	rTotal = Number(document.getElementById("b").value);
 	nTotal = Number(nSum);
-	document.getElementById("a").value;
+	// document.getElementById("a").value;
 	document.getElementById("a").value = nBase;
 	console.log('rTotal is: ' + (rTotal+1));
 	console.log('nTotal is: ' + nTotal);
 	var f = rTotal + nTotal;
 		document.getElementById("b").value = '';
 		document.getElementById("b").value = f;
+	setValue(0);
 }
 
-function reset() {
-	rTotal = 0;
-	document.getElementById("rTotal").innerHTML = '';
-	rTotalField.append(rTotal);
-}
-
-function resetAll() {
-	rTotal = 0;
-	celsius = 0;
-	document.getElementById("answer").innerHTML = '';
-	document.getElementById("rTotal").innerHTML = '';
-	document.getElementById("celsius").innerHTML = '';
-	rTotalField.append(rTotal);
-	celsiusField.append(celsius);	
+function clearCurrent(opt) {
+	if (opt === 1){
+		document.getElementById("a").value = 0;
+		setValue(0);
+	}
+	else if  (opt === 2){
+		document.getElementById("b").value = 0;
+	}
+	else {
+		document.getElementById("a").value = 0;
+		document.getElementById("b").value = 0;
+		setValue(0);
+	}
 }

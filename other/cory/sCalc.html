@@ -1,4 +1,4 @@
-
+<!-- 
 <html>
  -->
  	<head>
@@ -11,10 +11,11 @@
 		<content class="content">
  -->
  		<main class="main">
-			<div class="fullWidth center"><h1 onclick="resetAll()" class="mTop">Super Calc</h1></div>
+			<div class="fullWidth center"><h1 onclick="clearCurrent()" class="mTop">Super Calc</h1></div>
 			<div id="rowTop" class="fullWidth floatLeft">
 				<div class="halfWidth extra tRight floatLeft">Current Value:&nbsp;&nbsp;&nbsp;</div>
-				<div class="halfWidth floatLeft"><input id="a" type="text" name="" value="0" class="iFields" readonly></div>
+				<div class="floatLeft"><input id="a" type="text" name="" value="0" class="iFields" readonly></div>
+				<div class="floatLeft"><input id="cCurrent" type="button" name="" value="&oslash;" class="button clearButton" enabled onclick="clearCurrent(1)"></div>
 			</div>
 			<br>
 			<div id="bLoc" class="center bLoc">
@@ -31,18 +32,14 @@
 				<input type="button" value="9" class="button" onclick="setValue(value)" />
 				<input type="button" value="0" class="button" onclick="setValue(value)" />
 			</div>
-
 			<div class="fullWidth center">
-						<input type="button" value="Add" class="button" onclick="postSum()" />
-			</div>
-			<div class="fullWidth center">
-				<br>
-				<div class=""><input id="c" type="text" name="formula" value="" class="formula" readonly></div>
-				<br>
+				<input type="button" value="Add" class="button" onclick="postSum()" />
+				<br><br>
 			</div>
 			<div id="rowBottom" class="fullWidth floatLeft">
 				<div class="halfWidth extra tRight floatLeft">Total Sum:&nbsp;&nbsp;&nbsp;</div>
-				<div class="halfWidth floatLeft"><input id="b" type="text" name="" value="0" class="iFields" readonly></div>
+				<div class="floatLeft"><input id="b" type="text" name="" value="0" class="iFields" readonly></div>
+				<div class="floatLeft"><input id="cCurrent" type="button" name="" value="&oslash;" class="clearButton" enabled onclick="clearCurrent(2)"></div>
 			</div>
 		</main>
 		<script src="js/sCalc.js"></script>
