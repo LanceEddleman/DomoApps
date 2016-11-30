@@ -1,6 +1,6 @@
 {
   "name": "qualityAssurance",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "domo.domo": "datasourceID: 41522a1b-fd44-452f-8e9a-5dea7b40bef9",
   "===============": "==================================================",
   "domo.demo_sprintIssues_qasi": "datasourceID: e16b3d4a-2ce6-4b02-a9dc-47e4685c42f0",

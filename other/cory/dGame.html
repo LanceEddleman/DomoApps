@@ -1,0 +1,52 @@
+ 
+<html>
+ -->
+ 	<head>
+<!-- 
+		<link rel="stylesheet" href="css/nav.css" />
+ -->
+		<link rel="stylesheet" href="css/dGame.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	</head>
+<!-- This is the Dice Game Page
+	<body class="bw"> 
+		<content class="content">
+ -->
+ 		<main class="main">
+			<div class="fullWidth1 center1 extra1 mTop1"><h1 onclick="clearCurrent()" class="">Dice Game</h1></div>
+
+			<div id="startRow" class="fullWidth1 center1 extra1">
+				<input type="button" id="gameStart" value="Start Game" class="startButton" onclick="startGame()" />
+			</div>
+
+			<div id="buttonLoc" class="fullWidth1 center1 extra1">
+				<input type="button" id="d1" value="X" class="diceButton" onclick="rollDice(id,value)" />
+				<input type="button" id="d2" value="X" class="diceButton" onclick="rollDice(id,value)" />
+				<input type="button" id="d3" value="X" class="diceButton" onclick="rollDice(id,value)" />
+				<input type="button" id="d4" value="X" class="diceButton" onclick="rollDice(id,value)" />
+			</div>
+			<input type="text" id="d5" value="" class="rollTotal"" readonly/>			
+			<div id="jones" class="fullWidth1 center1 extra1">
+				<div class="halfWidth1 tRight1 floatLeft1">Rolls left this round: &nbsp;</div><div id="rLeft" class="halfWidth1 floatLeft1 tLeft1">X</div>
+			</div>
+			
+			<div id="jones2" class="fullWidth1 center1 extra1">
+				<div class="halfWidth1 tRight1 floatLeft1">Round Score: &nbsp;</div><div id="rScore" class="halfWidth1 floatLeft tLeft1">X</div>
+			</div>
+			
+			<div id="jones3" class="fullWidth1 center1 extra1">
+				<input type="button" id="nextRound" value="Next Round" class="roundButton" onclick="postRound()" disabled/>
+<!-- 
+				<input type="button" value="New Round" class="roundButton" onclick="postSum()" />
+ -->
+			</div>
+			
+			<div id="rowBottom" class="fullWidth1 extra1">
+				<div class="halfWidth1 tRight1 floatLeft1">Total Score: &nbsp;</div><div id="tScore" class="halfWidth1 floatLeft1 tLeft1">X</div>
+			</div>
+			<div class="fullWidth1 tRight1 helpIcon" onclick="showHelp(true)">?</div>
+		</main>
+		<script src="js/dGame.js"></script>
+  	</body>
+<!-- 
+</html>

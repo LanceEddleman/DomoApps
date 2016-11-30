@@ -82,9 +82,7 @@
 						capturedDateValue = ytoday.valueOf();
 
 					if(capturedDateValue >= nowValue) {
-						//console.log('Captured Date : DateValue ' + capturedDate + ' : ' + capturedDateValue);
-						//console.log('Next: Date / Day / Team ' + hfsDate + ' / ' + hfsDay + ' / ' + hfsTeam);
-						nextData.push({hfsDateValue,hfsDate,hfsDay,hfsTeam,uNum});
+						nextData.push({hfsDateValue:hfsDateValue,hfsDate:hfsDate,hfsDay:hfsDay,hfsTeam:hfsTeam,uNum:uNum});
 
 						// create now function and executes
 						(function(){
@@ -100,9 +98,7 @@
 				z= true;
 			 }
 			nextData.sort(function(a, b){return a.hfsDateValue-b.hfsDateValue});
-			// console.log('nextdata: ',nextData);
 			displayHFSTeam(nextData, seeOption);
-			// console.log('nextData as string' + JSON.stringify(nextData));
 		});
 		nextPrev();
 	}
@@ -112,29 +108,38 @@
 
 // display hotfix scheduled team on main page
 	function displayHFSTeam(cx, seeOption) {
-		var activeHotFix = 'Next Hotfix';
+		// console.log('dataset: ',cx);
+		var activeHotFix = 'Hotfix Schedule';
 		if(seeOption === 0) {
-			activeHotFix = 'Next Hotfix';
+			activeHotFix = 'Hotfix Schedule';
 		}
-		else {
-			activeHotFix = 'Hotfix Listing';
-		}
+		else { activeHotFix = 'Hotfix Listing'; }
 		viewing = seeOption;
-		console.log('View now: ' + viewing);		
-		content.append('<div class="nextLocation displayNextTitle">' + activeHotFix + '</div><div class="nextLocation displayNextSquad"><span class="lsquad">' + cx[viewing].hfsTeam + '</span><span class="lDay">' + cx[viewing].hfsDay + '</span><span class="lDate">' + cx[viewing].hfsDate + '</span></div>');
+		// console.log('View now: ' + viewing);
+		//content.append('<div class="nextLocation displayNextTitle">' + activeHotFix + '</div><div class="nextLocation displayNextSquad"><span class="lsquad">' + cx[viewing].hfsTeam + '</span><span class="lDay">' + cx[viewing].hfsDay + '</span><span class="lDate">' + cx[viewing].hfsDate + '</span></div>');
+		content.append('<div id="hsCalendar" class="hscLocation2"></div>');
+		var hsCal = $('#hsCalendar');
+		hsCal.append('<div id="nextTitle2" class="displayNextTitle2">' + activeHotFix + '</div></div>');
+		hsCal.append('<div class="displayNextSquad2"><span class="lsquad2">' + cx[viewing].hfsTeam + '</span><span class="lDay2">' + cx[viewing].hfsDay + '</span><span class="lDate2">' + cx[viewing].hfsDate + '</span></div>');
+		hsCal.append('<div id="hscList" class="hscList2"></div>');
+		var hscL = $('#hscList');
+
+		for (var n = 1; n < cx.length; n++) {
+			// console.log('Posting: ' + cx[n].hfsTeam + cx[n].hfsDay + cx[n].hfsDate);
+			hscL.append('<div class="displayNextSquad3"><span class="lsquad2">' + cx[n].hfsTeam + '</span><span class="lDay2">' + cx[n].hfsDay + '</span><span class="lDate2">' + cx[n].hfsDate + '</span></div>');
+		}
 	}
 
 
 // Display Next/Prev buttons
 	function nextPrev() {
-		content.append('<div id="displayNP" class="displayNPButtons"><button id="prevbutton" class="button prevbutton" onclick="seeNext(-1)">&#8592;</button><button id="nextbutton" class="button nextbutton" onclick="seeNext(1)">&#8594;</button></div>');
-		content.append('<div id="currentHF" class="displayCButton"><button id="currentHFButton" class="button currbutton" onclick="seeCurr(0)">&copy;</button></div>');
+		//content.append('<div id="displayNP" class="displayNPButtons"><button id="prevbutton" class="button prevbutton" onclick="seeNext(-1)">&#8592;</button><button id="nextbutton" class="button nextbutton" onclick="seeNext(1)">&#8594;</button></div>');
+		//content.append('<div id="currentHF" class="displayCButton"><button id="currentHFButton" class="button currbutton" onclick="seeCurr(0)">&copy;</button></div>');
 	}
 
 // see next date
 	function seeNext(np){
 		var validDate = nextData.length-1;
-		// console.log('ValidDate: ' + validDate);
 		viewing = viewing + np;
 		if(viewing >= validDate) {
 			viewing = validDate;
@@ -143,7 +148,6 @@
 		else {}
 
 		seeOption = viewing;
-		// console.log('View item: ' + seeOption);
 		displayHFSTeam(nextData, seeOption);
 	}
 
@@ -152,11 +156,6 @@
 		seeOption = 0;
 		displayHFSTeam(nextData, seeOption);
 	}
-
-
-
-
-
 
 
 

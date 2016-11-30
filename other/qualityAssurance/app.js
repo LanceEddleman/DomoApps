@@ -32,12 +32,13 @@ function sleep(milliseconds) {
 	function updated(){
 		var wnew = " - What's New - ";
 		var aRow = '<br>';
-		var newInfo = "v .7" + aRow + "Added future hotfix clicker, see current" + aRow + "v .6" + aRow + "Bug fixes" + aRow + "v .5" + aRow + "Added Next Hotfix listing" + aRow + "v .4" + aRow + "Added Director column to Teams page" + aRow + "v .3" + aRow + "Links page added, via link icon bottom center" + aRow + "v .2" + aRow + "Sorted Hotfix Leads to top of lists" + aRow + "v .1" + aRow + "Footer now able to be unique and display on each / all pages" + aRow + "Fixed Teams missing members" + aRow + "Added Hotfix Squads" + aRow + "What's NEW added" + aRow + "Version easter egg";
+		// var newInfo = "v .8" + aRow + "Converted hotfix list to always show all" + aRow + "v .7" + aRow + "Added future hotfix clicker, see current" + aRow + "v .6" + aRow + "Bug fixes" + aRow + "v .5" + aRow + "Added Next Hotfix listing" + aRow + "v .4" + aRow + "Added Director column to Teams page" + aRow + "v .3" + aRow + "Links page added, via link icon bottom center" + aRow + "v .2" + aRow + "Sorted Hotfix Leads to top of lists" + aRow + "v .1" + aRow + "Footer now able to be unique and display on each / all pages" + aRow + "Fixed Teams missing members" + aRow + "Added Hotfix Squads" + aRow + "What's NEW added" + aRow + "Version easter egg";
+		var newInfo = "v .8 - Converted hotfix list to show all";
 		document.getElementById("rCount").innerHTML = '<div id="div-new" class="newTitle">' + wnew + '<span id="newstuff">' + newInfo + '</span></div>';
 	}
 
 // Version
 	function vText(){
-		var versionText = "v 2.0.7 - 11/07/2016";
+		var versionText = "v 2.0.8 - 11/30/2016";
 		document.getElementById("version").innerHTML = versionText;
 	}
