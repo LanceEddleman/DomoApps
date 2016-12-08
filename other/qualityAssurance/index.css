@@ -150,22 +150,46 @@ body {
 }
 
 /* Helpful Links */
+.linkNav ul {
+	list-style:none;
+	background-color: #99ccee;
+	padding-left: 20px;
+	margin:0;
+}
+
+.linkNav li {
+  font-family: OpenSans, sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+}
+.linkNav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bolder;
+  display: block;
+  transition: .3s background-color;
+}
+.linkNav a:hover {
+  background-color: #707F8A;
+}
+
+.linkNav a.active {
+  background-color: #fff;
+  color: #707F8A;
+  cursor: default;
+}
+
 .linkLocation a {
 	position: absolute;
 	bottom: 1px;
-	width: 60px;
+	width: 120px;
 	height: 22px;
-	left: calc(50% - 30px);
-	z-index: 101;
-	background-image: url(linkClean.png);
-	background-size: 50px;
-	background-repeat: no-repeat;
-	background-position: center;
+	left: calc(50% - 85px);
+	text-decoration: none;
+	text-align: center;
+	z-index: 900;
 }
-
-.linkLocation a:hover {background-image: url(linkDark.png);}
-#links a.active {background-image: url(linkActive.png);}
-
 /* links end */
 
 /* Traditional clearfix */

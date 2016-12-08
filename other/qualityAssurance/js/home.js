@@ -63,7 +63,7 @@
 			 	var hfsDay = schedule[n].hfsDay;
 			 	var hfsTeam = schedule[n].hfsTeam;
 
-			 	hfSchedule.push({hfsDate,hfsDay,hfsTeam,uNum});
+			 	hfSchedule.push({hfsDate:hfsDate,hfsDay:hfsDay,hfsTeam:hfsTeam,uNum:uNum});
 			 	uNum = uNum+1;
 
 				var aDay = 0; // + days
@@ -121,12 +121,12 @@
 		var hsCal = $('#hsCalendar');
 		hsCal.append('<div id="nextTitle2" class="displayNextTitle2">' + activeHotFix + '</div></div>');
 		hsCal.append('<div class="displayNextSquad2"><span class="lsquad2">' + cx[viewing].hfsTeam + '</span><span class="lDay2">' + cx[viewing].hfsDay + '</span><span class="lDate2">' + cx[viewing].hfsDate + '</span></div>');
-		hsCal.append('<div id="hscList" class="hscList2"></div>');
+		hsCal.append('<div id="hscList" class="hscList2 "></div>');
 		var hscL = $('#hscList');
 
 		for (var n = 1; n < cx.length; n++) {
 			// console.log('Posting: ' + cx[n].hfsTeam + cx[n].hfsDay + cx[n].hfsDate);
-			hscL.append('<div class="displayNextSquad3"><span class="lsquad2">' + cx[n].hfsTeam + '</span><span class="lDay2">' + cx[n].hfsDay + '</span><span class="lDate2">' + cx[n].hfsDate + '</span></div>');
+			hscL.append('<div class="displayNextSquad3 leftFade"><span class="lsquad2">' + cx[n].hfsTeam + '</span><span class="lDay2">' + cx[n].hfsDay + '</span><span class="lDate2">' + cx[n].hfsDate + '</span></div>');
 		}
 	}
 

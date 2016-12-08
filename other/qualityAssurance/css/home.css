@@ -37,7 +37,8 @@
 	height: 20px;
 	line-height: 20px;
 	text-align: left;
-	background-color: #F8A550;
+	background-color: #707F8A;
+	color: #fff;
 	border-bottom: 1px black solid;
 	border-left: 1px black solid;
 }
@@ -66,34 +67,26 @@
 	font-style: bolder;
 	font-weight: bolder;
 	border-bottom: 1px black solid;
-	border-left: 1px black solid;
-	background-color: #fccf84;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,fccf84+20&0+0,0.65+20 */
+	background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(252,207,132,0.65) 40%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(252,207,132,0.65) 40%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(252,207,132,0.65) 40%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6fccf84',GradientType=1 ); /* IE6-9 */
 }
 
-.lSquad {
-	padding-right: 5px;
-	padding-left: 10px;
-	border-right: 1px black solid;
-}
 .lSquad2 {
 	padding-right: 5px;
 	padding-left: 5px;
 	border-right: 1px black solid;
 }
 
-.lDay {
-	padding-right: 5px;
-	padding-left: 5px;
-	border-right: 1px black solid;
+.lSquad2a {
 }
+
 .lDay2 {
 	padding-right: 5px;
 	padding-left: 5px;
 	border-right: 1px black solid;
-}
-
-.lDate {
-	padding-left: 5px;
 }
 
 .lDate2 {
@@ -108,17 +101,19 @@
 	width: 250px;
 	min-width: 250px;
 	max-width: 250px;
-//	height: calc(100% - 83px);
 	overflow-y: auto;
-	background-color: #F8A550;
+}
+
+.leftFade {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,e0dfe2+20&0+0,0.65+20 */
+	background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(224,223,226,0.65) 30%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(224,223,226,0.65) 30%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(224,223,226,0.65) 30%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6e0dfe2',GradientType=1 ); /* IE6-9 */
 }
 
 .displayNextSquad3 {
 	line-height: 40px;
-//	bottom: 23px;
-//	height: 40px;
-	border-bottom: 1px black solid;
-	border-left: 1px black solid;
 }
 
 .button {
@@ -145,17 +140,8 @@
 	width: 60px;
 }
 
-.nextButton {
-	//border-top-right-radius: 10px;
-	//border-bottom-right-radius: 10px;
-	background-color: #E3BB77;
-
-}
-.prevButton {
-	//border-top-left-radius: 10px;
-	//border-bottom-left-radius: 10px;
-	background-color: #E3BB77;
-}
+.nextButton {background-color: #E3BB77;}
+.prevButton {background-color: #E3BB77;}
 
 .nextButton:hover {background-color: #99ccee;
 	border-top-right-radius: 10px;
