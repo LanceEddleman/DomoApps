@@ -55,13 +55,15 @@ function rollRound(actualRound) {
 
 	// rTotal = (dv1 + dv2 + dv3 + dv4);
 
-	if(dv1 === dv2 && dv1 === dv3 && dv1 === dv4) {
-		rTotal = ((dv1 + dv2 + dv3 + dv4)*5);
-		document.getElementById("d5").value = ' BONUS ' + rTotal;
-	}
-	else {
-		rTotal = (dv1 + dv2 + dv3 + dv4);
-	}
+	// if(dv1 === dv2 && dv1 === dv3 && dv1 === dv4) {
+	// 	rTotal = ((dv1 + dv2 + dv3 + dv4)*5);
+	// 	document.getElementById("d5").value = ' BONUS ' + rTotal;
+	// }
+	// else {
+	// 	rTotal = (dv1 + dv2 + dv3 + dv4);
+	// }
+
+	checkRoll(dv1,dv2,dv3,dv4);
 
 	document.getElementById("d1").value = dv1;
 	document.getElementById("d2").value = dv2;
@@ -133,6 +135,17 @@ function postRound() {
 	roundCount = roundCount + 1;
 	document.getElementById("startRow").innerHTML = 'Round: ' + roundCount;
 	rollRound(roundCount);
+}
+
+function checkRoll(dv1,dv2,dv3,dv4) {
+		if(dv1 === dv2 && dv1 === dv3 && dv1 === dv4) {
+		rTotal = 100;
+		document.getElementById("d5").value = ' BONUS ' + rTotal;
+	}
+	else {
+		rTotal = (dv1 + dv2 + dv3 + dv4);
+	}
+
 }
 
 function postGame() {
