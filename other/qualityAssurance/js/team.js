@@ -15,10 +15,11 @@
 	var squad = '';
 	var tsState = 0;
 	var teamList = [];
+	var teamLeader = [];
 
 // Display team intro title splash
 	function teamTitleFade() {
-				document.getElementById("content").innerHTML = '';
+		document.getElementById("content").innerHTML = '';
 		setTimeout(function() {	$('.titleFade').addClass('hide'); }, 100);
 		setTimeout(function() { }, 500);
 	}
@@ -28,6 +29,7 @@
 		domo.get('/data/v1/teamList').then(function(qaTeam){
 			// console.log("qaTeams ", qaTeam);
 
+			qaTeam.sort(directorSort);
 			uNum = 0;
 
 			for(var t = 0; t < qaTeam.length; t++)
@@ -56,10 +58,41 @@
 					}
 					else {features = features;}
 				}
-				teamList.push({team,qa1,qa2,qa3,i1,i2,director,features,uNum});
-				uNum = uNum + 1;
-				 console.log(team + ' : ', teamList[t]);
+
+				// if (team.value === 'Leadership') {
+				// 	console.log(uNum);
+				// 	var temp_uNum = uNum;
+				// 	console.log(temp_uNum);
+				// 	uNum = 99;
+				// 	console.log(uNum);
+				// 	teamList.push({team:team,qa1:qa1,qa2:qa2,qa3:qa3,i1:i1,i2:i2,director:director,features:features,uNum:uNum});
+				// 	uNum = temp_uNum + 1;
+				// 	console.log(uNum);
+
+				//  console.log(team + ' : ', teamList[t]);
+				// }
+				// else {
+				// 	teamList.push({team:team,qa1:qa1,qa2:qa2,qa3:qa3,i1:i1,i2:i2,director:director,features:features,uNum:uNum});
+				// 	uNum = uNum + 1;
+				// 	console.log(team + ' : ', teamList[t]);
+				// }
+
+				if (team !== 'Leadership') {
+					teamList.push({team:team,qa1:qa1,qa2:qa2,qa3:qa3,i1:i1,i2:i2,director:director,features:features,uNum:uNum});
+					uNum = uNum + 1;
+					console.log(team + ' : ', teamList[t]);
+				}
+				else {
+					var temp_uNum = uNum;
+					uNum = 99;
+					teamList.push({team:team,qa1:qa1,qa2:qa2,qa3:qa3,i1:i1,i2:i2,director:director,features:features,uNum:uNum});
+					teamLeader.push({team:team,qa1:qa1,qa2:qa2,qa3:qa3,i1:i1,i2:i2,director:director,features:features,uNum:uNum});
+
+					uNum = temp_uNum;
+					console.log(teamLeader[0].team + ' : ' + teamLeader[0].qa1 + ' : ', teamList[t]);
+				}
 			}
+			teamList.splice(temp_uNum, 1);
 			displayTeamList();
 		});
 	}
@@ -74,6 +107,19 @@
 
 // list all teams
 	function displayAll() {
+
+		var tlteam = teamLeader[0].team;
+		var tlqa1 = teamLeader[0].qa1;
+		var tlqa2 = teamLeader[0].qa2;
+		var tlqa3 = teamLeader[0].qa3;
+		var tli1 = teamLeader[0].i1;
+		var tli2 = teamLeader[0].i2;
+		var tldirector = teamLeader[0].director;
+		var tlfeatures = teamLeader[0].features;
+		var tluNum = teamLeader[0].uNum;
+
+		teamList.unshift({team:tlteam,qa1:tlqa1,qa2:tlqa2,qa3:tlqa3,i1:tli1,i2:tli2,director:tldirector,features:tlfeatures,uNum:tluNum});
+
 		for(var w = 0; w < teamList.length; w++) {
 			var team = teamList[w].team;
 			var qa1 = teamList[w].qa1;
@@ -112,7 +158,8 @@
 			
 			var classTeam = 'fullWidth floatLeft';
 			
-			if (row % 2 === 0) {classTeam = classTeam + ' aR1 teamLight';}
+			if (row === 99) {classTeam = classTeam + ' teamLeader';}
+			else if (row % 2 === 0) {classTeam = classTeam + ' aR1 teamLight';}
 			else{classTeam = classTeam + ' aR2 teamDark';}
 			
 			if (features === fMiss) {classTeam = classTeam + ' md';}
@@ -139,22 +186,35 @@
 			document.getElementById('squadInfo').innerHTML = '';
 		}
 		
-
-//		squad data
+		//	squad data
 		var sf = '';
-		
+		var t = 0;
 		if(teamList.indexOf(squadName)) {
-			for(var t = 0; t < teamList.length; t++) {
+			for(t = 0; t < teamList.length; t++) {
 				sf = teamList[t];
 				console.log('what: ' + sf);
 			}
 			console.log(squadName);
 		}
-		
 		var squadFeatures = '<div class="floatLeft featuresList">' + sf[t] + '</div>';
-
 		squadInfo.append(squadFeatures);
 	}
+
+// Director sort
+	function directorSort(a,b) {
+	// function compare(a,b) {
+		  if (a.team < b.team)
+		    return -1;
+		  if (a.team > b.team)
+		    return 1;
+		  return 0;
+	}
+
+
+
+
+
+
 
 
 

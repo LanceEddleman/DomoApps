@@ -14,13 +14,12 @@
 }
 
 .titleFade {
+	position: absolute;
 	opacity: 1;
-	height: 100%;
 	width: 100%;
-	line-height: 500px;
+	top: 40%;
 	font-size: 48;
 	font-style: bolder;
-	background-color: #99ccee;
 }
 .titleFade.hide {
 	opacity: 0;
@@ -74,6 +73,7 @@
 /*  Row coloring */
 .teamLight {background-color: #fff;color: #000;}
 .teamDark {background-color: #bedef4;}
+.teamLeader {background-color: #F4D4BE;font-weight: bolder;}
 
 .aR1 {}
 .aR1:hover{
