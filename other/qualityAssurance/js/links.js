@@ -28,7 +28,7 @@ showAsActive();
 					// console.log('link? - ' + name + ':' + notes + ':' + alinks + ':' + info + ':' + uNum);
 
 					if(name !== '') {
-						linksList.push({name,notes,alinks,info,uNum});
+						linksList.push({name:name,notes:notes,alinks:alinks,info:info,uNum:uNum});
 						uNum = uNum + 1;
 					}
 					else {
@@ -48,7 +48,7 @@ showAsActive();
 		setTimeout(function() {$('.bodyShow').addClass('show');}, 999);
 
 		var slTitles = $('<div id="linkTitles" class="tbold lTitles"><span class="floatLeft lfields lname">Name</span><span class="floatLeft lfields lnotes">Notes</span><span class="floatRight lfields linfo">InfoSource</span></div>');
-		linkListing = $('<div id="linkListings" class="fullwidth"></div');
+		linkListing = $('<div id="linkListings" class="fullwidth linksHeight"></div');
 		linkBody.append(slTitles);			// Adds table titles
 		linkBody.append(linkListing);			// Adds table titles
 		var u = sList;

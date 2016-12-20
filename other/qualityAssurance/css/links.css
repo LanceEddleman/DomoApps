@@ -50,6 +50,11 @@
 	height: 100%;
 }
 
+.linksHeight {
+	height: calc(100% - 55px);
+	overflow-y: auto;
+}
+
 .linkRows {
 	line-height: 40px;
 	overflow: hidden;
