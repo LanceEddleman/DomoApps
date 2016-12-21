@@ -117,3 +117,82 @@
 	background-color: #707F8A;
 	transition: all 2s ease;
 }
+
+/*  director menu  */
+.onclick-menu {
+    position: relative;
+    display: inline-block;
+    z-index: 9000;
+
+}
+.onclick-menu:before {
+    content: "Director";
+}
+.onclick-menu:focus {
+    /* clicking on label should toggle the menu */
+    pointer-events: none;
+}
+.onclick-menu:focus .onclick-menu-content {
+    /*  opacity is 1 in opened state (see below) */
+    opacity: 1;
+    visibility: visible;
+    /* don't let pointer-events affect descendant elements */
+    pointer-events: auto;
+}
+.onclick-menu-content {
+	position: absolute;
+	z-index: 1;
+    /* use opacity to fake immediate toggle */
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.1s;
+}
+
+
+/* menu layout */
+.onclick-menu {
+//	padding: 0;
+//	margin: 0;
+	outline: 0;
+	background-color: #94a4a5;
+}
+.onclick-menu:before {
+//	background-color: #94a4a5;
+}
+.onclick-menu-content {
+	background-color: #94a4a5;
+	//background-color: #364656;
+}
+
+.onclick-menu-content li {
+	color: #f2f5e9;
+	list-style-type: none;
+	white-space: nowrap;
+	width: 100%;
+}
+
+/* style the buttons */
+.onclick-menu-content button {
+	background: transparent;
+	border: none;
+	color: inherit;
+	cursor: inherit;
+	outline: 0;
+	cursor: pointer;
+}
+.onclick-menu-content button:hover {
+	color: #ff8c31;
+}
+
+ul, menu, dir {
+    display: block;
+    list-style-type: none;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+    min-width: 175px;
+}
+
+
