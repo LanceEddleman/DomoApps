@@ -27,7 +27,8 @@ var clicked = 'home';
 		document.getElementById("content").innerHTML = '';
 		$("#content").load("teams.html");
 		teamTitleFade();
-		getTeamList();
+		gUserID();
+		//getTeamList();
 	}
 
 // Hotfix Squad

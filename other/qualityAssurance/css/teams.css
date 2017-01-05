@@ -123,65 +123,41 @@
     position: relative;
     display: inline-block;
     z-index: 9000;
+   	outline: 0;
+   	cursor: pointer;
+}
 
-}
-.onclick-menu:before {
-    content: "Director";
-}
 .onclick-menu:focus {
-    /* clicking on label should toggle the menu */
-    pointer-events: none;
-}
-.onclick-menu:focus .onclick-menu-content {
-    /*  opacity is 1 in opened state (see below) */
-    opacity: 1;
-    visibility: visible;
-    /* don't let pointer-events affect descendant elements */
-    pointer-events: auto;
-}
-.onclick-menu-content {
-	position: absolute;
-	z-index: 1;
-    /* use opacity to fake immediate toggle */
-    opacity: 0;
-    visibility: hidden;
-    transition: visibility 0.1s;
-}
-
-
-/* menu layout */
-.onclick-menu {
-//	padding: 0;
-//	margin: 0;
-	outline: 0;
+	pointer-events: none;
 	background-color: #94a4a5;
 }
-.onclick-menu:before {
-//	background-color: #94a4a5;
-}
-.onclick-menu-content {
+
+.onclick-menu:hover {background-color: #94a4a5;}
+
+.onclick-menu:focus {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: none;
 	background-color: #94a4a5;
-	//background-color: #364656;
 }
 
-.onclick-menu-content li {
-	color: #f2f5e9;
-	list-style-type: none;
-	white-space: nowrap;
-	width: 100%;
+.onclick-menu:active {background-color: #94a4a5;}
+
+.highlight {}
+.highlight:hover {background-color: #707F8A;}
+.highlight:active {background-color: #fff;color:000;}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #94a4a5;
+    min-width: 160px;
+    width: 100%;
 }
 
-/* style the buttons */
-.onclick-menu-content button {
-	background: transparent;
-	border: none;
-	color: inherit;
-	cursor: inherit;
-	outline: 0;
-	cursor: pointer;
-}
-.onclick-menu-content button:hover {
-	color: #ff8c31;
+.show {
+	z-index: 9000;
+	display:block;
 }
 
 ul, menu, dir {
@@ -192,6 +168,7 @@ ul, menu, dir {
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
     -webkit-padding-start: 0px;
+    width: 100%;
     min-width: 175px;
 }
 
