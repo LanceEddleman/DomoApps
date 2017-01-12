@@ -13,22 +13,29 @@
 		<content class="content">
  -->
  		<main class="main">
+<!-- 
 			<div class="fullWidth1 center1 extra1 mTop1"><h1 onclick="clearCurrent()" class="">Roll da Bones</h1></div>
+
+ -->			<div class="fullWidth1 center1 extra1 mTop1"><h1 onclick="clearCurrent()" class="">String vs Numbers</h1></div>
 
 			<div id="startRow" class="fullWidth1 center1 extra1">
 				<input type="button" id="gameStart" value="Start Game" class="startButton" onclick="startGame()" />
 			</div>
 
 			<div id="buttonLoc" class="fullWidth1 center1 extra1">
-				<input type="button" id="d1" value="X" class="diceButton" onclick="rollDice(id,value)" />
-				<input type="button" id="d2" value="X" class="diceButton" onclick="rollDice(id,value)" />
-				<input type="button" id="d3" value="X" class="diceButton" onclick="rollDice(id,value)" />
-				<input type="button" id="d4" value="X" class="diceButton" onclick="rollDice(id,value)" />
+				<input type="button" id="die1" value="X" class="diceButton" onclick="rollDice('die1')" />
+				<input type="button" id="die2" value="X" class="diceButton" onclick="rollDice('die2')" />
+				<input type="button" id="die3" value="X" class="diceButton" onclick="rollDice('die3')" />
+				<input type="button" id="die4" value="X" class="diceButton" onclick="rollDice('die4')" />
 			</div>
 			<input type="text" id="d5" value="" class="rollTotal"" readonly/>			
 			<div id="jones" class="fullWidth1 center1 extra1">
+				
 				<div class="halfWidth1 tRight1 floatLeft1">Rolls left this round: &nbsp;</div><div id="rLeft" class="halfWidth1 floatLeft1 tLeft1">X</div>
-			</div>
+<!-- 				
+				<div class="halfWidth1 tRight1 floatLeft1">Value vs Strings: &nbsp;</div><div id="rLeft" class="halfWidth1 floatLeft1 tLeft1">X</div>
+ -->
+ 			</div>
 			
 			<div id="jones2" class="fullWidth1 center1 extra1">
 				<div class="halfWidth1 tRight1 floatLeft1">Round Score: &nbsp;</div><div id="rScore" class="halfWidth1 floatLeft tLeft1">X</div>
