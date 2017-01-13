@@ -1,0 +1,431 @@
+/* Colors */
+	:root{
+	/*	DOMO color ranges, listed light to dark */
+
+	/* blues */
+		color: #d9ebfd; /* background */
+		color: #b7daf5;
+		color: #99ccee; /* Domo Blue */
+		color: #73b0d7;
+		color: #4e8cba;
+		color: #31689b; /* text*/
+	/* greens */
+		color: #ddf4ba;
+		color: #bbe491;
+		color: #a0d771;
+		color: #80c25d;
+		color: #559e38;
+		color: #387b26;
+	/*  orange */
+		color: #fdecad;
+		color: #fccf84;
+		color: #fbad56;
+		color: #fb8d34;
+		color: #e45621;
+		color: #a43724;
+	/*  purple */
+		color: #f3e4fe;
+		color: #ddc8ef;
+		color: #b391ca;
+		color: #8f6dc0;
+		color: #7940a1;
+	/*  teal */
+		color: #d8f4de;
+		color: #abe4ca;
+		color: #8dd5be;
+		color: #68bea8;
+		color: #46998a;
+		color: #227872;
+	/*  pinks */
+		color: #fcd7e6;
+		color: #fbb6dd;
+		color: #f395cd;
+		color: #ee76bf;
+		color: #cf51ac;
+		color: #a62a92;
+	/*  reds */
+		color: #fddddd;
+		color: #fcbcb7;
+		color: #fd9a93;
+		color: #fd7f76;
+		color: #e45850;
+		color: #c92e25;
+	/*  gray to black */
+		color: #818d8f;
+		color: #54585a;
+		color: #2f3132;
+	/*  gray scale */
+		color: #f1f2f2; /* background */
+		color: #e4e5e5;
+		color: #d7d8d8;
+		color: #cacbcc;
+		color: #b0b1b2;
+		color: #387b26;
+		color: #a2a5a6;
+		color: #959899;
+		color: #a62a92;
+		color: #888b8c;
+		color: #7b7e80;
+		color: #6e7173;
+		color: #616466;
+		color: #54585a; /* text */
+	};
+
+/* Fonts */
+	@font-face {
+	    font-family: OpenSans;
+	    src: url(/fonts/OpenSans-Light.ttf);
+	}
+
+	@font-face {
+	    font-family: OpenSans-Bold;
+	    src: url(/fonts/OpenSans-Bold.ttf);
+	    font-weight: bold;
+	}
+
+	@font-face {
+	    font-family: OpenSans-Bolder;
+	    src: url(/fonts/OpenSans-ExtraBold.ttf);
+	    font-weight: bolder;
+	}
+
+html{
+	/* Firefox */
+	height: -moz-calc(100% - 40px);
+	/* WebKit */
+	height: -webkit-calc(100% - 40px);
+	/* Opera */
+	height: -o-calc(100% - 40px);
+	/* Standard */
+	height: calc(100% - 40px);
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: OpenSans;
+    background-color: #99ccee;
+}
+
+div {
+  margin: 0px;
+  padding: 0px;
+}
+
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {
+	text-align: center;
+    font-family: OpenSans-Bold;
+    font-size: 24px;
+    line-height: 36px;
+	margin: 0px;
+	padding: 0px;
+}
+
+ul
+{
+    list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#page {
+	height: 100%;
+	width: 100%;
+}
+
+.blue {background-color: blue;}
+.red {background-color: red;}
+.green {background-color: green;}
+.orange {background-color: orange;}
+.purple {background-color: purple;}
+.pink {background-color: pink;}
+.yellow {background-color: yellow;}
+.black {background-color: black;}
+.gray {background-color: grey;}
+.lightblue {background-color: lightblue;}
+
+.fRow {
+	width: 100%;
+	background-color: #f1f2f2;
+	color: #000;
+	display: inline-block;
+}
+
+.fRowE {
+	width: 100%;
+	background-color: #b0b1b2;
+	color: #000;
+	display: inline-block;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+#tSelect {
+	float: left;
+}
+#baseSet {
+	float: left;
+	color: #f1f2f2;
+	font-family: OpenSans;
+    font-size: 12px;
+    line-height: 12px;
+    width: 100%;
+    overflow: auto;
+}
+
+.rField {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	/* Firefox */
+	width: -moz-calc(20% - 20px);
+	/* WebKit */
+	width: -webkit-calc(20% - 20px);
+	/* Opera */
+	width: -o-calc(20% - 20px);
+	/* Standard */
+	width: calc(20% - 20px);
+}
+
+/* Traditional clearfix */
+.clearfix:after {
+	//content: ".";
+    display: block;
+    height: 0px;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {display: inline-block;}
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+
+/* Custom CSS for the page layout */
+.columns .column1 {float: left;}
+.columns .column2 {float: left;}
+
+.title {
+    text-align: center;
+	color: #f1f2f2;
+	font-family: OpenSans-Bold;
+	background-color: #2f3132;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+a {
+    color: #5874BF;
+    text-decoration: none;
+    margin: 0px;
+    padding: 
+}
+a:hover {
+    color: #3B59A9;
+}
+.full {
+	width: 100%;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+
+.bbar {
+	width: 100% !important;
+	text-align: left;
+	padding-left: 20px;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+.shadow {
+	text-shadow: 1px 0px #000;
+}
+
+.dSL {
+	margin-left: 8px
+}
+
+/* Navigation Start */
+.nav {
+   border-top: 1px black solid;
+   border-bottom: 1px black solid;
+   min-height: 25px;
+}
+#navItem {
+   width:100%;
+}
+#navItem ul {
+   clear:left;
+   float:left;
+   list-style:none;
+   margin:0;
+   padding:0;
+   text-align:center;
+}
+#navItem ul li {
+   display:block;
+   float:left;
+   list-style:none;
+   margin:0;
+   padding:0;
+   position:relative;
+}
+#navItem ul li a button{
+   display:block;
+   margin:0 0 0 1px;
+   padding:3px 10px;
+   background:#ddd;
+   color:#000;
+   text-decoration:none;
+   line-height:1.3em;
+}
+#navItem ul li button a:hover {
+}
+#navItem ul li button a.active,
+#navItem ul li button a.active:hover {
+   color:#fff;
+   background:#000;
+   font-weight:bold;
+}
+
+.tabrow li button {
+/*	background: linear-gradient(to bottom, #ECECEC 50%, #666 100%);
+	box-shadow: 0 0px 0px rgba(0, 0, 0, 0.4), inset 0 1px 0 #666;
+*/
+  text-shadow: 0.5px 0.5px #FFF;
+  margin: 0px;
+  padding: 0px;
+}
+
+.fbuttons {
+/*	background: linear-gradient(to bottom, #A50038 95%, #000 100%);*/
+}
+
+.buttonM {
+	margin-left: 20px;
+}
+
+button {
+	width: 100px;
+	border : 0px;
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px;
+	border-radius:7px;
+	font-size: 16px;
+}
+
+.shM {
+	margin-right: 20px;
+}
+
+/* Navigation End */
+
+/* Circle */
+.full-circle {
+	border: 1px solid #333;
+	height: 150px;
+	width: 150px;
+	-moz-border-radius:75px;
+	-webkit-border-radius: 75px;
+	float: left;
+}
+
+#multiset1 {
+	background-color: #d9ebfd;
+	z-index: 5;
+}
+#multiset2 {
+	z-index: 6;
+	background-color: #b7daf5;
+}
+#multiset3 {
+	z-index: 7;
+	background-color: #73b0d7;
+}
+#webform1 {
+	z-index: 8;
+	background-color: #4e8cba;
+}
+#webform2 {
+	z-index: 9;
+	background-color: #31689b;
+}
+#webform3 {
+	z-index: 10;
+	background-color: #959899;
+}
+
+.loc1 {
+	position: relative;
+	top: 100px;
+	left: 5px;
+}
+.loc2 {
+	position: relative;
+	top: 175px;
+	left: 5px;
+}
+.loc3 {
+	position: relative;
+	top: 100px;
+	left: 5px;
+}
+.loc4 {
+	position: relative;
+	top: 175px;
+	left: 5px;
+}
+.loc5 {
+	position: relative;
+	top: 100px;
+	left: 5px;
+}
+.loc6 {
+	position: relative;
+	top: 175px;
+	left: 5px;
+}
+
+.cText {
+	text-align: center;
+	vertical-align: middle;
+	line-height: 150px;  
+}
+
+/* End Circle */
+
+
+/*Stuff for whitney */
+#mainImage {
+	position: absolute;
+	left: 25%;
+	width: 440px;
+	height: 395px;
+	z-index: 0;
+	background-color: #444444;
+	margin: 0px;
+	padding: 0px;
+}
+
+.wImages {
+	display: inline-block;
+	width: 220px;
+	height: 197px;
+	margin: 0px;
+}
+
+img {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}

@@ -1,0 +1,113 @@
+body {
+	margin: 0;
+	padding: 0;
+	float: left;
+	//width: 695px;
+	width: 100%;
+}
+
+div, p, h1, {
+	margin: 0;
+	padding: 0;
+}
+
+.rowContainer {
+	position: absolute;
+	top: 80px;
+	border: 1px solid black;
+	height: calc(100% - 82px);
+	width: calc(100% - 2px);
+	overflow-y: auto;
+}
+
+.aCenter {text-align: center;
+}
+.lCenter {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.fLeft {float: left;}
+.fRight {float: right;}
+
+.fullWidth {
+	width: 100%;
+	line-height: 25px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.fWidth {
+	width: 200px;
+	display: inline-block;
+	text-align: left;
+}
+.fSubWidth {
+	width: 328px;
+	text-align: left;
+	display: inline-block;
+}
+
+.platformWidth {
+	width: 96px;
+	display: inline-block;
+}
+
+/* Title */
+.mTitle {
+	line-height: 50px;
+	height: 50px;
+	font-size: 32px;
+	background-color: #99ccee;
+	border-bottom: 1px solid black;
+}
+
+.cTitles {
+	line-height: 30px;
+	height: 30px;
+	background-color: #31689b;
+	color: #fff;
+}
+
+/*  Row coloring */
+.teamLight {background-color: #fff;color: #000;}
+.teamDark {background-color: #d9ebfd;}
+
+.aR1 {}
+.aR1:hover{
+	background-color: #d9d9d9;
+	transition: all 0.3s ease;
+}
+
+.aR2 {}
+.aR2:hover{
+	background-color: #92c8ed;
+	transition: all 0.3s ease;
+}
+
+/* shapes */
+
+#circle {
+	width: 18px;
+	height: 18px;
+	background: #4e8cba;
+	-moz-border-radius: 9px;
+	-webkit-border-radius: 9px;
+	border-radius: 9px;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 4 0 3 0; 
+}
+
+#hcircle {
+	height:9px;
+	width:18px;
+	background:#73b0d7;
+	border-radius: 0 0 18px 18px;
+	-moz-border-radius: 0 0 18px 18px;
+	-webkit-border-radius: 0 0 18px 18px;
+	border-radius: 0 0 18px 18px;
+	display: inline-block;
+	vertical-align: middle;
+ }
+
