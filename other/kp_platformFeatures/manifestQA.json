@@ -1,0 +1,47 @@
+{
+  "name": "kp_platformFeatures",
+  "version": "1.0.0",
+  "size": {
+    "width": 4,
+    "height": 2
+  },
+  "qa2staging.qa dataSetId": "a25822fd-396a-477f-b452-82ecf9fef1a4",
+  "domo.demo dataSetId": "2545d6f6-9125-48ea-9ba4-a968136d6f59",
+  "mapping": [
+    {
+      "dataSetId": "a25822fd-396a-477f-b452-82ecf9fef1a4",
+      "alias": "platformData",
+      "fields": [
+        {
+          "alias": "base",
+          "columnName": "Base"
+        },
+        {
+          "alias": "feature",
+          "columnName": "Feature"
+        },
+        {
+          "alias": "subfeature",
+          "columnName": "Subfeature"
+        },
+        {
+          "alias": "desktop",
+          "columnName": "Desktop"
+        },
+        {
+          "alias": "ios",
+          "columnName": "iOS"
+        },
+        {
+          "alias": "android",
+          "columnName": "Android"
+        },
+        {
+          "alias": "mobileweb",
+          "columnName": "Mobile Web"
+        }
+      ]
+    }
+  ],
+  "id": "4400a64a-2193-45e3-b4aa-4709f2662252"
+}

@@ -82,8 +82,8 @@
 			if (dsub === 'na') {dsub = '&nbsp;';}
 
 // class changes
-			var dataRowSpec = 'fullWidth fLeft fheight';
-			var pformW = 'platformWidth aCenter';
+			var dataRowSpec = 'fullWidth fLeft fheight lineH';
+			var pformW = 'platformWidth aCenter lineH';
 			if (rowNum % 2 === 0) {dataRowSpec = dataRowSpec + ' aR1 teamLight';}
 			else{dataRowSpec = dataRowSpec + ' aR2 teamDark';}
 			//console.log('dbase: ' + dbase + ' : ' + 'dfeature: ' + dfeature + ' : ' + 'dsub: ' + dsub);
@@ -91,22 +91,22 @@
 // fill options
 			if (ddesktop === 'x' || ddesktop === 'X') {ddesktop = '<div id="circle" class="lCenter">&nbsp;</div>';}
 			else if (ddesktop === '-') {ddesktop = '<div id="hcircle" class="lCenter">&nbsp;</div>';}
-			else if(ddesktop === 'na') {ddesktop = '<div>&nbsp;</div>';}
+			else if(ddesktop === 'na') {ddesktop = '<div id="circleB" class="lCenter">&nbsp;</div>';}
 			else {pformW = pformW;}
 
 			if (dios === 'x' || dios === 'X') {dios = '<div id="circle" class="lCenter">&nbsp;</div>';}
 			else if (dios === '-') {dios = '<div id="hcircle" class="lCenter">&nbsp;</div>';}
-			else if(dios === 'na') {dios = '<div>&nbsp;</div>';}
+			else if(dios === 'na') {dios = '<div id="circleB" class="lCenter">&nbsp;</div>';}
 			else {pformW = pformW;}
 
 			if (dandroid === 'x' || dandroid === 'X') {dandroid = '<div id="circle" class="lCenter">&nbsp;</div>';}
 			else if (dandroid === '-') {dandroid = '<div id="hcircle" class="lCenter">&nbsp;</div>';}
-			else if(dandroid === 'na') {dandroid = '<div>&nbsp;</div>';}
+			else if(dandroid === 'na') {dandroid = '<div id="circleB" class="lCenter">&nbsp;</div>';}
 			else {pformW = pformW;}
 
 			if (dmweb === 'x' || dmweb === 'X') {dmweb = '<div id="circle" class="lCenter">&nbsp;</div>';}
 			else if (dmweb === '-') {dmweb = '<div id="hcircle" class="lCenter">&nbsp;</div>';}
-			else if(dmweb === 'na') {dmweb = '<div>&nbsp;</div>';}
+			else if(dmweb === 'na') {dmweb = '<div id="circleB" class="lCenter">&nbsp;</div>';}
 			else {pformW = pformW;}
 
 // post rows			
