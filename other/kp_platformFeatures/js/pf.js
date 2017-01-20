@@ -16,6 +16,12 @@
 	var viewing = 0;
 
 
+	// domo.onDataUpdate(function(platformData){
+	//   console.log("alias updated: ", platformData);
+	//   //getPlatformData();
+	// });
+
+
 
 // Get dataset
 	function getPlatformData() {
@@ -45,7 +51,7 @@
 
 					featureList.push({ibase:ibase,ifeature:ifeature,isubFeature:isubFeature,idesktop:idesktop,iios:iios,iandroid:iandroid,imweb:imweb,uNum:uNum});
 					uNum = uNum + 1;
-					// console.log(ibase + ' : ', featureList[t]);
+					//console.log(ibase + ' : ', featureList[t]);
 				}
 			}
  		cleanFeatures();
@@ -67,6 +73,8 @@
 	function displayFeatures() {
 	 	document.getElementById('dataRows').innerHTML = '';
 		var rowNum = 0;
+		var rowSub = 0;
+
 		for(var t = 0; t < featureList.length; t++) {
 
 			var dbase = featureList[t].ibase;
@@ -109,8 +117,17 @@
 			else if(dmweb === 'na') {dmweb = '<div id="circleB" class="lCenter">&nbsp;</div>';}
 			else {pformW = pformW;}
 
+//			for(var b = 0; b < subList.length; b++) {
+				// if(dbase !== 'na') {
+					ifRow = $('<div id="pf' + t + '" class="' + dataRowSpec + '"><div class="fLeft fwidth">' + dfeature + '</div><div class="fLeft fSubwidth">' + dsub + '</div><div class="' + pformW+ '">' + ddesktop + '</div><div class="' + pformW+ '">' + dios + '</div><div class="' + pformW + '">' + dandroid + '</div><div class="' + pformW + '">' + dmweb + '</div></div>');
+				// }
+				// else {
+				// 	ifRow = $('<div id="pfSub' + (t-1) + '"><div id="pf' + t + '" class="' + dataRowSpec + '"><div class="fLeft fwidth">' + dfeature + '</div><div class="fLeft fSubwidth">' + dsub + '</div><div class="' + pformW+ '">' + ddesktop + '</div><div class="' + pformW+ '">' + dios + '</div><div class="' + pformW + '">' + dandroid + '</div><div class="' + pformW + '">' + dmweb + '</div></div></div>');
+				// }
+//			}
+
 // post rows			
-			ifRow = $('<div id="pf' + t + '" class="' + dataRowSpec + '"><div class="fLeft fwidth">' + dfeature + '</div><div class="fLeft fSubwidth">' + dsub + '</div><div class="' + pformW+ '">' + ddesktop + '</div><div class="' + pformW+ '">' + dios + '</div><div class="' + pformW + '">' + dandroid + '</div><div class="' + pformW + '">' + dmweb + '</div></div>');
+			//ifRow = $('<div id="pf' + t + '" class="' + dataRowSpec + '"><div class="fLeft fwidth">' + dfeature + '</div><div class="fLeft fSubwidth">' + dsub + '</div><div class="' + pformW+ '">' + ddesktop + '</div><div class="' + pformW+ '">' + dios + '</div><div class="' + pformW + '">' + dandroid + '</div><div class="' + pformW + '">' + dmweb + '</div></div>');
 			$("#dataRows").append(ifRow);
 			rowNum = rowNum +1;
 		}
