@@ -83,7 +83,7 @@
 			var dandroid = featureList[t].iandroid;
 			var dmweb = featureList[t].imweb;
 			var dparent = featureList[t].iparent;
-			var dxparent = featureList[t].isparent;
+			var dISparent = featureList[t].isparent;
 			//console.log(dbase + ' : ' + dfeature + ' : ' + dsub + ' : ' + ddesktop + ' : ' + dios + ' : ' + dandroid + ' : ' + dmweb);
 			
 			if (dsub !== 'na') {dbase = dfeature; dfeature = '&nbsp;';}
@@ -113,19 +113,21 @@
 // class changes
 			var dataRowSpec = 'fullWidth fLeft fheight lineH';
 			var pformW = 'platformWidth aCenter lineH';
-			if (rowNum % 2 === 0) {dataRowSpec = dataRowSpec + ' aR1 teamLight';}
-			else{dataRowSpec = dataRowSpec + ' aR2 teamDark';}
-			if (dparent) {}
-			console.log('dbase: ' + dbase + ' : ' + 'dfeature: ' + dfeature + ' : ' + 'dsub: ' + dsub + ' : ' + 'dparent: ' + dparent + ' : ' + 'dxparent: ' + dxparent);
+
+			dataRowSpec += (rowNum % 2 === 0) ? ' aR1 teamLight' : ' aR2 teamDark';
+
+			// if (dparent) {}
+			//console.log('dbase: ' + dbase + ' : ' + 'dfeature: ' + dfeature + ' : ' + 'dsub: ' + dsub + ' : ' + 'dparent: ' + dparent + ' : ' + 'dISparent: ' + dISparent);
 
 
 // hide subs
-			if (dxparent === 1) {
-				ifRow = $('<div id="pf' + t + '" class="' + dataRowSpec + '"><div class="fLeft fwidth">' + dfeature + '</div><div class="fLeft fSubwidth">' + dsub + '</div><div class="' + pformW + '">' + ddesktop + '</div><div class="' + pformW+ '">' + dios + '</div><div class="' + pformW + '">' + dandroid + '</div><div class="' + pformW + '">' + dmweb + '</div></div>');
+			if (dISparent === 1) {
+				ifRow = $('<div id="pf' + t + '" class="' + dataRowSpec + ' header_row" onClick="sparents(' + dparent + ', this)""><div class="fLeft fwidth"><div class="arrow"></div><div style="padding-left:15px">' + dfeature + '</div></div><div class="fLeft fSubwidth">' + dsub + '</div><div class="' + pformW + '">' + ddesktop + '</div><div class="' + pformW+ '">' + dios + '</div><div class="' + pformW + '">' + dandroid + '</div><div class="' + pformW + '">' + dmweb + '</div></div>');
 				rowBase = dparent;
+				console.log(dfeature);
 			}
 			else {
-				ifRow = $('<div id="pf' + rowBase + '-' + t + '" class="' + dataRowSpec + '"><div class="fLeft fwidth">' + dfeature + '</div><div class="fLeft fSubwidth">' + dsub + '</div><div class="' + pformW+ '">' + ddesktop + '</div><div class="' + pformW+ '">' + dios + '</div><div class="' + pformW + '">' + dandroid + '</div><div class="' + pformW + '">' + dmweb + '</div></div>');
+				ifRow = $('<div data-parent-id="pfs' + rowBase+ '" class="' + dataRowSpec + '"><div class="fLeft fwidth">' + dfeature + '</div><div class="fLeft fSubwidth">' + dsub + '</div><div class="' + pformW+ '">' + ddesktop + '</div><div class="' + pformW+ '">' + dios + '</div><div class="' + pformW + '">' + dandroid + '</div><div class="' + pformW + '">' + dmweb + '</div></div>');
 
 			}
 
@@ -133,7 +135,13 @@
 
 // post rows			
 			$("#dataRows").append(ifRow);
-			rowNum = rowNum +1;
+			rowNum =  dISparent === 1 ? 0 :rowNum +1;
 		}
 	}
 
+// ParentsOnly
+	function sparents(xparent, ele) {
+		var chlidren = $("[data-parent-id='pfs" + xparent + "']");
+		chlidren.toggle();
+		$(ele).toggleClass('header_closed');
+	}
