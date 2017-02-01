@@ -12,20 +12,15 @@
 	var xDay = 0;
 
 	// misc
+	var iparent = 0;
+	var isparent = 0;
+	var seeSub = 0;
 	var seeOption = 0;
 	var viewing = 0;
 
-
-	// domo.onDataUpdate(function(platformData){
-	//   console.log("alias updated: ", platformData);
-	//   //getPlatformData();
-	// });
-
-
-
 // Get dataset
 	function getPlatformData() {
-		domo.get("/data/v1/platformData?limit=9999").then(function(item){
+		domo.get("/data/v1/platformData").then(function(item){
 			// console.log("platformData", item);
 
 	 		uNum = 0;
@@ -41,16 +36,18 @@
 				var imweb = item[t].mobileweb;
 
 				if (true) {
-					if (ibase === null || ibase === "" || ibase === undefined) {ibase = 'na';} else {ibase = ibase;}
+					if (ibase === null || ibase === "" || ibase === undefined) {ibase = 'na';} else {ibase = ibase; iparent = iparent; isparent = 1;}
 					if (ifeature === null || ifeature === "" || ifeature === undefined) {ifeature = 'badElement';} else {ifeature = ifeature;}
-					if (isubFeature === null || isubFeature === "" || isubFeature === undefined) {isubFeature = 'na';} else {isubFeature = isubFeature;}
+					if (isubFeature === null || isubFeature === "" || isubFeature === undefined) {isubFeature = 'na';} else {isubFeature = isubFeature; ibase = ifeature; iparent = iparent -1;}
 					if (idesktop === null || idesktop === "" || idesktop === undefined) { idesktop = 'na'; } else { idesktop = idesktop; }
 					if (iios === null || iios === "" || iios === undefined) { iios = 'na'; } else { iios = iios; }
 					if (iandroid === null || iandroid === "" || iandroid === undefined) { iandroid = 'na'; } else { iandroid = iandroid; }
 					if (imweb === null || imweb === "" || imweb === undefined) { imweb = 'na'; } else { imweb = imweb; }
 
-					featureList.push({ibase:ibase,ifeature:ifeature,isubFeature:isubFeature,idesktop:idesktop,iios:iios,iandroid:iandroid,imweb:imweb,uNum:uNum});
+					featureList.push({ibase:ibase,ifeature:ifeature,isubFeature:isubFeature,idesktop:idesktop,iios:iios,iandroid:iandroid,imweb:imweb,uNum:uNum,iparent:iparent,isparent:isparent});
 					uNum = uNum + 1;
+					iparent = iparent + 1;
+					isparent = 0;
 					//console.log(ibase + ' : ', featureList[t]);
 				}
 			}
@@ -73,6 +70,7 @@
 	function displayFeatures() {
 	 	document.getElementById('dataRows').innerHTML = '';
 		var rowNum = 0;
+		var rowBase = 0;
 		var rowSub = 0;
 
 		for(var t = 0; t < featureList.length; t++) {
@@ -84,17 +82,12 @@
 			var dios = featureList[t].iios;
 			var dandroid = featureList[t].iandroid;
 			var dmweb = featureList[t].imweb;
+			var dparent = featureList[t].iparent;
+			var dxparent = featureList[t].isparent;
 			//console.log(dbase + ' : ' + dfeature + ' : ' + dsub + ' : ' + ddesktop + ' : ' + dios + ' : ' + dandroid + ' : ' + dmweb);
 			
-			if (dsub !== 'na') {dfeature = '&nbsp;';}
+			if (dsub !== 'na') {dbase = dfeature; dfeature = '&nbsp;';}
 			if (dsub === 'na') {dsub = '&nbsp;';}
-
-// class changes
-			var dataRowSpec = 'fullWidth fLeft fheight lineH';
-			var pformW = 'platformWidth aCenter lineH';
-			if (rowNum % 2 === 0) {dataRowSpec = dataRowSpec + ' aR1 teamLight';}
-			else{dataRowSpec = dataRowSpec + ' aR2 teamDark';}
-			//console.log('dbase: ' + dbase + ' : ' + 'dfeature: ' + dfeature + ' : ' + 'dsub: ' + dsub);
 
 // fill options
 			if (ddesktop === 'x' || ddesktop === 'X') {ddesktop = '<div id="circle" class="lCenter">&nbsp;</div>';}
@@ -117,17 +110,28 @@
 			else if(dmweb === 'na') {dmweb = '<div id="circleB" class="lCenter">&nbsp;</div>';}
 			else {pformW = pformW;}
 
-//			for(var b = 0; b < subList.length; b++) {
-				// if(dbase !== 'na') {
-					ifRow = $('<div id="pf' + t + '" class="' + dataRowSpec + '"><div class="fLeft fwidth">' + dfeature + '</div><div class="fLeft fSubwidth">' + dsub + '</div><div class="' + pformW+ '">' + ddesktop + '</div><div class="' + pformW+ '">' + dios + '</div><div class="' + pformW + '">' + dandroid + '</div><div class="' + pformW + '">' + dmweb + '</div></div>');
-				// }
-				// else {
-				// 	ifRow = $('<div id="pfSub' + (t-1) + '"><div id="pf' + t + '" class="' + dataRowSpec + '"><div class="fLeft fwidth">' + dfeature + '</div><div class="fLeft fSubwidth">' + dsub + '</div><div class="' + pformW+ '">' + ddesktop + '</div><div class="' + pformW+ '">' + dios + '</div><div class="' + pformW + '">' + dandroid + '</div><div class="' + pformW + '">' + dmweb + '</div></div></div>');
-				// }
-//			}
+// class changes
+			var dataRowSpec = 'fullWidth fLeft fheight lineH';
+			var pformW = 'platformWidth aCenter lineH';
+			if (rowNum % 2 === 0) {dataRowSpec = dataRowSpec + ' aR1 teamLight';}
+			else{dataRowSpec = dataRowSpec + ' aR2 teamDark';}
+			if (dparent) {}
+			console.log('dbase: ' + dbase + ' : ' + 'dfeature: ' + dfeature + ' : ' + 'dsub: ' + dsub + ' : ' + 'dparent: ' + dparent + ' : ' + 'dxparent: ' + dxparent);
+
+
+// hide subs
+			if (dxparent === 1) {
+				ifRow = $('<div id="pf' + t + '" class="' + dataRowSpec + '"><div class="fLeft fwidth">' + dfeature + '</div><div class="fLeft fSubwidth">' + dsub + '</div><div class="' + pformW + '">' + ddesktop + '</div><div class="' + pformW+ '">' + dios + '</div><div class="' + pformW + '">' + dandroid + '</div><div class="' + pformW + '">' + dmweb + '</div></div>');
+				rowBase = dparent;
+			}
+			else {
+				ifRow = $('<div id="pf' + rowBase + '-' + t + '" class="' + dataRowSpec + '"><div class="fLeft fwidth">' + dfeature + '</div><div class="fLeft fSubwidth">' + dsub + '</div><div class="' + pformW+ '">' + ddesktop + '</div><div class="' + pformW+ '">' + dios + '</div><div class="' + pformW + '">' + dandroid + '</div><div class="' + pformW + '">' + dmweb + '</div></div>');
+
+			}
+
+//			ifRow = $('<div id="pf' + t + '" class="' + dataRowSpec + '"><div class="fLeft fwidth">' + dfeature + '</div><div class="fLeft fSubwidth">' + dsub + '</div><div class="' + pformW+ '">' + ddesktop + '</div><div class="' + pformW+ '">' + dios + '</div><div class="' + pformW + '">' + dandroid + '</div><div class="' + pformW + '">' + dmweb + '</div></div>');
 
 // post rows			
-			//ifRow = $('<div id="pf' + t + '" class="' + dataRowSpec + '"><div class="fLeft fwidth">' + dfeature + '</div><div class="fLeft fSubwidth">' + dsub + '</div><div class="' + pformW+ '">' + ddesktop + '</div><div class="' + pformW+ '">' + dios + '</div><div class="' + pformW + '">' + dandroid + '</div><div class="' + pformW + '">' + dmweb + '</div></div>');
 			$("#dataRows").append(ifRow);
 			rowNum = rowNum +1;
 		}
