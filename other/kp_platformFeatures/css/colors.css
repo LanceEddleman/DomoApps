@@ -101,10 +101,10 @@ html{
 }
 
 body {
-    margin: 0px;
-    padding: 0px;
-    font-family: OpenSans;
-    background-color: #99ccee;
+	margin: 0px;
+	padding: 0px;
+	font-family: OpenSans;
+	background-color: #ddd;
 }
 
 div {

@@ -34,6 +34,7 @@
 				var iios = item[t].ios;
 				var iandroid = item[t].android;
 				var imweb = item[t].mobileweb;
+				var ichild = 0;
 
 				if (true) {
 					if (ibase === null || ibase === "" || ibase === undefined) {ibase = 'na';} else {ibase = ibase; iparent = iparent; isparent = 1;}
@@ -44,11 +45,12 @@
 					if (iandroid === null || iandroid === "" || iandroid === undefined) { iandroid = 'na'; } else { iandroid = iandroid; }
 					if (imweb === null || imweb === "" || imweb === undefined) { imweb = 'na'; } else { imweb = imweb; }
 
-					featureList.push({ibase:ibase,ifeature:ifeature,isubFeature:isubFeature,idesktop:idesktop,iios:iios,iandroid:iandroid,imweb:imweb,uNum:uNum,iparent:iparent,isparent:isparent});
+					featureList.push({ibase:ibase,ifeature:ifeature,isubFeature:isubFeature,idesktop:idesktop,iios:iios,iandroid:iandroid,imweb:imweb,uNum:uNum,iparent:iparent,isparent:isparent,ichild:ichild});
+
 					uNum = uNum + 1;
 					iparent = iparent + 1;
 					isparent = 0;
-					//console.log(ibase + ' : ', featureList[t]);
+					// console.log(ibase + ' : ', featureList[t]);
 				}
 			}
  		cleanFeatures();
@@ -115,33 +117,82 @@
 			var pformW = 'platformWidth aCenter lineH';
 
 			dataRowSpec += (rowNum % 2 === 0) ? ' aR1 teamLight' : ' aR2 teamDark';
-
-			// if (dparent) {}
-			//console.log('dbase: ' + dbase + ' : ' + 'dfeature: ' + dfeature + ' : ' + 'dsub: ' + dsub + ' : ' + 'dparent: ' + dparent + ' : ' + 'dISparent: ' + dISparent);
-
+			// console.log('dbase: ' + dbase + ' : ' + 'dfeature: ' + dfeature + ' : ' + 'dsub: ' + dsub + ' : ' + 'dparent: ' + dparent + ' : ' + 'dISparent: ' + dISparent);
 
 // hide subs
 			if (dISparent === 1) {
-				ifRow = $('<div id="pf' + t + '" class="' + dataRowSpec + ' header_row" onClick="sparents(' + dparent + ', this)""><div class="fLeft fwidth"><div class="arrow"></div><div style="padding-left:15px">' + dfeature + '</div></div><div class="fLeft fSubwidth">' + dsub + '</div><div class="' + pformW + '">' + ddesktop + '</div><div class="' + pformW+ '">' + dios + '</div><div class="' + pformW + '">' + dandroid + '</div><div class="' + pformW + '">' + dmweb + '</div></div>');
+				ifRow = $('<div id="pf' + t + '" class="' + dataRowSpec + ' header_row" onClick="sparents(' + dparent + ', this)""><div class="fLeft hRow"><div id="' + dfeature + '" class="arrow"></div><div style="padding-left:15px">' + dfeature + '</div></div><div class="fLeft hSRow">' + dsub + '</div><div class="' + pformW + '">' + ddesktop + '</div><div class="' + pformW+ '">' + dios + '</div><div class="' + pformW + '">' + dandroid + '</div><div class="' + pformW + '">' + dmweb + '</div></div>');
 				rowBase = dparent;
-				console.log(dfeature);
+				// console.log(dfeature);
 			}
 			else {
-				ifRow = $('<div data-parent-id="pfs' + rowBase+ '" class="' + dataRowSpec + '"><div class="fLeft fwidth">' + dfeature + '</div><div class="fLeft fSubwidth">' + dsub + '</div><div class="' + pformW+ '">' + ddesktop + '</div><div class="' + pformW+ '">' + dios + '</div><div class="' + pformW + '">' + dandroid + '</div><div class="' + pformW + '">' + dmweb + '</div></div>');
-
+				ifRow = $('<div data-parent-id="pfs' + rowBase+ '" class="' + dataRowSpec + ' hidden"><div class="fLeft fwidth">' + dfeature + '</div><div class="fLeft fSubwidth">' + dsub + '</div><div class="' + pformW+ '">' + ddesktop + '</div><div class="' + pformW+ '">' + dios + '</div><div class="' + pformW + '">' + dandroid + '</div><div class="' + pformW + '">' + dmweb + '</div></div>');
 			}
-
-//			ifRow = $('<div id="pf' + t + '" class="' + dataRowSpec + '"><div class="fLeft fwidth">' + dfeature + '</div><div class="fLeft fSubwidth">' + dsub + '</div><div class="' + pformW+ '">' + ddesktop + '</div><div class="' + pformW+ '">' + dios + '</div><div class="' + pformW + '">' + dandroid + '</div><div class="' + pformW + '">' + dmweb + '</div></div>');
 
 // post rows			
 			$("#dataRows").append(ifRow);
 			rowNum =  dISparent === 1 ? 0 :rowNum +1;
 		}
+		wChild();
 	}
 
-// ParentsOnly
+// Parent w/ children close
 	function sparents(xparent, ele) {
 		var chlidren = $("[data-parent-id='pfs" + xparent + "']");
 		chlidren.toggle();
 		$(ele).toggleClass('header_closed');
+		}
+
+// test for children
+	function wChild(xparent) {
+		var pink = $("[data-parent-id='pfs" + xparent + "']");
+			//document.getElementsByClassName(arrow).AddClass(arrowN);
+			var isParent = 0;
+			var isParentCount = 0;
+			var parent = 0;
+			var rowCounter = 0;
+			var lastChild = 0;
+			var lastParent = 0;
+			var hasChild = 0;
+
+			var fpCount = 0;
+			var findParent = 0;
+			var findparentCount = 0;
+
+		for (var u = 0; u <featureList.length; u++) {
+			isParent = featureList[u].isparent;
+			parent = featureList[u].ifeature;
+
+			findParent = featureList[u].ifeature;
+			findip = featureList[u].iparent;
+			// console.log('Parent: ' + findP + ' - ID: ' + findip );
+			// console.log('Item: ' + parent + ' is a parent: ' + isParent + ' - its ID: ' + isParentCount);
+
+			if (isParent === 1) {
+				//console.log('Item: ' + parent + ' is a parent: ' + isParent + ' - its ID: ' + isParentCount + ' currentRow is ' + rowCounter);
+				lastParent = rowCounter;
+				rowCounter = rowCounter + 1;
+				isParentCount = isParentCount + 1;
+			}
+			else {
+				//console.log("last parent: " + lastParent);
+				//console.log("parent: " + parent + " child count is: " + rowCounter); //Number(fpCount));
+				fpCount = 0;
+				rowCounter = rowCounter + 1;
+			}
+			//console.log('last parent: ' + lastParent);
+			hasChild = ((Number(rowCounter)-1)-lastParent);
+			console.log('Parent: ' + parent + ' children: ' + ((Number(rowCounter)-1)-lastParent));
+			if (hasChild === 0) {document.getElementById(parent).className = "arrowN";}
+			if (hasChild > 0) {document.getElementById(parent).className = "arrow";}
+
+		}
 	}
+
+
+
+
+
+
+
+

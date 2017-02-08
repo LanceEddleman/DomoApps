@@ -89,6 +89,21 @@ div, p, h1, {
 	display: inline-block;
 }
 
+/* Header only rows */
+.hRow {
+	width: 40%;
+	display: inline-block;
+	text-align: left;
+	margin-left: 5px;
+}
+.hSRow {
+	width: 4%;
+	text-align: left;
+	display: inline-block;
+	margin-left: -3%;
+}
+
+
 /* Title */
 .mTitle {
 	line-height: 50px;
@@ -118,7 +133,7 @@ div, p, h1, {
 
 .aR1 {}
 .aR1:hover{
-	background-color: #d9d9d9;
+	background-color: #b0b1b2; //d9d9d9
 	transition: all 0.3s ease;
 }
 
@@ -172,7 +187,7 @@ div, p, h1, {
 }
 
 .header_closed .arrow {
-	transform: rotate(-90deg);
+	transform: rotate(0deg);
 }
 
 .arrow {
@@ -185,9 +200,27 @@ div, p, h1, {
 	border-style: solid;
 	border-width: 5px 5px 0 5px;
 	border-color: #888 transparent transparent transparent;
-	transition: all .1s ease;
+	transform: rotate(-90deg);
+	transition: all .05s ease;
 }
 
+.arrowN {
+	left: 5px;
+	top: 50%;
+	margin-top: -5px;
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 5px 5px 0 5px;
+	border-color: transparent; transparent transparent transparent;
+	//transform: rotate(-90deg);
+	//transition: all .05s ease;
+	//background-color: red;
+}
+
+
+.hidden {display: none;}
 
 /* Mobile */
 
