@@ -114,9 +114,11 @@
 
 // class changes
 			var dataRowSpec = 'fullWidth fLeft fheight lineH';
+			var dataRowSpecOffset = 'fullWidth fLeft fheight lineH';
 			var pformW = 'platformWidth aCenter lineH';
 
-			dataRowSpec += (rowNum % 2 === 0) ? ' aR1 teamLight' : ' aR2 teamDark';
+			dataRowSpec += (dparent % 2 === 0) ? ' hR1' : ' hR2';
+			dataRowSpecOffset += (rowNum % 2 === 0) ? ' aR1 teamLight' : ' aR2 teamDark';
 			// console.log('dbase: ' + dbase + ' : ' + 'dfeature: ' + dfeature + ' : ' + 'dsub: ' + dsub + ' : ' + 'dparent: ' + dparent + ' : ' + 'dISparent: ' + dISparent);
 
 // hide subs
@@ -126,7 +128,7 @@
 				// console.log(dfeature);
 			}
 			else {
-				ifRow = $('<div data-parent-id="pfs' + rowBase+ '" class="' + dataRowSpec + ' hidden"><div class="fLeft fwidth">' + dfeature + '</div><div class="fLeft fSubwidth">' + dsub + '</div><div class="' + pformW+ '">' + ddesktop + '</div><div class="' + pformW+ '">' + dios + '</div><div class="' + pformW + '">' + dandroid + '</div><div class="' + pformW + '">' + dmweb + '</div></div>');
+				ifRow = $('<div data-parent-id="pfs' + rowBase+ '" class="' + dataRowSpecOffset + ' hidden"><div class="fLeft fwidth">' + dfeature + '</div><div class="fLeft fSubwidth">' + dsub + '</div><div class="' + pformW+ '">' + ddesktop + '</div><div class="' + pformW+ '">' + dios + '</div><div class="' + pformW + '">' + dandroid + '</div><div class="' + pformW + '">' + dmweb + '</div></div>');
 			}
 
 // post rows			
@@ -141,7 +143,7 @@
 		var chlidren = $("[data-parent-id='pfs" + xparent + "']");
 		chlidren.toggle();
 		$(ele).toggleClass('header_closed');
-		}
+	}
 
 // test for children
 	function wChild(xparent) {
@@ -154,10 +156,6 @@
 			var lastChild = 0;
 			var lastParent = 0;
 			var hasChild = 0;
-
-			var fpCount = 0;
-			var findParent = 0;
-			var findparentCount = 0;
 
 		for (var u = 0; u <featureList.length; u++) {
 			isParent = featureList[u].isparent;
@@ -182,14 +180,12 @@
 			}
 			//console.log('last parent: ' + lastParent);
 			hasChild = ((Number(rowCounter)-1)-lastParent);
-			console.log('Parent: ' + parent + ' children: ' + ((Number(rowCounter)-1)-lastParent));
+			//console.log('Parent: ' + parent + ' children: ' + ((Number(rowCounter)-1)-lastParent));
 			if (hasChild === 0) {document.getElementById(parent).className = "arrowN";}
-			if (hasChild > 0) {document.getElementById(parent).className = "arrow";}
+			else {document.getElementById(parent).className = "arrow";}
 
 		}
 	}
-
-
 
 
 
