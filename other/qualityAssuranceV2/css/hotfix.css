@@ -1,0 +1,109 @@
+.hotfixMain {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: calc(100% - 22px);
+}
+
+#hotfixBody {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+}
+
+.hotfixTitle {
+	height: 100%;
+	width: 100%;
+	line-height: 500px;
+	font-size: 48;
+	font-style: bolder;
+}
+
+.hotfixTitleFade {
+	opacity: 1;
+	height: 100%;
+	width: 100%;
+	background-color: ##7D9Ec0;
+}
+
+.hotfixTitleFade.hide {
+	opacity: 0;
+	background-color: ##7D9Ec0;
+	transition: all 3s ease;
+}
+
+.hotfixFade {
+	background-color: ##7D9Ec0;
+	opacity: 0;
+}
+.hotfixFade.show {
+	background-color: ##7D9Ec0;
+	height: 100%;
+	width: 100%;
+	opacity: 1;
+	transition: all 2s ease;
+}
+
+#hotfixLayout {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+}
+
+#hotfixText {
+	height: 30px;
+	line-height: 30px;
+	width: 100%;
+	border-bottom: 1px black solid;
+	margin-right: 20px;
+}
+
+.squadList {
+	width: 100%;
+	height: calc(100% - 31px);
+	display: inline-block;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.lHeight{line-height: 50px;}
+.fHeight{height: 100%;}
+.bb1 {border-bottom: 1px solid black;}
+
+/*	widths	*/
+/*.teamsList {width: 100%;text-align: center;}*/
+.qaList{width: 50%; text-align: center;}
+.areaList{width: 50%; text-align: center;}
+.squadWidth {
+	width: 33.33%;
+	float: left;
+	text-align: center;
+}
+/* width end */
+
+.bravo {background-color: #E3A869;}
+.charlie {background-color: #71C671;}
+.delta {background:#7D9Ec0}
+.cLead {font-size: 18px;font-weight: bolder;color: #ccddee;}
+
+/* squad info pane */
+.squadInfo {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	background-color: fccf84;
+	height: 30px;
+	line-height: 30px;
+	font-size: 1.2em;
+}
+
+.squadInfo.show {height: calc(100% - 22px);}
+.squadInfo.hide {height: 30px;transition: all 2s ease;}
+
+#footer {
+	background-color: #99ccee;
+	color: #fff;
+	transition: all 2s ease;
+}

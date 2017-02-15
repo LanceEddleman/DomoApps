@@ -1,0 +1,143 @@
+/* Navigation Start */
+.nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 80px;
+	line-height: 80px;
+	width:100%;
+	font-family: OpenSans, sans-serif;
+	font-size: 1.2em;
+	font-weight: bold;
+	background-color: #99ccee;
+}
+
+.nav ul {
+	list-style:none;
+	padding-left: 20px;
+	margin:0;
+}
+
+.nav li {
+	width: 100px;
+	line-height: 40px;
+	display: inline-block;
+	text-align: center;
+}
+
+.nav a {
+	text-decoration: none;
+	color: #fff;
+	display: block;
+	transition: .3s background-color;
+}
+
+.nav a:hover {background-color: #707F8A;}
+
+.nav a.active {
+	background-color: #fff;
+	color: #707F8A;
+	cursor: default;
+}
+
+#headerBase {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 50%;
+	height: 80px;
+	z-index: 6000;
+}
+
+#header1 {}
+#header2 {}
+
+.header1 {
+	position: absolute;
+	right: 5%;
+	height: 80px;
+	z-index: 100;
+}
+
+.header1:hover {
+	color: #99ccee;
+	text-shadow: 1px 1px 6px #000;
+	transition: all 2s ease;
+}
+
+.header2 {
+	position: absolute;
+	right: 4%;
+	top: 5px;
+	height: 80px;
+	z-index: 1;
+}
+
+.header3Version {
+	position: absolute;
+	top: 0px;
+	right: 5px;
+	font-size: 10px;
+	width: 50%;
+	text-align: right;
+	opacity: 0;
+}
+
+.tHover {}
+.tHover:hover .header3Version {
+	opacity: 1;
+	transition: all 2s ease;
+}
+
+.domoFont {
+	font-family: OpenSans-Bold;
+	font-size: 70px;
+	letter-spacing: -11;
+	line-height: 70px;
+	padding: 0;
+	margin: 0;
+}
+/* Navigation End */
+
+/* Links Page -- Link at bottom of home needs to move */
+.linkNav ul {
+	list-style:none;
+	background-color: #99ccee;
+	padding-left: 20px;
+	margin:0;
+}
+
+.linkNav li {
+  font-family: OpenSans, sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+}
+.linkNav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bolder;
+  display: block;
+  transition: .3s background-color;
+}
+.linkNav a:hover {
+  background-color: #707F8A;
+}
+
+.linkNav a.active {
+  background-color: #fff;
+  color: #707F8A;
+  cursor: default;
+}
+
+.linkLocation a {
+	position: absolute;
+	bottom: 1px;
+	width: 120px;
+	height: 22px;
+	left: calc(50% - 85px);
+	text-decoration: none;
+	text-align: center;
+	z-index: 900;
+}
+/* links end */

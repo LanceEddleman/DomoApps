@@ -1,0 +1,422 @@
+.fRow {
+	width: 100%;
+	background-color: #f1f2f2;
+	color: #000;
+	display: inline-block;
+}
+
+.fRowE {
+	width: 100%;
+	background-color: #b0b1b2;
+	color: #000;
+	display: inline-block;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+#tSelect {
+	float: left;
+}
+#baseSet {
+	float: left;
+	color: #f1f2f2;
+	font-family: OpenSans;
+    font-size: 12px;
+    line-height: 12px;
+    width: 100%;
+    overflow: auto;
+}
+
+.rField {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	/* Firefox */
+	width: -moz-calc(20% - 20px);
+	/* WebKit */
+	width: -webkit-calc(20% - 20px);
+	/* Opera */
+	width: -o-calc(20% - 20px);
+	/* Standard */
+	width: calc(20% - 20px);
+}
+
+.title {
+    text-align: center;
+	color: #f1f2f2;
+	font-family: OpenSans-Bold;
+	background-color: #2f3132;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.full {
+	width: 100%;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+
+.bbar {
+	width: 100% !important;
+	text-align: left;
+	padding-left: 20px;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+.shadow {
+	text-shadow: 1px 0px #000;
+}
+
+.dSL {
+	margin-left: 8px
+}
+
+/* Circle */
+.full-circle {
+	border: 1px solid #333;
+	height: 150px;
+	width: 150px;
+	-moz-border-radius:75px;
+	-webkit-border-radius: 75px;
+	float: left;
+}
+
+#multiset1 {
+	background-color: #d9ebfd;
+	z-index: 5;
+}
+#multiset2 {
+	z-index: 6;
+	background-color: #b7daf5;
+}
+#multiset3 {
+	z-index: 7;
+	background-color: #73b0d7;
+}
+#webform1 {
+	z-index: 8;
+	background-color: #4e8cba;
+}
+#webform2 {
+	z-index: 9;
+	background-color: #31689b;
+}
+#webform3 {
+	z-index: 10;
+	background-color: #959899;
+}
+
+.loc1 {
+	position: relative;
+	top: 100px;
+	left: 5px;
+}
+.loc2 {
+	position: relative;
+	top: 175px;
+	left: 5px;
+}
+.loc3 {
+	position: relative;
+	top: 100px;
+	left: 5px;
+}
+.loc4 {
+	position: relative;
+	top: 175px;
+	left: 5px;
+}
+.loc5 {
+	position: relative;
+	top: 100px;
+	left: 5px;
+}
+.loc6 {
+	position: relative;
+	top: 175px;
+	left: 5px;
+}
+
+.cText {
+	text-align: center;
+	vertical-align: middle;
+	line-height: 150px;  
+}
+
+/* End Circle */
+
+
+/* Custom CSS for the page layout */
+.columns .column1 {float: left;}
+.columns .column2 {float: left;}
+
+
+
+/* Navigation Start */
+.nav {
+   border-top: 1px black solid;
+   border-bottom: 1px black solid;
+   min-height: 25px;
+}
+#navItem {
+   width:100%;
+}
+#navItem ul {
+   clear:left;
+   float:left;
+   list-style:none;
+   margin:0;
+   padding:0;
+   text-align:center;
+}
+#navItem ul li {
+   display:block;
+   float:left;
+   list-style:none;
+   margin:0;
+   padding:0;
+   position:relative;
+}
+#navItem ul li a button{
+   display:block;
+   margin:0 0 0 1px;
+   padding:3px 10px;
+   background:#ddd;
+   color:#000;
+   text-decoration:none;
+   line-height:1.3em;
+}
+#navItem ul li button a:hover {
+}
+#navItem ul li button a.active,
+#navItem ul li button a.active:hover {
+   color:#fff;
+   background:#000;
+   font-weight:bold;
+}
+
+.tabrow li button {
+/*	background: linear-gradient(to bottom, #ECECEC 50%, #666 100%);
+	box-shadow: 0 0px 0px rgba(0, 0, 0, 0.4), inset 0 1px 0 #666;
+*/
+  text-shadow: 0.5px 0.5px #FFF;
+  margin: 0px;
+  padding: 0px;
+}
+
+.fbuttons {
+/*	background: linear-gradient(to bottom, #A50038 95%, #000 100%);*/
+}
+
+.buttonM {
+	margin-left: 20px;
+}
+
+button {
+	width: 100px;
+	border : 0px;
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px;
+	border-radius:7px;
+	font-size: 16px;
+}
+
+.shM {
+	margin-right: 20px;
+}
+
+/* Navigation End */
+
+
+a {
+    color: #5874BF;
+    text-decoration: none;
+    margin: 0px;
+    padding: 
+}
+a:hover {
+    color: #3B59A9;
+}
+
+
+
+
+/*Stuff for whitney */
+#mainImage {
+	position: absolute;
+	left: 25%;
+	width: 440px;
+	height: 395px;
+	z-index: 0;
+	background-color: #444444;
+	margin: 0px;
+	padding: 0px;
+}
+
+.wImages {
+	display: inline-block;
+	width: 220px;
+	height: 197px;
+	margin: 0px;
+}
+
+
+/* was in index.css */
+/* Footer New features */
+#newstuff {
+	position: absolute;
+	bottom: 0;
+	left: -10px;
+	color: #000;
+	width: 100%;
+	padding: 5px;
+	border-left: 15px solid #99ccee;
+	height: 0px;
+	opacity: 0;
+	z-index: -50;
+}
+
+#div-new:hover #newstuff {
+	color: #000;
+  	bottom: 12px;
+	height: auto;
+	padding-bottom: 12px;
+	opacity: 1;
+	transition: all 0.4s ease;
+}
+
+.newTitle:hover {
+	font-weight: bolder;
+	color: #000;
+	background-color: #99ccee;
+}
+
+.message {
+	position: absolute;
+	text-align: right;
+	right: 10px;
+	width: 20%;
+	min-width: 150px;
+}
+
+.rCount {
+	position: absolute;
+	width: 80%;
+	min-width: 450px;
+	left: 10px;
+}
+
+
+/* removed form index.css */
+.op {
+	color: #000000;
+	font-weight: bold;
+	background: rgba(255,255,255,0.3);
+}
+.opT {
+	color: #ffffff;
+	background: rgba(0,0,0,0.6)
+}
+
+.opE {
+	color: #387b26;
+    font-weight: bold;
+}
+.opO {
+	color: #31689b;
+    font-weight: bold;
+}
+
+.opRed {
+	color: #B83E52;
+    font-weight: bold;
+}
+.opOrange {
+	color: #DA803C;
+    font-weight: bold;
+}
+
+.uSort, .uLink {
+	width: 30px;
+	padding-left: 10px;
+}
+
+.fullH{background: rgba(255,255,255,0.2);}
+
+.fullH:hover{
+	background: rgba(0,0,0,0.3);
+	cursor: pointer;
+	color: #ffffff;
+}
+
+.tbold {
+	font-size: 24px;
+	font-weight: bolder;
+}
+
+.dName {
+	width: 200px;
+	text-align: center;
+	padding-left: 15px;
+}
+.dID {
+	width: 120px;
+	text-align: center;
+}
+
+.tType {
+	width: 60px;
+	text-align: center;
+	float: right;
+}
+
+
+.dName:hover, .dID:hover {
+	color: #ffffff;
+	font-weight: bold;
+}
+
+
+.intro {
+	font-size: 90px;
+	font-weight: 700;
+	text-align: center;
+	line-height: 150px;
+}
+
+/* Traditional clearfix */
+.clearfix:after {
+//    content: ".";
+	display: block;
+	height: 0px;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {display: inline-block;}
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+
+/* Custom CSS for the page layout */
+.columns .column1 {float: left;}
+.columns .column2 {float: left;}
+
+
+.mLeft {margin-left: 20%;}
+.mTop {}
+
+.clear {clear: both;}
+.center {text-align: center;}
+.allCenter {align-content: center;}
+.fullWidth {width: 100%;}
+.halfWidth {width: 50%;}
+.fullheight{height: 100%; min-height: 100%;}
+.floatLeft {float: left;}
+.floatRight {float: right;}

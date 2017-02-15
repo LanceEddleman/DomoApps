@@ -1,0 +1,152 @@
+{
+  "name": "qualityAssurance_V2",
+  "version": "1.0.0",
+  "domo.domo": "datasourceID: 41522a1b-fd44-452f-8e9a-5dea7b40bef9",
+  "===============": "==================================================",
+  "domo.demo_sprintIssues_qasi": "datasourceID: e16b3d4a-2ce6-4b02-a9dc-47e4685c42f0",
+  "domo.demo_serverList": "datasourceID: 41e6f660-f72b-4ac4-beaf-200e3721e9c7",
+  "domo.demo_teamList": "datasourceID: cc226fea-8611-401a-ae3b-b667f1d2d2f9",
+  "domo.demo_hfSquad": "datasourceID: 7983e8ea-b806-4ff7-bd60-108bce0340e2",
+  "domo.demo_links": "datasourceID: addb8dc2-33db-4667-98d3-b27014ee2bff",
+  "---------------": "--------------------------------------------------",
+  "qa2staging.qa_sprintIssues_qasi": "datasourceID: fef20312-fe5c-4da4-ba46-c2f06aa4564e",
+  "qa2staging.qa_serverList": "datasourceID: 2309b1f8-0f17-4b0f-b60a-675fe0919493",
+  "qa2staging.qa_teamList": "datasourceID: 8d8ea0b1-711b-41fe-abec-061cd1b4ead8",
+  "qa2staging.qa_hfSquad": "datasourceID: f4be40c9-6a41-496d-b029-0417f23e460d",
+  "qa2staging.qa_links": "datasourceID: ",
+  "fullpage": false,
+  "size": {
+    "width": 4,
+    "height": 2
+  },
+  "mapping": [
+    {
+      "dataSetId": "41e6f660-f72b-4ac4-beaf-200e3721e9c7",
+      "alias": "serverList",
+      "fields": []
+    },
+    {
+      "dataSetId": "addb8dc2-33db-4667-98d3-b27014ee2bff",
+      "alias": "linksList",
+      "fields": []
+    },
+    {
+      "dataSetId": "7983e8ea-b806-4ff7-bd60-108bce0340e2",
+      "alias": "hfSquad",
+      "fields": [
+        {
+          "alias": "name",
+          "columnName": "Name"
+        },
+        {
+          "alias": "team",
+          "columnName": "Team"
+        },
+        {
+          "alias": "area",
+          "columnName": "Product area"
+        }
+      ]
+    },
+    {
+      "dataSetId": "cc226fea-8611-401a-ae3b-b667f1d2d2f9",
+      "alias": "teamList",
+      "fields": [
+        {
+          "alias": "team",
+          "columnName": "Team"
+        },
+        {
+          "alias": "qa1",
+          "columnName": "QA1"
+        },
+        {
+          "alias": "qa2",
+          "columnName": "QA2"
+        },
+        {
+          "alias": "qa3",
+          "columnName": "QA3"
+        },
+        {
+          "alias": "i1",
+          "columnName": "Intern1"
+        },
+        {
+          "alias": "i2",
+          "columnName": "Intern2"
+        },
+        {
+          "alias": "director",
+          "columnName": "Director"
+        },
+        {
+          "alias": "features",
+          "columnName": "Features"
+        }
+      ]
+    },
+    {
+      "dataSetId": "e16b3d4a-2ce6-4b02-a9dc-47e4685c42f0",
+      "alias": "qasi",
+      "fields": [
+        {
+          "alias": "squad",
+          "columnName": "Squad"
+        },
+        {
+          "alias": "status",
+          "columnName": "Status"
+        },
+        {
+          "alias": "jira",
+          "columnName": "JiraNumber"
+        },
+        {
+          "alias": "summary",
+          "columnName": "Summary"
+        },
+        {
+          "alias": "notes",
+          "columnName": "Notes"
+        },
+        {
+          "alias": "reason",
+          "columnName": "Reason"
+        },
+        {
+          "alias": "sprint",
+          "columnName": "Sprint"
+        },
+        {
+          "alias": "test",
+          "columnName": "Left2Test"
+        }
+      ]
+    },
+    {
+      "dataSetId": "4da2f819-09d5-494f-8969-dc97d84c90ea",
+      "alias": "hfSchedule",
+      "fields": [
+        {
+          "alias": "hfsDate",
+          "columnName": "Date"
+        },
+        {
+          "alias": "hfsDay",
+          "columnName": "Day of Week"
+        },
+        {
+          "alias": "hfsTeam",
+          "columnName": "Team"
+        }
+      ]
+    }
+  ],
+  "oldID": "e3a9bbf6-2ddc-4ef8-9cfd-6bd5c0f4c09a",
+  "domo.domo - id": "7aeefdc5-7549-46dc-b242-3f93247d0d20",
+  "qa2staging.qa - id": "d2ff31a6-6cd6-46c1-929a-c3ab6eb445d2",
+  "V1 3D domo.demo - id": "e7eb4990-66b2-4a2c-b3cb-cf531fecfb05",
+  "V2 3D domo.demo - id": "d717df37-6ad7-449d-b0bc-d0bad541e806",
+  "id": "d717df37-6ad7-449d-b0bc-d0bad541e806"
+}

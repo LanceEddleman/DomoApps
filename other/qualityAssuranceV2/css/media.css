@@ -1,0 +1,75 @@
+@media only screen and (max-width: 640px){
+	.nav {
+		line-height: 30px;
+		width:100%;
+		font-size: .8em;
+		font-weight: bold;
+	}
+
+	.nav ul {padding-left: 3%;}
+	.nav li {width: 50px;}
+	.nav a {}
+	.nav a:hover {}
+	.nav a.active {}
+
+	.domoFont {
+		font-size: 2em;
+		letter-spacing: -4;
+	}
+
+	#header {
+		display: none;
+
+		position: absolute;
+		right: 2%;
+	}
+
+	#header2 {
+		display: none;
+		position: absolute;
+		right: 2%;
+	}
+
+	.header {
+		display: none;
+
+		position: absolute;
+		right: 35px;
+		z-index: 100;
+	}
+
+	.header:hover {
+		display: none;
+
+		color: #99ccee;
+		text-shadow: 1px 1px 8px #000;
+		transition: all 3s ease;
+	}
+
+	.header2 {
+		display: none;
+
+		position: absolute;
+		right: 2%;
+		top: 5px;
+		z-index: 1;
+	}
+
+	.header3 {
+		display: none;
+
+		position: absolute;
+		top: -1px;
+		right: -12px;
+		font-size: 12px;
+		width: 200px;
+		text-align: right;
+		opacity: 0;
+	}
+
+	/* General Items */
+	.titleFade {
+		font-size: 1em;
+	}
+
+}

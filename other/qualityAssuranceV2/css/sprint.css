@@ -1,0 +1,156 @@
+.main {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: lightgray;
+}
+
+.clear {
+  clear: both;			
+}
+
+#contentSection {
+	position: absolute;
+	top: 50px;
+	bottom: 22px;
+	height: calc(100% - 72px);
+	width: 100%;
+}
+
+#footer {
+	color: #fff;
+	background-color: #707F8A;
+	transition: all 2s ease;
+}
+
+.message {
+	position: absolute;
+	right: 10px;
+}
+
+.rCount {
+	position: absolute;
+	left: 10px;
+}
+
+#fire {
+	height: 100%;
+}
+
+#fireText {
+	color: #000;
+	overflow: auto;
+	height: calc(100% - 30px);
+	width: 100%;
+}
+
+.title {
+	height: 30px;
+	line-height: 30px;
+}
+
+#sectionTitle {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px solid black;
+	font-family: OpenSans-Bold;
+
+}
+
+.fRow {
+	width: 100%;
+	background-color: #f1f2f2;
+	display: inline-block;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.fRowE {
+	width: 100%;
+	background-color: #b0b1b2;
+	color: #000;
+	display: inline-block;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.tableRows {font-weight: normal;}
+
+/* Field Widths */
+.wsquad {width: 200px; float: left; text-align: center; white-space: wrap;}
+.wjira {width: 150px; float: left; text-align: center;}
+.wsummary {width: calc(100% - 450px); float: left; text-align: left;}
+.wsprint {width: 100px; float: left; text-align: center; white-space: nowrap;}
+
+.wnotes {width: 20%; float: left; text-align: left;}
+.wreason {width: 10%; float: left; text-align: left;}
+.wtest {width: 10%; float: left; text-align: left;}
+.wstatus {width: 5%; float: left; text-align: center; white-space: nowrap;}
+
+.intro {
+	font-size: 90px;
+	font-weight: 700;
+	text-align: center;
+	line-height: 150px;
+}
+
+.redText {
+	color: #B83E52;
+    font-weight: bold;
+}
+
+/* Navigation Start */
+.sprintNav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 50px;
+	line-height: 50px;
+	background-color: #707F8A;
+	width:100%;
+}
+
+.sprintNav ul {
+	list-style: none;
+	height: 20px;
+	line-height: 50px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.sprintNav li {
+	font-family: OpenSans, sans-serif;
+	font-size: 1.0em;
+	font-weight: bold;
+	text-align: center;
+	width: 105px;
+	float: left;
+}
+
+.sprintNav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: .3s background-color;
+}
+
+.sprintNav a:hover {
+	background-color: #99ccee;
+	color: #000;
+	font-weight: bolder;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
+.sprintNav a.active {
+  background-color: #fff;
+  color: #707F8A;
+  cursor: default;
+}
+
+/* Navigation End */

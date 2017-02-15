@@ -1,0 +1,64 @@
+/* basics */
+@font-face {font-family: OpenSans;
+	src: url(/fonts/OpenSans-Light.ttf);}
+
+@font-face {font-family: OpenSans-Bold;
+	src: url(/fonts/OpenSans-Bold.ttf);
+	font-weight: bold;}
+
+@font-face {font-family: OpenSans-Bolder;
+	src: url(/fonts/OpenSans-ExtraBold.ttf);
+	font-weight: bolder;}
+
+body{
+	margin: 0; padding: 0;
+	font-family: OpenSans;
+	width: 100%;
+	overflow: hidden;
+}
+
+h1 {margin: 0px; padding: 0px; text-align: center; font-family: OpenSans-Bold;}
+div {margin: 0px; padding: 0px;}
+table {border-collapse: collapse; margin: 0px; padding: 0px;}
+thead, th, tr, td, tbody {margin: 0px; padding: 0px;}
+p {margin: 0px; padding: 0px;}
+ul {list-style-type: none; margin: 0px; padding: 0px;}
+img {margin: 0px; padding: 0px; border: 0px;}
+
+content {
+	position: absolute;
+	top: 80px;
+	height: calc(100% - 82px);
+	width: calc(100% - 2px);
+	background-color: #fff;
+}
+
+#page {height: 100%; width: 100%;}
+
+.contentBox {border: 1px solid black;}
+
+/* Footer */
+#footer {
+	position: absolute;
+	bottom: 1px;
+	left: 1px;
+	height: 22px;
+	width: calc(100% - 2px);
+	color: #fff;
+	background-color: #99ccee;
+	border-top: 1px solid black;
+	transition: all 2s ease;
+	z-index: 10;
+}
+/* Footer End */
+
+/* Colors */
+.domoBlue {color: #99ccee;}
+.domoBlueBG {background-color: #99ccee;}
+.darkBlue {color: #707F8A;}
+.darkBlueBG {background-color: #707F8A;}
+.white {color: #fff;}
+.whiteBG {background-color: #fff;}
+.redShadow {text-shadow: 0.5px 0px red;}
+.greenShadow {text-shadow: 0.5px 0px green;}
+.oddRow {background-color: lightgrey;}

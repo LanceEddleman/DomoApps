@@ -1,0 +1,33 @@
+ 	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="stylesheet" href="css/sprint.css" />
+<!-- 
+		<link rel="stylesheet" href="css/index.css" />
+ -->
+		<script src="js/sprint.js"></script>
+		<script src="domo.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+		<script>$(document).ready(function(){getSprintsList();});</script>
+	</head>
+
+	<main class="main">
+		<div id="page">
+			<div class="sprintNav">
+				<ul>
+					<li><select id="sprintList" class="buttonM" onchange="chooseSprint()">
+							<option value="1">All Issues</option>
+						</select>
+					</li>
+					<li id="fireAll" onclick="showSelection('fire',0);serverActive('fireAll')"><a href="#">Fire Items</a></li>
+					<li id="allIssues" onclick="showSelection('all',9999);serverActive('allIssues')"><a href="#" class="active">All Issues</a></li>
+				</ul>
+			</div>
+	  		<div id="contentSection" class="whiteBG clear">
+				<div id="fire">
+					<div id="groupTitle" class="title"><h1 class="mTop">Sprint Issues</h1></div>
+					<div id="fireText"><div id="intro" class="intro"></div></div>
+				</div>
+			</div>
+		</div>
+	</main>

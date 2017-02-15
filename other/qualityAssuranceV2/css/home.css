@@ -1,0 +1,170 @@
+.titleFade {
+	position: absolute;
+	top: 35%;
+	opacity: 1;
+	width: 100%;
+	font-size: 3em;
+}
+
+.nextLocation {
+	position: absolute;
+	z-index: 999;
+	text-align: center;
+	padding-right: 10px;
+	font-style: bolder;
+	font-size: 16;
+	right: 0px;
+	background-color: #DC9A2C;
+	width: 21%;
+}
+
+.hscLocation2 {
+	position: absolute;
+	top: 0;
+	z-index: 999;
+	text-align: right;
+	font-style: bolder;
+	right: 0px;
+	width: 250px;
+	min-width: 250px;
+	max-width: 250px;
+	height: calc(100% - 23px);
+}
+
+.displayNextTitle2 {
+	height: 20px;
+	line-height: 20px;
+	text-align: left;
+	background-color: #707F8A;
+	color: #fff;
+	border-bottom: 1px black solid;
+	border-left: 1px black solid;
+}
+
+.displayNextTitle {
+	bottom: 63px;
+	border: 1px black solid;
+	border-right: 0px;
+	height: 20px;
+	line-height: 20px;
+	border-top-left-radius: 15px;
+}
+
+.displayNextSquad {
+	line-height: 40px;
+	bottom: 23px;
+	height: 40px;
+	border-top: 1px black solid;
+	border-left: 1px black solid;
+}
+
+.displayNextSquad2 {
+	line-height: 40px;
+	bottom: 23px;
+	height: 40px;
+	font-style: bolder;
+	font-weight: bolder;
+	border-bottom: 1px black solid;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,fccf84+20&0+0,0.65+20 */
+	background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(252,207,132,0.65) 40%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(252,207,132,0.65) 40%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(252,207,132,0.65) 40%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6fccf84',GradientType=1 ); /* IE6-9 */
+}
+
+.lSquad2 {
+	padding-right: 5px;
+	padding-left: 5px;
+	border-right: 1px black solid;
+}
+
+.lSquad2a {}
+
+.lDay2 {
+	padding-right: 5px;
+	padding-left: 5px;
+	border-right: 1px black solid;
+}
+
+.lDate2 {
+	padding-right: 10px;
+	padding-left: 5px;
+}
+
+.hscList2 {
+	position: absolute;
+	top: 62;
+	right: 0px;
+	width: 250px;
+	min-width: 250px;
+	max-width: 250px;
+	overflow-y: auto;
+}
+
+.leftFade {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,e0dfe2+20&0+0,0.65+20 */
+	background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(224,223,226,0.65) 30%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(224,223,226,0.65) 30%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(224,223,226,0.65) 30%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6e0dfe2',GradientType=1 ); /* IE6-9 */
+}
+
+.displayNextSquad3 {
+	line-height: 40px;
+}
+
+.button {
+	width: 30px;
+    border: none;
+    text-decoration: none;
+	outline: none;
+    background-color: transparent;
+    color: #000;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bolder;
+	line-height: 14px;
+}
+.button:active {
+	transform: translateY(1px);
+}
+
+.displayNPButtons {
+	position: absolute;
+	bottom: 65;
+	z-index: 1000;
+	right: 0px;
+	width: 60px;
+}
+
+.nextButton {background-color: #E3BB77;}
+.prevButton {background-color: #E3BB77;}
+
+.nextButton:hover {background-color: #99ccee;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	transition: all .3s ease;}
+.prevButton:hover {background-color: #99ccee;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	transition: all .3s ease;}
+
+.displayCButton {
+	position: absolute;
+	bottom: 65;
+	z-index: 1000;
+	right: 224px;
+	width: 30px;
+	background-color: #E3BB77;
+	border-top-left-radius: 15px;
+}
+
+.displayCButton:hover {
+	background-color: #99ccee;
+	transition: all .3s ease;
+}
+
+
+
+
+

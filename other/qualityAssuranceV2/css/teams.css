@@ -1,0 +1,175 @@
+.teamMain {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: calc(100% - 22px);
+	background-color: #fff;
+}
+
+#teamBody {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	background-color: #99ccee;
+}
+
+.titleFade {
+	position: absolute;
+	opacity: 1;
+	width: 100%;
+	top: 40%;
+	font-size: 48;
+	font-style: bolder;
+}
+.titleFade.hide {
+	opacity: 0;
+	transition: all 3s ease;
+}
+
+.teamFade {
+	opacity: 0;
+}
+.teamFade.show {
+	opacity: 1;
+	transition: all 2s ease;
+}
+
+#teamLayout {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+}
+
+#teamText {
+	height: 30px;
+	line-height: 30px;
+	width: calc(100% - 15px);
+	width: 100%;
+	background-color: #707F8A;
+	color: #fff;
+	border-bottom: 1px black solid;
+}
+
+.squadList {
+	width: 100%;
+	height: calc(100% - 31px);
+	display: inline-block;
+	overflow-x: hidden;
+	//overflow-y: auto;
+}
+
+/*	widths	*/
+.teamsList {width: 15%; min-width: 150px;min-height: 20px;text-align: center;}
+.qaList{width: 15%; min-width: 150px;min-height: 20px;text-align: center;}
+.featuresList{width: 55%; min-width: 200px;min-height: 20px;}
+.ffeaturesList{width: calc(55% - 15px);}
+.directorList{text-align: right; width: 15%; min-width: 150px;
+	min-height: 20px;text-align: center;//background-color: red;}
+
+/* width end */
+
+/*  Row coloring */
+.teamLight {background-color: #fff;color: #000;}
+.teamDark {background-color: #bedef4;}
+.teamLeader {background-color: #F4D4BE;font-weight: bolder;}
+
+.aR1 {}
+.aR1:hover{
+	background-color: #d9d9d9;
+	transition: all 0.3s ease;
+}
+
+.aR2 {}
+.aR2:hover{
+	background-color: #92c8ed;
+	transition: all 0.3s ease;
+}
+
+.md {color: crimson;font-weight: bold;}
+.md:hover {color: crimson;}
+
+/* squad info pane */
+.squadInfo {
+	position: absolute;
+	right: 0;
+	top: 31px;
+	width: 60%;
+	background-color: skyblue;
+	height: 0;
+	z-index: 100;
+}
+
+.squadInfo.show {
+	height: calc(100% - 31px);
+	opacity: 1;
+	transition: all 1s ease;
+}
+
+.squadInfo.hide {
+	height: 0;
+	opacity: 0;
+	transition: all 1s ease;
+}
+
+#footer {
+	background-color: #707F8A;
+	transition: all 2s ease;
+}
+
+/*  director menu  */
+.onclick-menu {
+    position: relative;
+    display: inline-block;
+    z-index: 9000;
+   	outline: 0;
+   	cursor: pointer;
+}
+
+.onclick-menu:focus {
+	pointer-events: none;
+	background-color: #94a4a5;
+}
+
+.onclick-menu:hover {background-color: #94a4a5;}
+
+.onclick-menu:focus {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: none;
+	background-color: #94a4a5;
+}
+
+.onclick-menu:active {background-color: #94a4a5;}
+
+.highlight {}
+.highlight:hover {background-color: #707F8A;}
+.highlight:active {background-color: #fff;color:000;}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #94a4a5;
+    min-width: 160px;
+    width: 100%;
+}
+
+.show {
+	z-index: 9000;
+	display:block;
+}
+
+ul, menu, dir {
+    display: block;
+    list-style-type: none;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+    width: 100%;
+    min-width: 175px;
+}
+
+

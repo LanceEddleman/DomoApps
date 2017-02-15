@@ -1,0 +1,91 @@
+#linksPage .linkmain{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: calc(100% - 22px);
+	background-color: #fff;
+}
+
+#linksBody {}
+
+.titleLFade {
+	opacity: 1;
+	height: 100%;
+	width: 100%;
+	line-height: 500px;
+	font-size: 48;
+	font-style: bolder;
+	background-color: #B9CFB9;
+	z-index: 901;
+}
+
+.titleLFade.hide {
+	opacity: 0;
+	z-index: -10;
+	transition: all 2s ease;
+}
+.titleEFade.hide {
+	opacity: 0;
+	z-index: -11;
+	transition: all 0.1s ease;
+}
+
+.bodyShow {opacity: 0;}
+.bodyShow.show {
+	opacity: 1;
+	transition: all 2s ease;
+}
+
+.lTitles {
+	height: 32px;
+	line-height: 32px;
+	background-color: #B9CFB9;
+	color: #000;
+	border-bottom: 1px solid black;
+}
+
+#linksBody {
+	position: absolute;
+	top: 0;
+	height: 100%;
+}
+
+.linksHeight {
+	height: calc(100% - 55px);
+	overflow-y: auto;
+}
+
+.linkRows {
+	line-height: 40px;
+	overflow: hidden;
+}
+
+.fullG{}
+
+.fullG:hover{
+	cursor: pointer;
+	font-weight: bolder;
+}
+
+.opY {background-color: #fff;}
+.opY:hover {background: rgba(0,0,0,0.2);}
+.opX {background-color: #E6F6ED;}
+.opX:hover {background-color: #CEF0DB;}
+
+.lfields {text-align: left;}
+
+.lname {
+	width: 25%;
+	margin-left: 30px;
+}
+.lnotes {
+	width: 55%;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.linfo {margin-right: 30px;}
+
+#footer {
+	background-color: #B9CFB9;
+	color: #000;
+}

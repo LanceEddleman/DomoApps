@@ -1,0 +1,127 @@
+/* Colors */
+	:root{
+	/*	DOMO color ranges, listed light to dark */
+
+	/* blues */
+		color: #d9ebfd; /* background */
+		color: #b7daf5;
+		color: #99ccee; /* Domo Blue */
+		color: #73b0d7;
+		color: #4e8cba;
+		color: #31689b; /* text*/
+	/* greens */
+		color: #ddf4ba;
+		color: #bbe491;
+		color: #a0d771;
+		color: #80c25d;
+		color: #559e38;
+		color: #387b26;
+	/*  orange */
+		color: #fdecad;
+		color: #fccf84;
+		color: #fbad56;
+		color: #fb8d34;
+		color: #e45621;
+		color: #a43724;
+	/*  purple */
+		color: #f3e4fe;
+		color: #ddc8ef;
+		color: #b391ca;
+		color: #8f6dc0;
+		color: #7940a1;
+	/*  teal */
+		color: #d8f4de;
+		color: #abe4ca;
+		color: #8dd5be;
+		color: #68bea8;
+		color: #46998a;
+		color: #227872;
+	/*  pinks */
+		color: #fcd7e6;
+		color: #fbb6dd;
+		color: #f395cd;
+		color: #ee76bf;
+		color: #cf51ac;
+		color: #a62a92;
+	/*  reds */
+		color: #fddddd;
+		color: #fcbcb7;
+		color: #fd9a93;
+		color: #fd7f76;
+		color: #e45850;
+		color: #c92e25;
+	/*  gray to black */
+		color: #818d8f;
+		color: #54585a;
+		color: #2f3132;
+	/*  gray scale */
+		color: #f1f2f2; /* background */
+		color: #e4e5e5;
+		color: #d7d8d8;
+		color: #cacbcc;
+		color: #b0b1b2;
+		color: #387b26;
+		color: #a2a5a6;
+		color: #959899;
+		color: #a62a92;
+		color: #888b8c;
+		color: #7b7e80;
+		color: #6e7173;
+		color: #616466;
+		color: #54585a; /* text */
+	};
+
+/* Fonts */
+	@font-face {
+	    font-family: OpenSans;
+	    src: url(/fonts/OpenSans-Light.ttf);
+	}
+
+	@font-face {
+	    font-family: OpenSans-Bold;
+	    src: url(/fonts/OpenSans-Bold.ttf);
+	    font-weight: bold;
+	}
+
+	@font-face {
+	    font-family: OpenSans-Bolder;
+	    src: url(/fonts/OpenSans-ExtraBold.ttf);
+	    font-weight: bolder;
+	}
+
+//html
+//{
+	/* Firefox */
+//	height: -moz-calc(100% - 40px);
+	/* WebKit */
+//	height: -webkit-calc(100% - 40px);
+	/* Opera */
+//	height: -o-calc(100% - 40px);
+	/* Standard */
+//	height: calc(100% - 40px);
+/}
+
+
+.blue {background-color: blue;}
+.red {background-color: red;}
+.green {background-color: green;}
+.orange {background-color: orange;}
+.purple {background-color: purple;}
+.pink {background-color: pink;}
+.yellow {background-color: yellow;}
+.black {background-color: black;}
+.gray {background-color: grey;}
+.lightblue {background-color: lightblue;}
+
+/* Traditional clearfix */
+.clearfix:after {
+	//content: ".";
+    display: block;
+    height: 0px;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {display: inline-block;}
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}

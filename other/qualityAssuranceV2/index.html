@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/nav.css" />
+		<link rel="stylesheet" href="css/media.css" />
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="domo.js"></script>
+		<script src="app.js"></script>
+		<script>$(document).ready(function(){homePage('homePage');displayDate();vText();});</script>
+<!-- 
+		<script>$(document).ready(function(){homePage('homePage');displayDate();vText();});</script>
+ -->
+	</head>
+	<body>
+		<div id="headerBase" class="tHover">
+			<div class="header2 domoFont darkBlue">DOMO&nbsp;-&nbsp;QA</div>
+			<div class="header1 domoFont white">DOMO&nbsp;-&nbsp;QA</div>
+			<span id="version" class="header3Version darkBlue">v2 1.0.0 - 02/02/2017</span>
+		</div>
+<!-- Nav menu -->
+		<menu>
+			<div class="nav">
+				<ul>
+					<li id="homePage" onclick="homePage('homePage')"><a href="#" class="active">Home</a></li>
+					<li id="teams" onclick="teams('team')"><a href="#">Teams</a></li>
+					<li id="servers" onclick="servers('server')"><a href="#">Servers</a></li>
+					<li id="hfSquad" onclick="hfSquad('hfSquad')"><a href="#">Hotfix</a></li>
+<!-- 
+					<li id="sprints" onclick="sprints('sprint')"><a href="#">Sprints</a></li>
+ -->
+				</ul>
+			</div>
+		</menu>
+<!-- Nav menu end -->
+		<content id="content" class="contentBox"></content>
+
+		<div id="footer"><div id="rCount" class="rCount"></div><div id="message" class="message"></div></div>
+		<div id="links" class="linkNav linkLocation" onclick="linksShow('links')"><a href="#">Team Links</a></div>
+
+		<script src="js/nav.js"></script>
+		<script src="js/servers.js"></script>
+		<script src="js/team.js"></script>
+		<script src="js/hotfix.js"></script>
+		<script src="js/links.js"></script>
+
+<!-- Removing sprints page
+		<script src="js/sprint.js"></script>
+-->
+	</body>
+</html>
+
+
