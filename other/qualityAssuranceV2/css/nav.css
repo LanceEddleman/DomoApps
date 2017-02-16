@@ -5,11 +5,11 @@
 	left: 0;
 	height: 80px;
 	line-height: 80px;
-	width:100%;
+	width:50%;
 	font-family: OpenSans, sans-serif;
 	font-size: 1.2em;
 	font-weight: bold;
-	background-color: #99ccee;
+	//background-color: #99ccee;
 }
 
 .nav ul {
@@ -19,7 +19,7 @@
 }
 
 .nav li {
-	width: 100px;
+	width: 70px;
 	line-height: 40px;
 	display: inline-block;
 	text-align: center;
@@ -39,6 +39,16 @@
 	color: #707F8A;
 	cursor: default;
 }
+
+.domoFont {
+	font-family: OpenSans-Bold;
+	font-size: 70px;
+	letter-spacing: -11;
+	line-height: 70px;
+	padding: 0;
+	margin: 0;
+}
+
 
 #headerBase {
 	position: absolute;
@@ -89,14 +99,6 @@
 	transition: all 2s ease;
 }
 
-.domoFont {
-	font-family: OpenSans-Bold;
-	font-size: 70px;
-	letter-spacing: -11;
-	line-height: 70px;
-	padding: 0;
-	margin: 0;
-}
 /* Navigation End */
 
 /* Links Page -- Link at bottom of home needs to move */
