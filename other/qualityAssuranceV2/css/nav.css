@@ -9,7 +9,6 @@
 	font-family: OpenSans, sans-serif;
 	font-size: 1.2em;
 	font-weight: bold;
-	//background-color: #99ccee;
 }
 
 .nav ul {
@@ -52,9 +51,9 @@
 
 #headerBase {
 	position: absolute;
-	right: 0;
+	right: 5px;
 	top: 0;
-	width: 50%;
+	width: 25%;
 	height: 80px;
 	z-index: 6000;
 }
@@ -102,6 +101,17 @@
 /* Navigation End */
 
 /* Links Page -- Link at bottom of home needs to move */
+.linkLocation a {
+	position: absolute;
+	bottom: 1px;
+	width: 120px;
+	height: 22px;
+	left: calc(50% - 60px);
+	text-decoration: none;
+	text-align: center;
+	z-index: 900;
+}
+
 .linkNav ul {
 	list-style:none;
 	background-color: #99ccee;
@@ -112,7 +122,6 @@
 .linkNav li {
   font-family: OpenSans, sans-serif;
   font-size: 1.2em;
-  font-weight: bold;
   text-align: center;
 }
 .linkNav a {
@@ -120,7 +129,7 @@
   color: #fff;
   font-weight: bolder;
   display: block;
-  transition: .3s background-color;
+  transition: .5s background-color;
 }
 .linkNav a:hover {
   background-color: #707F8A;
@@ -130,16 +139,5 @@
   background-color: #fff;
   color: #707F8A;
   cursor: default;
-}
-
-.linkLocation a {
-	position: absolute;
-	bottom: 1px;
-	width: 120px;
-	height: 22px;
-	left: calc(50% - 85px);
-	text-decoration: none;
-	text-align: center;
-	z-index: 900;
 }
 /* links end */

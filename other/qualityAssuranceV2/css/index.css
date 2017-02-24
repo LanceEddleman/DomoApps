@@ -51,6 +51,64 @@ content {
 	transition: all 2s ease;
 	z-index: 10;
 }
+
+#newstuff {
+	position: absolute;
+	bottom: 0;
+	left: -1px;
+	color: #000;
+	width: 100%;
+	padding: 5px;
+	border-left: 20px solid #99ccee;
+	height: 0px;
+	opacity: 0;
+	text-align: left;
+	z-index: -50;
+}
+
+#div-new:hover #newstuff {
+  	bottom: 12px;
+	height: auto;
+	padding-bottom: 12px;
+	opacity: 1;
+	transition: all 0.4s ease;
+}
+
+.newTitle:hover {
+	font-weight: bolder;
+	color: #fff;
+	background-color: #707F8A;
+}
+
+.message {
+	position: absolute;
+	text-align: right;
+	right: 10px;
+	width: 20%;
+	min-width: 150px;
+
+}
+
+.rCount {
+	position: absolute;
+	width: 80%;
+	min-width: 400px;
+	left: 1px;
+}
+
+.numberCircle {
+	border-radius: 50%;
+	//   behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+	margin-top: 1px;
+	width: 18px;
+	height: 18px;
+	line-height: 20px;
+	background: #fff;
+	border: 1px solid #707F8A;
+	color: #707F8A;
+	text-align: center;
+}
+
 /* Footer End */
 
 /* Colors */

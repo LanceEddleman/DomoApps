@@ -1,67 +1,51 @@
+
 @media only screen and (max-width: 640px){
+	/* Navigation & Home page */
 	.nav {
 		height: 40px;
 		line-height: 40px;
 		width:100%;
-		font-size: .8em;
+		font-size: .9em;
 	}
 
 	.nav ul {padding-left: 3%;}
 	.nav li {width: 50px; line-height: 20px;}
-	.nav li { border-right: 1px solid #000000; }
+	/*
+	.nav li { border-right: 1px solid #fff; }
+	.nav li { padding-right : 3px; }
 	.nav li:last {border-right:none;}
+	*/
 	.nav a {}
 	.nav a:hover {}
 	.nav a.active {}
 
 	.domoFont {
-		font-size: 1.4em;
-		letter-spacing: -3;
-		font-family: OpenSans, sans-serif;
+		font-size: 1.2em;
+		letter-spacing: -2;
 	}
 
 	#headerBase {
 		position: absolute;
-		right: 0;
 		top: 0;
-		width: 50%;
 		height: 40px;
 	}
 
 	#header1 {}
 	#header2 {}
 
-	.header1 {
-		line-height: 40px;
-		z-index: 100;
-	}
-
-	.header1:hover {
-		color: #99ccee;
-		text-shadow: 1px 1px 6px #000;
-		transition: all 2s ease;
-	}
-
-	.header2 {
-		top: 3px;
-		line-height: 40px;
-		z-index: 1;
-	}
+	.header1 {height: 40px; line-height: 40px; z-index: 100;}
+	.header1:hover {}
+	.header2 {top: 3px; height: 40px; line-height: 40px;}
 
 	.header3Version {
 		position: absolute;
-		right: 5px;
 		font-size: .3em;
 		width: 100%;
 		text-align: right;
-		opacity: 0;
 	}
 
 	.tHover {}
-	.tHover:hover .header3Version {
-		opacity: 1;
-		transition: all 2s ease;
-	}
+	.tHover:hover .header3Version {}
 
 	/* General Items */
 	.titleFade {
@@ -71,6 +55,17 @@
 		top: 40px;
 		height: calc(100% - 42px);
 	}
+	.rCount {display: none;}
+	.message {font-size: .7em;line-height: 2em;}
+	/* Navigation & Home page end */	
+}
 
 
+@media only screen and (max-width: 640px) and (orientation : landscape){
+	/* Navigation & Home page */
+	.vertX{
+		line-height: 14px;
+		font-size: .8em !important;
+	}
+	/* Navigation & Home page end */
 }

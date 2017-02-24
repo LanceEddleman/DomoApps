@@ -6,12 +6,30 @@
 	font-size: 3em;
 }
 
+.vertTitle {
+	width: 20px;
+	height: calc(100% - 22px);
+	background-color: #707F8A;
+	color: #fff;
+	border-right: 1px black solid;
+}
+
+.vertX {
+	word-wrap: break-word;
+	//width: 1px;
+	height: 100%;
+	font-size: 1em;
+	font-style: bolder;
+	text-align: center;
+}
+
+
 .nextLocation {
 	position: absolute;
 	z-index: 999;
 	text-align: center;
 	padding-right: 10px;
-	font-style: bolder;
+	font-style: bold;
 	font-size: 16;
 	right: 0px;
 	background-color: #DC9A2C;
@@ -51,17 +69,17 @@
 }
 
 .displayNextSquad {
-	line-height: 40px;
+	height: 30px;
+	line-height: 30px;
 	bottom: 23px;
-	height: 40px;
 	border-top: 1px black solid;
 	border-left: 1px black solid;
 }
 
 .displayNextSquad2 {
-	line-height: 40px;
+	height: 30px;
+	line-height: 30px;
 	bottom: 23px;
-	height: 40px;
 	font-style: bolder;
 	font-weight: bolder;
 	border-bottom: 1px black solid;
@@ -93,11 +111,12 @@
 
 .hscList2 {
 	position: absolute;
-	top: 62;
+	top: 52;
 	right: 0px;
-	width: 250px;
+	width: 270px;
 	min-width: 250px;
-	max-width: 250px;
+	max-width: 270px;
+	height: calc(100% - 52px);
 	overflow-y: auto;
 }
 
@@ -110,7 +129,7 @@
 }
 
 .displayNextSquad3 {
-	line-height: 40px;
+	line-height: 30px;
 }
 
 .button {

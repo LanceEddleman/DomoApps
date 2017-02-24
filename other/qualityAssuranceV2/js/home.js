@@ -6,20 +6,17 @@
 	var nextData = [];
 	var seeOption = 0;
 	var viewing = 0;
+	var qaText = 'Q<br>U<br>A<br>L<br>I<br>T<br>Y<br><br> A<br>S<br>S<br>U<br>R<br>A<br>N<br>C<br>E';
 
-// array sorting
-	// [1, 3, -1, 6, 3, 1, 9].sort(function (a, b) { console.log('comparing %s to %s', a, b); return a < b ? -1 : 1; });
-	// [{age: 121}, {age: 77}].sort(function (a, b) { return a.age < b.age ? -1 : 1; });
+// QA Title
+	function qaName() {document.getElementById("qaTitle").innerHTML = '<div class="vertX">' + qaText + '</div>';}
 
-// Run Testdata
-	//testDate();
-
+// Current Date
 	var currentDate = '';
 	var today = 0;
 	var xMonth = 0;
 	var xDay = 0;
 
-// Current Date
 	function testDate(){
 		today = new Date();
 		// console.log(today);
@@ -113,6 +110,7 @@
 		console.log('dataset: ',cx);
 		console.log('SeeOption: ' + seeOption);
 		var activeHotFix = 'Hotfix Schedule';
+		var hsCal = '';
 		if(seeOption === 0) {
 			activeHotFix = 'Hotfix Schedule';
 		}
@@ -124,20 +122,20 @@
 			// console.log('View now: ' + viewing);
 			//content.append('<div class="nextLocation displayNextTitle">' + activeHotFix + '</div><div class="nextLocation displayNextSquad"><span class="lsquad">' + cx[viewing].hfsTeam + '</span><span class="lDay">' + cx[viewing].hfsDay + '</span><span class="lDate">' + cx[viewing].hfsDate + '</span></div>');
 			content.append('<div id="hsCalendar" class="hscLocation2"></div>');
-			var hsCal = $('#hsCalendar');
+			hsCal = $('#hsCalendar');
 			hsCal.append('<div id="nextTitle2" class="displayNextTitle2">' + activeHotFix + '</div></div>');
 			hsCal.append('<div class="displayNextSquad2"><span class="lsquad2">' + cx[viewing].hfsTeam + '</span><span class="lDay2">' + cx[viewing].hfsDay + '</span><span class="lDate2">' + cx[viewing].hfsDate + '</span></div>');
-			hsCal.append('<div id="hscList" class="hscList2 "></div>');
-			var hscL = $('#hscList');
+			hsCal.append('<div id="hscList" class="hscList2 leftFade"></div>');
+			hscL = $('#hscList');
 
 			for (var n = 1; n < cx.length; n++) {
 				// console.log('Posting: ' + cx[n].hfsTeam + cx[n].hfsDay + cx[n].hfsDate);
-				hscL.append('<div class="displayNextSquad3 leftFade"><span class="lsquad2">' + cx[n].hfsTeam + '</span><span class="lDay2">' + cx[n].hfsDay + '</span><span class="lDate2">' + cx[n].hfsDate + '</span></div>');
+				hscL.append('<div class="displayNextSquad3"><span class="lsquad2">' + cx[n].hfsTeam + '</span><span class="lDay2">' + cx[n].hfsDay + '</span><span class="lDate2">' + cx[n].hfsDate + '</span></div>');
 			}
 		}
 		else {
 			// content.append('<div id="hsCalendar" class="hscLocation2"></div>');
-			var hsCal = $('#hsCalendar');
+			hsCal = $('#hsCalendar');
 			hsCal.append('<div id="nextTitle2" class="displayNextTitle2">No Data<br>Contact Nate Lyons</div></div>');
 		}
 	}
