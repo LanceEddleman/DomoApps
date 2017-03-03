@@ -27,7 +27,7 @@
 // Display team intro title splash
 	function teamTitleFade() {
 		document.getElementById("content").innerHTML = '';
-		setTimeout(function() {	$('.titleFade').addClass('hide'); }, 100);
+		setTimeout(function() {	$('.teamtitleFade').addClass('hide'); }, 100);
 		setTimeout(function() { }, 500);
 	}
 
@@ -91,7 +91,7 @@
 				else {
 					temp_uNum = uNum;
 					uNum = 99;
-					console.log(uNum);
+					// console.log(uNum);
 					teamList.push({team:team,qa1:qa1,qa2:qa2,qa3:qa3,i1:i1,i2:i2,director:director,features:features,uID:uID,uNum:uNum});
 					teamLeader.push({team:team,qa1:qa1,qa2:qa2,qa3:qa3,i1:i1,i2:i2,director:director,features:features,uID:uID,uNum:uNum});
 
@@ -117,7 +117,7 @@
 // list all teams
 	function displayAll() {
 		document.getElementById('squadList').innerHTML = '';
-		console.log(teamLeader);
+		console.log('Teamleader: ',teamLeader);
 		var tlteam = teamLeader[0].team;
 		var tlqa1 = teamLeader[0].qa1;
 		var tlqa2 = teamLeader[0].qa2;
@@ -166,7 +166,7 @@
 			if(i1 === '') {} else{if(qa !== ''){qa = qa + addRow + i1;}else{qa = i1;}}
 			if(i2 === '') {} else{if(qa !== ''){qa = qa + addRow + i2;}else{qa = i2;}}
 			
-			var classTeam = 'fullWidth floatLeft';
+			var classTeam = 'tfull tleft';
 			
 			if (row === 99) {classTeam = classTeam + ' teamLeader';}
 			else if (row % 2 === 0) {classTeam = classTeam + ' aR1 teamLight';}
@@ -174,8 +174,8 @@
 			
 			if (features === fMiss) {classTeam = classTeam + ' md';}
 			
-			squad = $('<div id="' + team + '" class="' + classTeam + '"><span class="floatLeft teamsList")>' + team + '</span><span class="floatLeft qaList" onClick="gUser()">' + qa + '</span><span class="floatLeft featuresList">' + features + '</span><span class="floatLeft directorList">' + director + '</span></div>');
-			//			onclick="teamStats(' + team + ')">
+			squad = $('<div id="' + team + '" class="' + classTeam + '"><span class="tleft teamsList" onclick="teamStats(' + row + ')")>' + team + '</span><span class="tleft qaList" onClick="gUser()">' + qa + '</span><span class="tleft featuresList">' + features + '</span><span class="tleft directorList">' + director + '</span></div>');
+			//			onclick="teamStats(' + team + ')"    add this to show specific team clicked stat only right side of screen
 			squadList.append(squad);
 		}
 		getDirectorList();
@@ -190,7 +190,22 @@
 
 // Display team status section
 	// animation and stats load
-	function teamStats(squadName) {
+	function teamStats(displayTeam) {
+		console.log(displayTeam);
+		var result = $.grep(teamList, function(e){ return e.id === displayTeam; });
+		if (result.length === 0) {
+		  // not found
+		  console.log('error no data');
+		} else if (result.length === 1) {
+		  console.log('found: ' + result);
+		  // access the foo property using result[0].foo
+		} else {
+		  // multiple items found
+		}
+		// for (i=0; i<teamList.length; i++) {
+		// 	console.log('squad clicked: ' + displayTeam);			
+		// }
+		console.log('squad clicked: ' + displayTeam);
 		if(tsState === 0) {
 			tsState = 1;
 			$('.squadInfo').removeClass('hide');
@@ -207,14 +222,14 @@
 		//	squad data
 		var sf = '';
 		var t = 0;
-		if(teamList.indexOf(squadName)) {
+		if(teamList.indexOf(displayTeam)) {
 			for(t = 0; t < teamList.length; t++) {
 				sf = teamList[t];
 				console.log('what: ' + sf);
 			}
-			console.log(squadName);
+			console.log(displayTeam);
 		}
-		var squadFeatures = '<div class="floatLeft featuresList">' + sf[t] + '</div>';
+		var squadFeatures = '<div class="tleft featuresList">' + sf[t] + '</div>';
 		squadInfo.append(squadFeatures);
 	}
 
@@ -293,7 +308,7 @@
 			if(i1 === '') {} else{if(qa !== ''){qa = qa + addRow + i1;}else{qa = i1;}}
 			if(i2 === '') {} else{if(qa !== ''){qa = qa + addRow + i2;}else{qa = i2;}}
 			
-			var classTeam = 'fullWidth floatLeft';
+			var classTeam = 'tfull tleft';
 			if (uNum === 99 || team === "Leadership") {classTeam = classTeam + ' teamLeader';}			
 			else if (uNum % 2 === 0) {classTeam = classTeam + ' aR1 teamLight';}
 			else{classTeam = classTeam + ' aR2 teamDark';}
@@ -302,7 +317,7 @@
 			
 			if (director.indexOf(dfLink) !== -1) {
 				//console.log(uNum);
-				squad = $('<div id="' + team + '" class="' + classTeam + '"><span class="floatLeft teamsList")>' + team + '</span><span class="floatLeft qaList">' + qa + '</span><span class="floatLeft featuresList">' + features + '</span><span class="floatLeft directorList">' + director + '</span></div>');
+				squad = $('<div id="' + team + '" class="' + classTeam + '"><span class="tleft teamsList")>' + team + '</span><span class="tleft qaList">' + qa + '</span><span class="tleft featuresList">' + features + '</span><span class="tleft directorList">' + director + '</span></div>');
 				squadList.append(squad);
 				uNum = uNum + 1;
 			}

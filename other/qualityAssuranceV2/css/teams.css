@@ -3,17 +3,16 @@
 	top: 0;
 	width: 100%;
 	height: calc(100% - 22px);
-	background-color: #fff;
 }
 
 #teamBody {
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	background-color: #99ccee;
+	background-color: #fff;
 }
 
-.titleFade {
+.teamtitleFade {
 	position: absolute;
 	opacity: 1;
 	width: 100%;
@@ -21,7 +20,7 @@
 	font-size: 48;
 	font-style: bolder;
 }
-.titleFade.hide {
+.teamtitleFade.hide {
 	opacity: 0;
 	transition: all 3s ease;
 }
@@ -45,9 +44,10 @@
 #teamText {
 	height: 30px;
 	line-height: 30px;
-	width: calc(100% - 15px);
+	width: calc(100% - 5px);
 	width: 100%;
 	background-color: #707F8A;
+	// background-color: red;
 	color: #fff;
 	border-bottom: 1px black solid;
 }
@@ -61,19 +61,19 @@
 }
 
 /*	widths	*/
-.teamsList {width: 15%; min-width: 150px;min-height: 20px;text-align: center;}
-.qaList{width: 15%; min-width: 150px;min-height: 20px;text-align: center;}
-.featuresList{width: 55%; min-width: 200px;min-height: 20px;}
-.ffeaturesList{width: calc(55% - 15px);}
-.directorList{text-align: right; width: 15%; min-width: 150px;
-	min-height: 20px;text-align: center;//background-color: red;}
+.teamsList {width: 15%; min-width: 50px; min-height: 20px;text-align: center;}
+.qaList{width: 15%; min-width: 50px; min-height: 20px;text-align: center;}
+.featuresList{width: 55%; min-width: 100px;min-height: 20px;}
+.ffeaturesList{width: calc(55% - 5px);}
+.directorList{text-align: right; width: 15%; min-width: 50px;
+	min-height: 20px;text-align: center;}
 
 /* width end */
 
 /*  Row coloring */
 .teamLight {background-color: #fff;color: #000;}
 .teamDark {background-color: #bedef4;}
-.teamLeader {background-color: #F4D4BE;font-weight: bolder;}
+.teamLeader {background-color: #8DD5BE;}
 
 .aR1 {}
 .aR1:hover{
@@ -93,9 +93,9 @@
 /* squad info pane */
 .squadInfo {
 	position: absolute;
-	right: 0;
+	left: 15%;
 	top: 31px;
-	width: 60%;
+	width: 85%;
 	background-color: skyblue;
 	height: 0;
 	z-index: 100;
@@ -173,3 +173,5 @@ ul, menu, dir {
 }
 
 
+.tleft {float: left;}
+.tfull {width: 100%;}

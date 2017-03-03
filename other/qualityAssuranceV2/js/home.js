@@ -90,7 +90,7 @@
 						})();
 					}
 					else{ 
-						console.log('No Data');	
+						// console.log('No Data');	
 						displayHFSTeam('No Data');
 					}
 				}
@@ -107,12 +107,13 @@
 
 // display hotfix scheduled team on main page
 	function displayHFSTeam(cx, seeOption) {
-		console.log('dataset: ',cx);
-		console.log('SeeOption: ' + seeOption);
+		// console.log('dataset: ',cx);
+		// console.log('SeeOption: ' + seeOption);
 		var activeHotFix = 'Hotfix Schedule';
 		var hsCal = '';
 		if(seeOption === 0) {
 			activeHotFix = 'Hotfix Schedule';
+			console.log('dataset: ',cx);
 		}
 		else { activeHotFix = 'Hotfix Listing'; }
 
