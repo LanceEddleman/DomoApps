@@ -65,13 +65,14 @@
 }
 
 
-@media only screen and (max-width: 640px) and (orientation : landscape){
+@media only screen and (max-width: 750px) and (orientation : landscape){
 	/* Navigation & Home page */
 	.vertX{
-		line-height: 14px;
+		line-height: 16px;
 		font-size: .8em !important;
 	}
 	/* Navigation & Home page end */
+	#teamLayout {font-size: .8em;}
 }
 
 @media only screen and (max-width: 500px){

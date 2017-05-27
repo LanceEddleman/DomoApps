@@ -3,13 +3,13 @@
 	top: 0;
 	width: 100%;
 	height: 100%;
-	background-color: #FFCC99;
+	//background-color: #FFCC99;
 }
 #serverBody {
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	background-color: #FFCC99;
+	//background-color: #FFCC99;
 }
 #servertitles {
 	position: fixed;
@@ -19,10 +19,10 @@
 }
 .servertop {position: fixed; top: 123px;}
 .servers {position: relative; height: 30px; line-height: 30px; width: calc(100% - 2px);}
-.ga {background-color: #FFCC99;}
-.fa {background-color: #FFE5CC;}
-.dev {background-color: #F0F8FF;}
-.branch {background-color: #B9D3EE;}
+.dev {background-color: #f1f2f2;}
+.branch {background-color: #cacbcc;}
+.fa {background-color: #b7daf5;}
+.ga {background-color: #73b0d7;}
 
 /* Field Widths */
 .fields {
@@ -33,11 +33,13 @@
 	text-align: left;
 	padding-left: 15px;
 }
+
 .wsname {
 	width: 300px;
 	text-align: left;
 	padding-left: 15px;
 }
+
 .wlink {
 	width: 373px;
 	text-align: left;
@@ -63,7 +65,7 @@
 	line-height: 500px;
 	font-size: 48;
 	font-style: bolder;
-	background-color: #FFE5CC;
+	//background-color: #f1f2f2;
 }
 .titleFade.hide {
 	opacity: 0;
