@@ -26,9 +26,8 @@
 
 // Display team intro title splash
 	function teamTitleFade() {
-		document.getElementById("content").innerHTML = '';
-		setTimeout(function() {	$('.teamtitleFade').addClass('hide'); }, 100);
-		setTimeout(function() { }, 500);
+		var element = document.getElementById("teamTitle");
+		element.classList.add("hide");
 	}
 
 // Find user IDs add to new user array
@@ -108,9 +107,8 @@
 
 // Fade to team list
 	function displayTeamList(){
-		setTimeout(function() {
-			$('.teamFade').addClass('show');
-		}, 500);
+		var element = document.getElementById("teamBody");
+		element.classList.add("show");
 		displayAll();
 	}
 

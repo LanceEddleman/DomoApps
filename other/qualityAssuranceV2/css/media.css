@@ -62,8 +62,12 @@
 	#teamLayout {font-size: .75em;}
 	/* Team Page end */
 
-}
+	.teamtitleFade {
+		font-size: 200%;
+	}
 
+
+}
 
 @media only screen and (max-width: 750px) and (orientation : landscape){
 	/* Navigation & Home page */
@@ -73,6 +77,10 @@
 	}
 	/* Navigation & Home page end */
 	#teamLayout {font-size: .8em;}
+
+	.teamtitleFade {
+		font-size: 200%;
+	}
 }
 
 @media only screen and (max-width: 500px){
@@ -82,4 +90,10 @@
 		.directorList{width: 33% !important;}
 		.featuresList{display: none;}
 		.ffeaturesList{display: none;}
+
+	.teamtitleFade {
+		font-size: 200%;
+		top: 20%;
+	}
+
 }
