@@ -35,8 +35,6 @@ var clicked = 'home';
 		active(clicked);
 		document.getElementById("content").innerHTML = '';
 		$("#content").load("hotfix.html");
-		hotfixTitleFade();
-		getHFSquad();
 	}
 
 // Links

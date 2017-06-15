@@ -31,7 +31,7 @@ var serverInfo = [];
 					else { name = name; }
 
 					if(alternate !== 'Obsolete') {
-						serverList.push({name,shortName,link,notes,serverType,alternate,uNum});
+						serverList.push({name:name,shortName:shortName,link:link,notes:notes,serverType:serverType,alternate:alternate,uNum:uNum});
 						uNum = uNum + 1;
 					}
 					else {
@@ -45,7 +45,7 @@ var serverInfo = [];
 					if (info === undefined || info === '')  { break; }			// additional info
 					else { info = info; }
 
-					serverInfo.push({info});
+					serverInfo.push({info:info});
                     uNum = uNum + 1;
 				}
 
@@ -69,8 +69,13 @@ var serverInfo = [];
 
 		//console.clear();
 		document.getElementById("serverBody").innerHTML = "";
-		var slTitles = $('<div id="servertitles" class="fullWidth tbold opT"><span class="floatLeft fields wname">Name</span><span class="floatLeft wsname fields">Short Name</span><span class="floatLeft wlink fields">Link</span><span class="floatLeft wnotes fields">Notes</span><span class="floatLeft wtype fields">Type</span></div>');
-		var serverListings = $('<div id="serverListings" class="fullwidth servertop"></div');
+		var slTitles = $('<div id="servertitles">'+
+			'<div class="wname fields">Name</div>' + 
+			'<div class="wsname fields">Link</div>' + 
+			'<div class="wlink fields">Link</div>' + 
+			'<div class="wnotes fields">Notes</div>'+
+			'<div class="wtype fields">Type</div></div>');
+		var serverListings = $('<div id="serverListings" class="servertop"></div');
 		serverBody.append(slTitles);			// Adds table titles
 		serverBody.append(serverListings);			// Adds table titles
 		var u = sList;
@@ -98,7 +103,12 @@ var serverInfo = [];
 			else {className = className + ' opO';}
 		 	
 		 	// display each server and add click function
-			var slPop = $('<div id="server' + uNum + '" class="' + className + '"><span class="floatLeft wname fields">'+ name +'</span><span class="floatLeft wsname fields">'+ shortName +'</span><span class="floatLeft wlink fields">'+ link +'</span><span class="floatLeft wnotes fields">'+ notes +'</span><span class="floatLeft wtype fields">'+ type +'</span></div>');
+			var slPop = $('<div id="server' + uNum + '" class="' + className + '">'+
+				'<div class="wname fields">'+ name +'</div>'+
+				'<div class="wsname fields">'+ shortName +'</div>'+
+				'<div class="wlink fields">'+ link +'</div>'+
+				'<div class="wnotes fields">'+ notes +'</div>'+
+				'<div class="wtype fields">'+ type +'</div></div>');
 
 			// create now function and executes
 			(function(){

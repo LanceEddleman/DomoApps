@@ -160,11 +160,8 @@
 
 
 /* Navigation Start */
-.nav {
-   border-top: 1px black solid;
-   border-bottom: 1px black solid;
-   min-height: 25px;
-}
+.nav {}
+
 #navItem {
    width:100%;
 }

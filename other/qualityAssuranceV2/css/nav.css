@@ -31,7 +31,7 @@
 	transition: .3s background-color;
 }
 
-.nav a:hover {background-color: #707F8A;}
+.nav a:hover {background-color: #707F8A;color: #fff;}
 
 .nav a.active {
 	background-color: #fff;
@@ -133,6 +133,7 @@
 }
 .linkNav a:hover {
   background-color: #707F8A;
+  color: #fff;
 }
 
 .linkNav a.active {

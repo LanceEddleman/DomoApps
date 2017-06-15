@@ -1,20 +1,25 @@
  	<head>
 		<meta name="viewport" content="width=device-width,initial-scale=1">
+
+		<link rel="stylesheet" href="css/other.css" />
+
 		<link rel="stylesheet" href="css/hotfix.css" />
+		<link rel="stylesheet" href="css/media.css" />
 		<script src="js/hotfix.js"></script>
+		<script>$(document).ready(function(){hotfixTitleFade();getHFSquad();});</script>
 	</head>
 		<div id="hotfixMain" class="hotfixMain">
-			<h1 id="hotfixTitle" class="hotfixTitle hotfixTitleFade">Hotfix Squads</h1>
+			<h1 id="hotfixTitle" class="hotfixTitleFade">Hotfix Squads</h1>
 			<div id="hotfixBody" class="fullwidth hotfixFade">
 				<div id="hotfixLayout">
 					<div id="hotfixText">
-						<div class="center">Coming Soon:</div>
+						<div class="squad1 bravo hfTeamT">BRAVO</div><div class="squad2 charlie hfTeamT">CHARLIE</div><div class="squad3 delta hfTeamT">DELTA</div>
 					</div>
-					<div id="squadInfo" class="squadInfo show"></div>
 					<div id="squadList" class="squadList">
-						<div class="fHeight floatLeft squadWidth bravo"><div id="bravoF" class="bravo"></div></div>
-						<div class="fHeight floatLeft squadWidth charlie"><div id="charlieF" class="charlie"></div></div>
-						<div class="fHeight floatLeft squadWidth delta"><div id="deltaF" class="delta"></div></div>
+ 						<div class="fHeight fLeft squad1 bravo"><div id="bravoF" class="bravo"></div></div>
+						<div class="fHeight fLeft squad2 charlie"><div id="charlieF" class="charlie"></div></div>
+						<div class="fHeight fLeft squad3 delta"><div id="deltaF" class="delta"></div></div>
+
 					</div>
 				</div>
 			</div>

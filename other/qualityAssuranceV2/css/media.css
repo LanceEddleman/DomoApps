@@ -19,16 +19,9 @@
 	.nav a:hover {}
 	.nav a.active {}
 
-	.domoFont {
-		font-size: 1.2em;
-		letter-spacing: -2;
-	}
+	.domoFont {font-size: 1.2em; letter-spacing: -2;}
 
-	#headerBase {
-		position: absolute;
-		top: 0;
-		height: 40px;
-	}
+	#headerBase {position: absolute; top: 0; height: 40px;}
 
 	#header1 {}
 	#header2 {}
@@ -48,39 +41,49 @@
 	.tHover:hover .header3Version {}
 
 	/* General Items */
-	.titleFade {
-		font-size: 1em;
-	}
+	.titleFade {font-size: 1em;}
 	content {top: 40px;	height: calc(100% - 42px);}
 	.rCount {display: none;}
 	.message {font-size: .7em;line-height: 2em;}
 	/* Navigation & Home page end */
 
+	/* Team */
+	.teamsList {} #teamLayout {font-size: .75em;}
+	/* Team end */
 
-	/*	Team Page - widths */
-	.teamsList {}
-	#teamLayout {font-size: .75em;}
-	/* Team Page end */
+	/* Server */
+	.wname {width: 34vw;}
+	.wsname {width: 50vw; left: 35vw;}
+	.wnotes {width: 44vw; left: 35vw;display: none;}
+	.wtype {width: 20vw; left: 80vw; text-align: center;}
+	#serverBody{font-size: .9em;}
+	/* Server end */
 
-	.teamtitleFade {
-		font-size: 200%;
-	}
-
+	/* hotfix */
+	.hotfixMain {font-size: .75em;}
+	/* Hotfix end */
 
 }
 
 @media only screen and (max-width: 750px) and (orientation : landscape){
 	/* Navigation & Home page */
-	.vertX{
-		line-height: 16px;
-		font-size: .8em !important;
-	}
+	.vertX{line-height: 16px; font-size: .8em !important;}
 	/* Navigation & Home page end */
-	#teamLayout {font-size: .8em;}
+	#teamLayout {font-size: .75em;}
+	.dropdown-content {font-size: .725em;}
+	.featuresList{width: 55%; min-width: 55%; min-height: 5%;}
 
-	.teamtitleFade {
-		font-size: 200%;
-	}
+	/* Server */
+	.wname {width: 34vw;}
+	.wsname {width: 50vw; left: 35vw;}
+	.wnotes {width: 44vw; left: 35vw;display: none;}
+	.wtype {width: 20vw; left: 80vw; text-align: center;}
+	#serverBody{font-size: .9em;}
+	/* Server end */
+
+	/* hotfix */
+	.hotfixMain {font-size: .75em;}
+	/* Hotfix end */
 }
 
 @media only screen and (max-width: 500px){
@@ -91,9 +94,18 @@
 		.featuresList{display: none;}
 		.ffeaturesList{display: none;}
 
-	.teamtitleFade {
-		font-size: 200%;
-		top: 20%;
-	}
+			/* Server */
+	.wname {width: 34vw;}
+	.wsname {width: 50vw; left: 28vw;}
+	.wnotes {width: 44vw; left: 35vw;display: none;}
+	.wtype {width: 20vw; left: 80vw; text-align: center;}
+	#serverBody{font-size: .9em;}
+	/* Server end */
 
-}
+	/* hotfix */
+	.hotfixMain {font-size: .8em;}
+	.hfqaList{width: 100%;}
+	.hfareaList{width: 0;}
+	/* Hotfix end */
+
+	#linksBody {font-size: .8em;}

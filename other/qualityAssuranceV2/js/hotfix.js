@@ -27,8 +27,15 @@
 	var lead3 = "Craig Frost";
 	var activeSquad = '';
 
-// get hotfix squad data
-	function getHFSquad() { // hfS = hotfixSquad
+// Display squad intro title splash
+	function hotfixTitleFade() {
+		var element = document.getElementById("hotfixTitle");
+		element.classList.add("hide");
+	}
+
+// get hotfix squad data  - hfS = hotfixSquad
+
+	function getHFSquad() {
 		domo.get('/data/v1/hfSquad?orderby=Team ascending').then(function(hfS){
 			// console.log("hfSquad ", hfS);
 			uNum = 0;
@@ -47,33 +54,19 @@
 				else if (qa === lead3) {qa = '* ' + qa;lead = 1;}
 				else {lead = 0;}
 
-				hfSquads.push({squad,qa,area,lead,uNum});
+				hfSquads.push({squad:squad,qa:qa,area:area,lead:lead,uNum:uNum});
 				uNum = uNum + 1;
 				console.log(squad + ' : ', hfSquads[h]);
 			}
 			hfSquads.sort(function(a, b) {return b.lead - a.lead;});
 			// console.log("leads first push ", hfSquads);
-			displaySquadList();
+			displayAllSquads();
 		});
-	}
-
-// Display squad intro title splash
-	function hotfixTitleFade() {
-		setTimeout(function() {	$('.hotfixTitleFade').addClass('hide'); }, 100);
-		setTimeout(function() { /* getServerList(); */ }, 1000);
-	}
-
-// Fade to team list
-	function displaySquadList(){
-		setTimeout(function() {
-			$('.hotfixFade').addClass('show');
-		}, 500);
-		displayAllSquads();
 	}
 
 // list all teams
 	function displayAllSquads() {
-		document.getElementById('hotfixText').innerHTML = '';
+		//document.getElementById('hotfixText').innerHTML = '';
 		for(var w = 0; w < hfSquads.length; w++) {
 			var squadName = hfSquads[w].squad.toLowerCase();
 			var qa = hfSquads[w].qa;
@@ -84,7 +77,7 @@
 			var n = null;
 
 			var cLead = ' cLead';
-			var cSquad = 'fullWidth floatLeft lheight bb1';
+			var cSquad = ' fullWidth fLeft lheight bb1';
 			var bravo = ' bravo';
 			var charlie = ' charlie';
 			var delta = ' delta';
@@ -97,7 +90,7 @@
 			if (rown % 2 === 0) {cSquad = cSquad + ' R1 hfLight';}
 			else{cSquad = cSquad + ' R2 hfDark';}
 
-			squad = $('<div id="' + squadName + uNum + '" class="' + cSquad + '"><span class="floatLeft qaList">' + qa + '</span><span class="floatLeft areaList">' + area + '</span></div>');
+			squad = $('<div id="' + squadName + uNum + '" class="' + cSquad + '"><div class="fLeft hfqaList">' + qa + '</div><div class="fLeft hfareaList">' + area + '</div></div>');
 
 			 if(squadName === 'bravo'){bravoF.append(squad);}
 			 if(squadName === 'charlie'){charlieF.append(squad);}
@@ -106,20 +99,13 @@
 		squadTitleDisplay();
 		document.getElementById("rCount").innerHTML = '';
 		hfRowCount.append('* Squad Lead');
-
 	}
 
 // Display team status section
-		// animation and stats load
 	function squadTitleDisplay() {
-		$('.squadInfo').addClass('hide');
-		var squadFeatures = '<div id="squadNamesTitles" class="fullWidth floatLeft"><div class="squadWidth bravo">BRAVO</div><div class="squadWidth charlie">CHARLIE</div><div class="squadWidth delta">DELTA</div></div>';
-		squadInfo.append(squadFeatures);
+		var element = document.getElementById("hotfixBody");
+		element.classList.add("show");
 	}
-
-
-
-
 
 
 
