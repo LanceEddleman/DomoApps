@@ -21,32 +21,20 @@
 	font-size: 300%;
 	font-style: bolder;
 }
-/*
-.teamtitleFade.hide {
-	opacity: 0;
-	transition: all 4s ease;
-}
-*/
+
 .hide {
 	opacity: 0;
-	height: 0px;
+	height: 0;
 	transition: all 4s ease;
 }
-
 
 .teamFade {
 	opacity: 0;
 }
-.teamFade.show {
-	opacity: 1;
-	transition: all 2s ease;
-}
-
 .show {
 	opacity: 1;
 	transition: all 2s ease;
 }
-
 
 #teamLayout {
 	position: absolute;
@@ -57,12 +45,10 @@
 }
 
 #teamText {
-	height: 30px;
-	line-height: 30px;
-	width: calc(100% - 5px);
+	height: 25px;
+	line-height: 25px;
 	width: 100%;
 	background-color: #707F8A;
-	// background-color: red;
 	color: #fff;
 	border-bottom: 1px black solid;
 }
@@ -72,17 +58,14 @@
 	height: calc(100% - 31px);
 	display: inline-block;
 	overflow-x: hidden;
-	//overflow-y: auto;
 }
 
 /*	widths	*/
-.teamsList {width: 15%; min-width: 50px; min-height: 20px;text-align: center;}
-.qaList{width: 15%; min-width: 50px; min-height: 20px;text-align: center;}
-.featuresList{width: 55%; min-width: 100px;min-height: 20px;}
-.ffeaturesList{width: calc(55% - 5px);}
-.directorList{text-align: right; width: 15%; min-width: 50px;
-	min-height: 20px;text-align: center;}
-
+.teamsList {width: 15%; min-width: 15%; min-height: 5%; text-align: center;}
+.qaList{width: 15%; min-width: 15%; min-height: 5%; text-align: center;}
+.featuresList{width: 55%; min-width: 50% ;min-height: 5%;}
+.directorList{width: 15%; min-width: 5%;
+	min-height: 5%; text-align: center;}
 /* width end */
 
 /*  Row coloring */
@@ -166,7 +149,6 @@
     display: none;
     position: absolute;
     background-color: #94a4a5;
-    min-width: 160px;
     width: 100%;
 }
 

@@ -63,9 +63,9 @@ var serverInfo = [];
 
 // Display Server List
 	function displayServerList(sList){
-		setTimeout(function() {
-			$('.serverFade').addClass('show');
-		}, 500);
+		var element = document.getElementById("serverBody");
+		element.classList.add("show");
+
 
 		//console.clear();
 		document.getElementById("serverBody").innerHTML = "";
@@ -125,13 +125,10 @@ var serverInfo = [];
 
 // Display server title splash
 	function serverTitleFade() {
-		setTimeout(function() {
-			$('.titleFade').addClass('hide');
-		}, 100);
-		setTimeout(function() {
-			getServerList();
-		}, 500);
+		var element = document.getElementById("serverTitle");
+		element.classList.add("hide");
 	}
+
 
 
 //     	domo.navigate("http://flightdeck.domo.com/release/releases",true)
