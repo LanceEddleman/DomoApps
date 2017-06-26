@@ -25,7 +25,7 @@
 	text-align: center;
 }
 
-
+/*
 .nextLocation {
 	position: absolute;
 	z-index: 999;
@@ -37,31 +37,31 @@
 	background-color: #DC9A2C;
 	width: 21%;
 }
-
+*/
 .hscLocation2 {
 	position: absolute;
 	top: 0;
-	z-index: 999;
+	z-index: 10;
 	text-align: right;
 	font-style: bolder;
 	right: 0px;
-	width: 250px;
-	min-width: 250px;
-	max-width: 250px;
+	width: 30%;
+	border-left: 1px black solid;
 	height: calc(100% - 23px);
 }
 
 .displayNextTitle2 {
-	height: 20px;
-	line-height: 20px;
+	height: 1.4em;
+	line-height: 1.4em;
 	text-align: left;
+	padding-left: 10px;
 	background-color: #707F8A;
 	color: #fff;
 	border-bottom: 1px black solid;
 	border-left: 1px black solid;
 }
 
-.displayNextTitle {
+/*.displayNextTitle {
 	bottom: 63px;
 	border: 1px black solid;
 	border-right: 0px;
@@ -77,62 +77,56 @@
 	border-top: 1px black solid;
 	border-left: 1px black solid;
 }
-
+*/
 .displayNextSquad2 {
-	height: 30px;
-	line-height: 30px;
+	width: 100%;
+	height: 2em;
+	line-height: 2em;
 	bottom: 23px;
 	font-style: bolder;
 	font-weight: bolder;
+	text-align: center;
 	border-bottom: 1px black solid;
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,fccf84+20&0+0,0.65+20 */
-	background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(153,204,238,0.65) 40%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(153,204,238,0.65) 40%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(153,204,238,0.65) 40%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#b7daf5',GradientType=1 ); /* IE6-9 */
-}
-
-.lSquad2 {
-	padding-right: 5px;
-	padding-left: 5px;
-	border-right: 1px black solid;
-}
-
-.lSquad2a {}
-
-.lDay2 {
-	padding-right: 5px;
-	padding-left: 5px;
-	border-right: 1px black solid;
-}
-
-.lDate2 {
-	padding-right: 10px;
-	padding-left: 5px;
+	background-color: rgba(153,204,238,0.65);
 }
 
 .hscList2 {
 	position: absolute;
-	top: 52;
+	top: 3.5em;
 	right: 0px;
-	width: 270px;
-	min-width: 250px;
-	max-width: 270px;
-	height: calc(100% - 52px);
+	width: 100%;
+	height: calc(100% - 3.5em);
 	overflow-y: auto;
 }
 
-.leftFade {
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,e0dfe2+20&0+0,0.65+20 */
-	background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(224,223,226,0.65) 30%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(224,223,226,0.65) 30%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(224,223,226,0.65) 30%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6e0dfe2',GradientType=1 ); /* IE6-9 */
+.displayNextSquad3 {
+	font-size: 1em;
+	line-height: 1.em;
+	text-align: center;
 }
 
-.displayNextSquad3 {
-	line-height: 30px;
+.lSquad2 {
+	left: 0;
+	width: 25%;
+	float: left;
+	border-right: 1px black solid;
 }
+
+.lDay2 {
+	left: calc(35% + 1px);
+	width: 30%;
+	float: left;
+	border-right: 1px black solid;
+}
+
+.lDate2 {
+	left: 50%;
+	width: calc(40% - 5px);
+	float: left;
+}
+
+
+.leftFade {background-color: rgba(224,223,226,0.65);}
 
 .button {
 	width: 30px;
@@ -146,9 +140,8 @@
     font-weight: bolder;
 	line-height: 14px;
 }
-.button:active {
-	transform: translateY(1px);
-}
+
+.button:active {transform: translateY(1px);}
 
 .displayNPButtons {
 	position: absolute;

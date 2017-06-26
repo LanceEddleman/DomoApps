@@ -1,13 +1,18 @@
  	<head>
 		<meta name="viewport" content="width=device-width,initial-scale=1">
-<!-- 
-		<link rel="stylesheet" href="css/app.css" />
- -->
 		<link rel="stylesheet" href="css/links.css" />
+		<link rel="stylesheet" href="css/media.css" />
 		<script src="js/links.js"></script>
+		<script>$(document).ready(function(){gotoLinksPage();getLinksList();});</script>
 	</head>
 
-		<div id="linksPage" class="linkmain">
-			<div class="titleEFade"><h1 class="titleLFade">Crowd Source Links</h1></div>
-			<div id="linksBody" class="fullwidth bodyShow"></div>
+		<div id="linksPage" class="linksPage">
+			<h1 id="linksTitle" class="linksTitleFade">Crowd Source Links</h1>
+			<div id="linksBody" class="linksBody">
+				<div id="linksLayout">
+					<div id="linksText" class="lTitles"></div>
+					</div>
+				</div>
+
+			</div>
 		</div>		

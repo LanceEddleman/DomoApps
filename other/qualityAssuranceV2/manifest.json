@@ -14,7 +14,7 @@
   "qa2staging.qa_teamList": "datasourceID: 8d8ea0b1-711b-41fe-abec-061cd1b4ead8",
   "qa2staging.qa_hfSquad": "datasourceID: f4be40c9-6a41-496d-b029-0417f23e460d",
   "qa2staging.qa_links": "datasourceID: ",
-  "fullpage": false,
+  "fullpage": true,
   "size": {
     "width": 4,
     "height": 2
@@ -149,5 +149,5 @@
   "qa2staging.qa - id": "d2ff31a6-6cd6-46c1-929a-c3ab6eb445d2",
   "V1 3D domo.demo - id": "e7eb4990-66b2-4a2c-b3cb-cf531fecfb05",
   "V2 3D domo.demo - id": "d717df37-6ad7-449d-b0bc-d0bad541e806",
-  "id": "d717df37-6ad7-449d-b0bc-d0bad541e806"
+  "id": "e7eb4990-66b2-4a2c-b3cb-cf531fecfb05"
 }

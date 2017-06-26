@@ -3,7 +3,7 @@
 	top: 0;
 	width: 100%;
 	height: calc(100% - 22px);
-	background-color: #99ccee;
+	background-color: #707F8A;
 	display: table;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .teamtitleFade {
-	position: absolute;
+//	position: absolute;
 	opacity: 1;
 }
 
@@ -58,7 +58,7 @@
 
 .squadList {
 	width: 100%;
-	height: calc(100% - 31px);
+	height: calc(100% - 27px);
 	display: inline-block;
 	overflow-x: hidden;
 }

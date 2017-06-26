@@ -63,11 +63,13 @@
 	.hotfixMain {font-size: .75em;}
 	/* Hotfix end */
 
+	#linksBody {font-size: .8em;}
+
 }
 
 @media only screen and (max-width: 750px) and (orientation : landscape){
 	/* Navigation & Home page */
-	.vertX{line-height: 16px; font-size: .8em !important;}
+	.vertX{line-height: 1.25em; font-size: .7em !important;}
 	/* Navigation & Home page end */
 	#teamLayout {font-size: .75em;}
 	.dropdown-content {font-size: .725em;}
@@ -84,6 +86,25 @@
 	/* hotfix */
 	.hotfixMain {font-size: .75em;}
 	/* Hotfix end */
+	#linksBody {font-size: .75em;}
+	.lname {
+		width: 28%;
+		max-width: 28%;
+		padding-left: 2%;
+	}
+
+	.lnotes {
+		left: 30%;
+		width: 50%;
+		max-width: 50%;
+	}
+
+	.linfo {
+		left: 90%;
+		width: 10%;
+		text-align: left;
+	}
+
 }
 
 @media only screen and (max-width: 500px){
@@ -109,3 +130,26 @@
 	/* Hotfix end */
 
 	#linksBody {font-size: .8em;}
+
+	.lname {
+		width: 50%;
+		max-width: 50%;
+		padding-left: 5%;
+	}
+
+	.lnotes {
+		left: 30vw;
+		width: 0;
+		max-width: 0;
+		display: none;
+	}
+
+	.linfo {
+		left: 0;
+		right: 0;
+		text-align: left;
+	}
+
+
+}
+

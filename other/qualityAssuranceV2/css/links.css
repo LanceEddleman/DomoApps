@@ -1,91 +1,122 @@
-#linksPage .linkmain{
+.linksPage{
 	position: absolute;
 	top: 0;
 	width: 100%;
-	height: calc(100% - 22px);
-	background-color: #fff;
-}
-
-#linksBody {}
-
-.titleLFade {
-	opacity: 1;
-	height: 100%;
-	width: 100%;
-	line-height: 500px;
-	font-size: 48;
-	font-style: bolder;
-	background-color: #B9CFB9;
-	z-index: 901;
-}
-
-.titleLFade.hide {
-	opacity: 0;
-	z-index: -10;
-	transition: all 2s ease;
-}
-.titleEFade.hide {
-	opacity: 0;
-	z-index: -11;
-	transition: all 0.1s ease;
-}
-
-.bodyShow {opacity: 0;}
-.bodyShow.show {
-	opacity: 1;
-	transition: all 2s ease;
-}
-
-.lTitles {
-	height: 32px;
-	line-height: 32px;
-	background-color: #B9CFB9;
-	color: #000;
-	border-bottom: 1px solid black;
+	height: calc(100% - 23px);
+	background-color: #80c25d;
 }
 
 #linksBody {
 	position: absolute;
 	top: 0;
-	height: 100%;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: lightblue;
 }
 
-.linksHeight {
-	height: calc(100% - 55px);
-	overflow-y: auto;
+#linksTitle {
+	position: absolute;
+	height: calc(100% - 40%);
+	width: 100%;
+	color: #fff;
+	bottom: 0;
 }
+
+.linksTitleFade {
+	position: absolute;
+	opacity: 1;
+}
+
+.hide {
+	opacity: 0;
+	transition: all 4s ease;
+}
+
+.linksBody {
+	opacity: 0;
+}
+
+.show {
+	opacity: 1;
+	transition: all 3s ease;
+}
+
+#linksLayout {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+#linksText {
+	width: 100%;
+	border-bottom: 1px black solid;
+	background-color: #80c25d;
+	height: 1.5em;
+	font-size: 1.2em;
+	line-height: 1.5em;
+	font-weight: bolder;
+	display: inline-block;
+}
+
+.lTitles {color: #fff;}
+
+.lname {
+	width: 32vw;
+	max-width: 32vw;
+	float: left;
+}
+
+.lnotes {
+	left: 32vw;
+	width: 33vw;
+	max-width: 33vw;
+	float: left;
+}
+
+.linfo {
+	left: 66vw;
+	width: 33vw;
+	max-width: 33vw;
+	float: left;
+	text-align: center;
+}
+
+#linkListings {
+	position: absolute;
+	top: calc(1.5em + 6px);
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow-y: scroll;
+	background-color: #fff;
+}
+
+.linksHeight {}
 
 .linkRows {
-	line-height: 40px;
+	width: 100%;
+	line-height: 2em;
 	overflow: hidden;
 }
 
+.pLeft{padding-left: 1vw;}
+
 .fullG{}
 
-.fullG:hover{
+.fullG:hover {
 	cursor: pointer;
 	font-weight: bolder;
 }
 
 .opY {background-color: #fff;}
 .opY:hover {background: rgba(0,0,0,0.2);}
-.opX {background-color: #E6F6ED;}
-.opX:hover {background-color: #CEF0DB;}
-
-.lfields {text-align: left;}
-
-.lname {
-	width: 25%;
-	margin-left: 30px;
-}
-.lnotes {
-	width: 55%;
-	margin-left: 10px;
-	margin-right: 10px;
-}
-.linfo {margin-right: 30px;}
+.opX {background-color: #ddf4ba;}
+.opX:hover {background-color: #bbe491;}
 
 #footer {
-	background-color: #B9CFB9;
-	color: #000;
+	background-color: #80c25d;
+	color: #fff;
 }

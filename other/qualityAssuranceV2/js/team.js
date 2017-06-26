@@ -28,6 +28,7 @@
 	function teamTitleFade() {
 		var element = document.getElementById("teamTitle");
 		element.classList.add("hide");
+		getTeamList();
 	}
 
 // Find user IDs add to new user array
@@ -42,7 +43,8 @@
 		// 		}
 		// console.log(userList);
 		// });
-		getTeamList();
+		//getTeamList();
+		//gUserID();
 	}
 
 
@@ -101,7 +103,8 @@
 				}
 			}
 			teamList.splice(temp_uNum, 1);
-			displayTeamList();
+			displayAll();
+			//displayTeamList();
 		});
 	}
 
@@ -109,7 +112,7 @@
 	function displayTeamList(){
 		var element = document.getElementById("teamBody");
 		element.classList.add("show");
-		displayAll();
+		// displayAll();
 	}
 
 // list all teams
@@ -276,6 +279,7 @@
 
 			mdl.append(mdPop);
 		}
+		displayTeamList();
 	}
 
 // Display filted list

@@ -1,13 +1,20 @@
-var linkPage = $('#linksPage');
-var linkBody = $('#linksBody');
+var linksPage = $('#linksPage');
+var linksBody = $('#linksBody');
+var linksTitle = $('#linksTitle');
 var linkListing = $('#linkListings');
+var linksLayout = $('#linksLayout');
+var linksText = $('#linksText');
 var sList = '';
 var defMissing = 'Not Listed';
 var linksList = [];
 
+//showAsActive();
 
-getLinksList();
-showAsActive();
+	function gotoLinksPage(sList){
+		var element = document.getElementById("linksTitle");
+		element.classList.add("hide");
+	}
+
 
 // Get server list
 	function getLinksList(){
@@ -39,18 +46,12 @@ showAsActive();
 		});
 	}
 
-// Console server list and info
-	function consoleLinks(sList) {console.log("list", sList);}
-
 // Display Server List
 	function displayLinksList(sList){
-		setTimeout(function() {$('.titleLFade').addClass('hide');}, 100);
-		setTimeout(function() {$('.bodyShow').addClass('show');}, 999);
-
-		var slTitles = $('<div id="linkTitles" class="tbold lTitles"><span class="floatLeft lfields lname">Name</span><span class="floatLeft lfields lnotes">Notes</span><span class="floatRight lfields linfo">InfoSource</span></div>');
-		linkListing = $('<div id="linkListings" class="fullwidth linksHeight"></div');
-		linkBody.append(slTitles);			// Adds table titles
-		linkBody.append(linkListing);			// Adds table titles
+		var ilTitles = $('<div class="lname lTitles pLeft">Name</div><div class="lnotes lTitles">Notes</div><div class="linfo lTitles">Source</div>');
+		linksText.append(ilTitles);			// Adds table titles
+		var linkListing = $('<div id="linkListings"></div>');
+		linksLayout.append(linkListing);			// Adds table body
 		var u = sList;
 		var uNum = 0;
 
@@ -70,7 +71,9 @@ showAsActive();
 			else {className = className + ' opX';}
 		 	
 		 	// display each link and add click function
-			var lPop = $('<div id="link' + uNum + '" class="' + className + '"><span class="floatLeft lfields lname">'+ name +'</span><span class="floatLeft lfields lnotes">'+ notes +'</span><span class="floatRight lfields linfo">'+ info +'</span></div>');
+			var lPop = $('<div id="link' + uNum + '" class="' + className + '"><div class="lname pLeft">'+ name +
+				'</div><div class="lnotes">'+ notes +
+				'</div><div class="linfo">'+ info +'</div></div>');
 
 			// create now function and executes
 			(function(){
@@ -81,7 +84,15 @@ showAsActive();
 			linkListing.append(lPop);
 			uNum = uNum + 1;
 		}
+	displayLinksPage();
 	}
+
+// Display Link page
+	function displayLinksPage() {
+		var element = document.getElementById("linksBody");
+		element.classList.add("show");
+	}
+
 
 // Display selected link
 	function displayLink(link) {

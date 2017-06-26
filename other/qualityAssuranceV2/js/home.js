@@ -121,17 +121,17 @@
 		if(cx !== "No Data") {
 			viewing = seeOption;
 			// console.log('View now: ' + viewing);
-			//content.append('<div class="nextLocation displayNextTitle">' + activeHotFix + '</div><div class="nextLocation displayNextSquad"><span class="lsquad">' + cx[viewing].hfsTeam + '</span><span class="lDay">' + cx[viewing].hfsDay + '</span><span class="lDate">' + cx[viewing].hfsDate + '</span></div>');
+			//content.append('<div class="nextLocation displayNextTitle">' + activeHotFix + '</div><div class="nextLocation displayNextSquad"><div class="lsquad">' + cx[viewing].hfsTeam + '</div><div class="lDay">' + cx[viewing].hfsDay + '</div><div class="lDate">' + cx[viewing].hfsDate + '</div></div>');
 			content.append('<div id="hsCalendar" class="hscLocation2"></div>');
 			hsCal = $('#hsCalendar');
 			hsCal.append('<div id="nextTitle2" class="displayNextTitle2">' + activeHotFix + '</div></div>');
-			hsCal.append('<div class="displayNextSquad2"><span class="lsquad2">' + cx[viewing].hfsTeam + '</span><span class="lDay2">' + cx[viewing].hfsDay + '</span><span class="lDate2">' + cx[viewing].hfsDate + '</span></div>');
+			hsCal.append('<div class="displayNextSquad2"><div class="lsquad2">' + cx[viewing].hfsTeam + '</div><div class="lDay2">' + cx[viewing].hfsDay + '</div><div class="lDate2">' + cx[viewing].hfsDate + '</div></div>');
 			hsCal.append('<div id="hscList" class="hscList2 leftFade"></div>');
 			hscL = $('#hscList');
 
 			for (var n = 1; n < cx.length; n++) {
 				// console.log('Posting: ' + cx[n].hfsTeam + cx[n].hfsDay + cx[n].hfsDate);
-				hscL.append('<div class="displayNextSquad3"><span class="lsquad2">' + cx[n].hfsTeam + '</span><span class="lDay2">' + cx[n].hfsDay + '</span><span class="lDate2">' + cx[n].hfsDate + '</span></div>');
+				hscL.append('<div class="displayNextSquad3"><div class="lsquad2">' + cx[n].hfsTeam + '</div><div class="lDay2">' + cx[n].hfsDay + '</div><div class="lDate2">' + cx[n].hfsDate + '</div></div>');
 			}
 		}
 		else {
