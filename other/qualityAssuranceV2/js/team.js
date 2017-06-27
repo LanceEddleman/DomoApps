@@ -31,6 +31,7 @@
 		getTeamList();
 	}
 
+
 // Find user IDs add to new user array
 	function gUserID(){
 		// domo.get('/domo/users/v1?includeDetails=true&limit=99999').then(function(users){

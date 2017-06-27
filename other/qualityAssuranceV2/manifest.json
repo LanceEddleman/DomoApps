@@ -14,7 +14,7 @@
   "qa2staging.qa_teamList": "datasourceID: 8d8ea0b1-711b-41fe-abec-061cd1b4ead8",
   "qa2staging.qa_hfSquad": "datasourceID: f4be40c9-6a41-496d-b029-0417f23e460d",
   "qa2staging.qa_links": "datasourceID: ",
-  "fullpage": true,
+  "fullpage": false,
   "size": {
     "width": 4,
     "height": 2

@@ -25,29 +25,16 @@
 	text-align: center;
 }
 
-/*
-.nextLocation {
-	position: absolute;
-	z-index: 999;
-	text-align: center;
-	padding-right: 10px;
-	font-style: bold;
-	font-size: 16;
-	right: 0px;
-	background-color: #DC9A2C;
-	width: 21%;
-}
-*/
 .hscLocation2 {
 	position: absolute;
 	top: 0;
 	z-index: 10;
-	text-align: right;
 	font-style: bolder;
 	right: 0px;
 	width: 30%;
 	border-left: 1px black solid;
 	height: calc(100% - 23px);
+	text-align: center;
 }
 
 .displayNextTitle2 {
@@ -58,26 +45,9 @@
 	background-color: #707F8A;
 	color: #fff;
 	border-bottom: 1px black solid;
-	border-left: 1px black solid;
+	//border-left: 1px black solid;
 }
 
-/*.displayNextTitle {
-	bottom: 63px;
-	border: 1px black solid;
-	border-right: 0px;
-	height: 20px;
-	line-height: 20px;
-	border-top-left-radius: 15px;
-}
-
-.displayNextSquad {
-	height: 30px;
-	line-height: 30px;
-	bottom: 23px;
-	border-top: 1px black solid;
-	border-left: 1px black solid;
-}
-*/
 .displayNextSquad2 {
 	width: 100%;
 	height: 2em;
@@ -85,7 +55,6 @@
 	bottom: 23px;
 	font-style: bolder;
 	font-weight: bolder;
-	text-align: center;
 	border-bottom: 1px black solid;
 	background-color: rgba(153,204,238,0.65);
 }
@@ -99,86 +68,34 @@
 	overflow-y: auto;
 }
 
+::-webkit-scrollbar {display: none;}
+
 .displayNextSquad3 {
 	font-size: 1em;
 	line-height: 1.em;
-	text-align: center;
 }
 
 .lSquad2 {
 	left: 0;
-	width: 25%;
+	width: 28%;
 	float: left;
 	border-right: 1px black solid;
 }
 
 .lDay2 {
-	left: calc(35% + 1px);
-	width: 30%;
+	left: calc(28% + 1px);
+	width: 32%;
 	float: left;
 	border-right: 1px black solid;
 }
 
 .lDate2 {
-	left: 50%;
-	width: calc(40% - 5px);
+	left: 60%;
+	width: calc(40% - 2px);
 	float: left;
 }
 
 
 .leftFade {background-color: rgba(224,223,226,0.65);}
-
-.button {
-	width: 30px;
-    border: none;
-    text-decoration: none;
-	outline: none;
-    background-color: transparent;
-    color: #000;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: bolder;
-	line-height: 14px;
-}
-
-.button:active {transform: translateY(1px);}
-
-.displayNPButtons {
-	position: absolute;
-	bottom: 65;
-	z-index: 1000;
-	right: 0px;
-	width: 60px;
-}
-
-.nextButton {background-color: #E3BB77;}
-.prevButton {background-color: #E3BB77;}
-
-.nextButton:hover {background-color: #99ccee;
-	border-top-right-radius: 10px;
-	border-bottom-right-radius: 10px;
-	transition: all .3s ease;}
-.prevButton:hover {background-color: #99ccee;
-	border-top-left-radius: 10px;
-	border-bottom-left-radius: 10px;
-	transition: all .3s ease;}
-
-.displayCButton {
-	position: absolute;
-	bottom: 65;
-	z-index: 1000;
-	right: 224px;
-	width: 30px;
-	background-color: #E3BB77;
-	border-top-left-radius: 15px;
-}
-
-.displayCButton:hover {
-	background-color: #99ccee;
-	transition: all .3s ease;
-}
-
-
-
 
 
