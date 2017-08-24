@@ -68,13 +68,15 @@ function sleep(milliseconds) {
 	console.log(formatDate(d));
 
 
-	var latestVersion = "3.0.0";	
-	var lvUpdate = "02/22/2017";
+	var latestVersion = "3.1.0";	
+	var lvUpdate = "08/24/2017";
 
 // whats new
 	function updated(){
 		var aRow = '<br>';
-		var newInfo = "v " + latestVersion + aRow + "Teams page > Added ability to filter by director";
+		var newInfo = "v " + latestVersion + aRow + 
+		"Home Page > Added Lead listing to Hotfix Schedule" + aRow +
+		"Teams page > Added ability to filter by director" + aRow;
 		document.getElementById("rCount").innerHTML = '<div id="div-new" class="numberCircle newTitle">?<span id="newstuff">' + newInfo + '</span></div></div>';
 	}
 

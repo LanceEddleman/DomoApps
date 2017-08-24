@@ -140,6 +140,11 @@
           "alias": "hfsTeam",
           "columnName": "Team",
           "type": "string"
+        },
+        {
+          "alias": "hfsLead",
+          "columnName": "Lead",
+          "type": "string"
         }
       ]
     }

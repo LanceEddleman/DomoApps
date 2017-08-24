@@ -1,7 +1,7 @@
 @media screen only and (max-width: 940px) and (orientation:landscape){
 	/* Navigation & Home page */
 	.vertX{line-height: 1.2em; font-size: .7em !important;}
-	.hscLocation2 {font-size: .8em; width: 45% !important;}
+	.hscLocation2 {font-size: .75em; width: 65% !important;}
 	.displayNextTitle2 {height: 1em; line-height: 1em;}
 	.displayNextSquad2 {height: 1.5em !important; line-height: 1.5em !important;}
 	.hscList2 {top: 3em !important; height: calc(100% - 3em) !important;}
@@ -76,10 +76,33 @@
 
 
 	.vertX{line-height: 1.2em; font-size: .7em !important;}
-	.hscLocation2 {font-size: .8em; width: 45% !important;}
+	.hscLocation2 {font-size: .75em; width: 55% !important;}
 	.displayNextTitle2 {height: 1em; line-height: 1em;}
 	.displayNextSquad2 {height: 1.5em !important; line-height: 1.5em !important;}
 	.hscList2 {top: 3em !important; height: calc(100% - 3em) !important;}
+	.lSquad2 {
+		width: 16% !important;
+		float: left;
+		border-right: 1px black solid;
+	}
+	.lLead2 {
+		width: 30% !important;
+		float: left;
+		border-right: 1px black solid;
+	}
+
+	.lDay2 {
+		width: 20% !important;
+		float: left;
+		border-right: 1px black solid;
+	}
+
+	.lDate2 {
+		width: calc(20% - 3px) !important;;
+		float: left;
+	}
+
+
 	/* Navigation & Home page end */
 
 	/* Team Items */
@@ -139,7 +162,7 @@
 	.message {font-size: .7em;line-height: 2em;}
 
 	/* Hotfix schedule info */
-	.hscLocation2 {font-size: .8em; width: 65% !important;}
+	.hscLocation2 {font-size: .75em; width: 75% !important;}
 	.displayNextTitle2 {height: 1em; line-height: 1em;}
 	.displayNextSquad2 {height: 1.5em !important; line-height: 1.5em !important;}
 	.hscList2 {top: 3em !important; height: calc(100% - 3em) !important;}
@@ -199,7 +222,7 @@
 	.message {font-size: .7em;line-height: 2em;}
 
 	/* Hotfix schedule info */
-	.hscLocation2 {font-size: .8em; width: 65% !important;}
+	.hscLocation2 {font-size: .75em; width: 75% !important;}
 	.displayNextTitle2 {height: 1em; line-height: 1em;}
 	.displayNextSquad2 {height: 1.5em !important; line-height: 1.5em !important;}
 	.hscList2 {top: 3em !important; height: calc(100% - 3em) !important;}
@@ -256,10 +279,31 @@
 @media screen and (min-width: 320px) and (max-width: 480px){
 
 	/* Hotfix schedule info */
-	.hscLocation2 {font-size: .8em; width: 65% !important;}
+	.hscLocation2 {font-size: .7em; width: 95% !important;}
 	.displayNextTitle2 {height: 1em; line-height: 1em;}
 	.displayNextSquad2 {height: 1.5em !important; line-height: 1.5em !important;}
-	.hscList2 {top: 3em !important; height: calc(100% - 3em) !important;}
+	.hscList2 {top: 3em !important; height: calc(100% - 3em) !important;width: 100% !important;}
+	.lSquad2 {
+		width: 16% !important;
+		float: left;
+		border-right: 1px black solid;
+	}
+	.lLead2 {
+		width: 30% !important;
+		float: left;
+		border-right: 1px black solid;
+	}
+
+	.lDay2 {
+		width: 20% !important;
+		float: left;
+		border-right: 1px black solid;
+	}
+
+	.lDate2 {
+		width: calc(20% - 3px) !important;;
+		float: left;
+	}
 
 	/*	widths	Team Page */
 		.teamsList {width: 33% !important;}

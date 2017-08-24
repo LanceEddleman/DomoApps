@@ -7,6 +7,7 @@
 	var seeOption = 0;
 	var viewing = 0;
 	var qaText = 'Q<br>U<br>A<br>L<br>I<br>T<br>Y<br><br> A<br>S<br>S<br>U<br>R<br>A<br>N<br>C<br>E';
+	var missing = '- Signup Today -';
 
 // QA Title
 	function qaName() {document.getElementById("qaTitle").innerHTML = '<div class="vertX">' + qaText + '</div>';}
@@ -60,8 +61,13 @@
 			 	var hfsDate = schedule[n].hfsDate;
 			 	var hfsDay = schedule[n].hfsDay;
 			 	var hfsTeam = schedule[n].hfsTeam;
+			 	var hfsLead = schedule[n].hfsLead;
 
-			 	hfSchedule.push({hfsDate:hfsDate,hfsDay:hfsDay,hfsTeam:hfsTeam,uNum:uNum});
+			 	if(hfsLead === undefined || hfsLead === null || hfsLead === ''){hfsLead = missing;}
+			 	if(hfsTeam === 'All'){hfsLead = 'Nate Lyons';}
+			 	if(hfsTeam ===  undefined || hfsTeam === null || hfsTeam === ''){hfsTeam = 'noData';}
+
+			 	hfSchedule.push({hfsDate:hfsDate,hfsDay:hfsDay,hfsTeam:hfsTeam,hfsLead:hfsLead,uNum:uNum});
 			 	uNum = uNum+1;
 
 				var aDay = 0; // + days
@@ -80,7 +86,7 @@
 						capturedDateValue = ytoday.valueOf();
 
 					if(capturedDateValue >= nowValue) {
-						nextData.push({hfsDateValue:hfsDateValue,hfsDate:hfsDate,hfsDay:hfsDay,hfsTeam:hfsTeam,uNum:uNum});
+						nextData.push({hfsDateValue:hfsDateValue,hfsDate:hfsDate,hfsDay:hfsDay,hfsTeam:hfsTeam,hfsLead:hfsLead,uNum:uNum});
 
 						// create now function and executes
 						(function(){
@@ -90,20 +96,20 @@
 						})();
 					}
 					else{ 
-						// console.log('No Data');	
+						 console.log('No Data');	
 						displayHFSTeam('No Data');
 					}
 				}
 				z= true;
 			 }
-			nextData.sort(function(a, b){return a.hfsDateValue-b.hfsDateValue});
+			nextData.sort(function(a, b){return a.hfsDateValue-b.hfsDateValue;});
 			displayHFSTeam(nextData, seeOption);
 		});
 		nextPrev();
 	}
 
 // force update of nextData array
-	function makeData(md,x) {nextData.push({md});}
+	function makeData(md,x) {nextData.push({md:md});}
 
 // display hotfix scheduled team on main page
 	function displayHFSTeam(cx, seeOption) {
@@ -117,30 +123,33 @@
 		}
 		else { activeHotFix = 'Hotfix Listing'; }
 
+		var n = '';
+		var nVol = '';
+
 		//console.log(cx);
 		if(cx !== "No Data") {
 			viewing = seeOption;
-			// console.log('View now: ' + viewing);
-			//content.append('<div class="nextLocation displayNextTitle">' + activeHotFix + '</div><div class="nextLocation displayNextSquad"><div class="lsquad">' + cx[viewing].hfsTeam + '</div><div class="lDay">' + cx[viewing].hfsDay + '</div><div class="lDate">' + cx[viewing].hfsDate + '</div></div>');
+			if(cx[viewing].hfsLead === missing){nVol = ' volunteer';}
+			else{nVol = '';}
+
 			content.append('<div id="hsCalendar" class="hscLocation2"></div>');
 			hsCal = $('#hsCalendar');
 			hsCal.append('<div id="nextTitle2" class="displayNextTitle2">' + activeHotFix + '</div></div>');
-			hsCal.append('<div class="displayNextSquad2"><div class="lsquad2">' + cx[viewing].hfsTeam + '</div><div class="lDay2">' + cx[viewing].hfsDay + '</div><div class="lDate2">' + cx[viewing].hfsDate + '</div></div>');
+			hsCal.append('<div class="displayNextSquad2"><div class="lsquad2">' + cx[viewing].hfsTeam + '</div><div class="lLead2' + nVol + '">' + cx[viewing].hfsLead + '</div><div class="lDay2">' + cx[viewing].hfsDay + '</div><div class="lDate2">' + cx[viewing].hfsDate + '</div></div>');
 			hsCal.append('<div id="hscList" class="hscList2 leftFade"></div>');
 			hscL = $('#hscList');
 
-			for (var n = 1; n < cx.length; n++) {
-				// console.log('Posting: ' + cx[n].hfsTeam + cx[n].hfsDay + cx[n].hfsDate);
-				hscL.append('<div class="displayNextSquad3"><div class="lsquad2">' + cx[n].hfsTeam + '</div><div class="lDay2">' + cx[n].hfsDay + '</div><div class="lDate2">' + cx[n].hfsDate + '</div></div>');
+			for (n = 1; n < cx.length; n++) {
+				if(cx[n].hfsLead === missing){nVol = ' volunteer';}
+				else{nVol = '';}
+				hscL.append('<div class="displayNextSquad3"><div class="lsquad2">' + cx[n].hfsTeam + '</div><div class="lLead2' + nVol + '">' + cx[n].hfsLead + '</div><div class="lDay2">' + cx[n].hfsDay + '</div><div class="lDate2">' + cx[n].hfsDate + '</div></div>');
 			}
 		}
 		else {
-			// content.append('<div id="hsCalendar" class="hscLocation2"></div>');
 			hsCal = $('#hsCalendar');
 			hsCal.append('<div id="nextTitle2" class="displayNextTitle2">No Data<br>Contact Nate Lyons</div></div>');
 		}
 	}
-
 
 // Display Next/Prev buttons
 	function nextPrev() {
